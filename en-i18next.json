@@ -5,7 +5,7 @@
     },
     "sso": {
         "error": {
-            "auth_sso_unknown_error": "There was a problem connecting the user account to {provider}",
+            "auth_sso_unknown_error": "There was a problem connecting the user account to {{provider}}",
             "auth_sso_token_invalid": "The provided {{provider}} user token is invalid",
             "auth_sso_token_expired": "The provided {{provider}} user token expired",
             "auth_registration_sso_error": "There was a problem registering user using {{provider}} SSO",
@@ -301,11 +301,11 @@
                 "comp_vat_not_validated": "Company VAT Information not validated",
                 "select_plan": "Select different plan",
                 "change_billing_info": "Change",
-                "free_trial_duration_note_1": "Your 1 month free trial will begin on {{date_trial_start}} and will end on {{date_trial_end}}.<br>You can cancel the subscription anytime before {date_trial_end} and no payment will be charged. ",
+                "free_trial_duration_note_1": "Your 1 month free trial will begin on {{date_trial_start}} and will end on {{date_trial_end}}.<br>You can cancel the subscription anytime before {{date_trial_end}} and no payment will be charged. ",
                 "free_trial_duration_note_2": "1 month free trial starts today and ends on {{date_trial_ends}}.",
-                "free_trial_note_2": "Starting {{date_trial_ends}}, you will be charged {chargeText} until canceled.",
+                "free_trial_note_2": "Starting {{date_trial_ends}}, you will be charged {{chargeText}} until canceled.",
                 "free_trial_note_3": "Cancel anytime before {{date_trial_ends}} and no payment will be charged. ",
-                "free_trial_note_4": "You will not be charged until your free trial ends. We ask for your billing preferences and payment information to provide a seamless subscription experience. You can cancel at any time before {trial_end_date}. We will also send you a reminder {num_days} days before your free trial ends.",
+                "free_trial_note_4": "You will not be charged until your free trial ends. We ask for your billing preferences and payment information to provide a seamless subscription experience. You can cancel at any time before {{trial_end_date}}. We will also send you a reminder {{num_days}} days before your free trial ends.",
                 "supported_payments": "Supported payment methods",
                 "auto_renew": "Auto renewing",
                 "sub_payment_starting_at": "Subscription payment starting on {{date_trial_ends}}",
@@ -913,6 +913,7 @@
                 "add_video_link": "Add Video Link"
             },
             "label": {
+                "360": "360",
                 "sort_name_option": "Sort by Name (default)",
                 "sort_date_option": "Sort by Modified date",
                 "sort_type_option": "Sort by Type",
@@ -925,7 +926,6 @@
                 "options": "Options",
                 "3d": "3D",
                 "3d_video": "3D video",
-                "360": "360",
                 "360_video": "360 video",
                 "updated": "Updated"
             },
@@ -985,16 +985,16 @@
         "mimetypes": "The {{attribute}} must be a file of type: {{values}}.",
         "min": {
             "numeric": "The {{attribute}} must be at least {{min}}.",
-            "file": "The {{attribute} must be at least {{min}} kilobytes.",
-            "string": "The {{attribute} must be at least {{min}} characters.",
-            "array": "The {{attribute} must have at least {{min}} items."
+            "file": "The {{attribute}} must be at least {{min}} kilobytes.",
+            "string": "The {{attribute}} must be at least {{min}} characters.",
+            "array": "The {{attribute}} must have at least {{min}} items."
         },
         "not_in": "The selected {{attribute}} is invalid.",
         "numeric": "The {{attribute}} must be a number.",
         "present": "The {{attribute}} field must be present.",
         "regex": "The {{attribute}} format is invalid.",
         "required": "The {{attribute}} field is required.",
-        "required_if": "The {{attribute}} field is required when {{other} is {{value}}.",
+        "required_if": "The {{attribute}} field is required when {{other}} is {{value}}.",
         "required_unless": "The {{attribute}} field is required unless {{other}} is in {{values}}.",
         "required_with": "The {{attribute}} field is required when {{values}} is present.",
         "required_with_all": "The {{attribute}} field is required when {{values}} is present.",
@@ -1089,9 +1089,12 @@
                 "search_empty_list": "No items to display. Try a different tab or change the search filters.",
                 "empty_list_message": "The list is empty",
                 "ok": "OK",
-                "second": "seconds | 1 second | {{count}} seconds",
-                "minute": "minutes | 1 minute | {{count}} minutes",
-                "hour": "hours | 1 hour | {{count}} hours",
+                "minute_one": "{{count}} minute",
+                "minute_other": "{{count}} minutes",
+                "second_one": "{{count}} second",
+                "second_other": "{{count}} seconds",
+                "hour_one": "{{count}} hour",
+                "hour_other": "{{count}} hours",
                 "js_time_length_parse_short": "{{minutes}}m {{seconds}}s",
                 "pass": "Congratulations, you passed!",
                 "fail": "You failed. Better luck next time!",
@@ -1255,7 +1258,7 @@
                 "title": "Free month ending {{ends_at_date}} at {{ends_at_time}} {{timezone}}",
                 "thanks": "Thanks for subscribing to ENGAGE PLUS. We hope you are enjoying the experience.",
                 "thanks-vs": "Thanks for subscribing to VIVE Sessions PLUS. We hope you are enjoying the experience.",
-                "reminder": "As a reminder, your free month ends {{ends_at_date}} at {{ends_at_time}} {timezone}}. We hope you will continue to communicate, teach and learn in virtual reality using {{url}} of ENGAGE PLUS.",
+                "reminder": "As a reminder, your free month ends {{ends_at_date}} at {{ends_at_time}} {{timezone}}. We hope you will continue to communicate, teach and learn in virtual reality using {{url}} of ENGAGE PLUS.",
                 "reminder-vs": "As a reminder, your free month ends {{ends_at_date}} at {{ends_at_time}} {{timezone}}. We hope you will continue to communicate, teach and learn in virtual reality using {{url}} of Vive Sessions PLUS.",
                 "reminder_link": "super powered features",
                 "contact": "Remember, if you need support, you can always contact us at {{url}}."
@@ -1284,8 +1287,8 @@
                 "subject": "Reset Password",
                 "title": "Password reset request",
                 "requested": "A password reset was recently requested for your account.",
-                "assistance": "Password changes requested through ENGAGE are only sent to the contact email on the account. If you are worried that someone is trying to gain unauthorized access to your account, go ahead and reset your password, or contact us at {url} for assistance.",
-                "assistance-vs": "Password changes requested through VIVE Sessions are only sent to the contact email on the account. If you are worried that someone is trying to gain unauthorized access to your account, go ahead and reset your password, or contact us at {url} for assistance.",
+                "assistance": "Password changes requested through ENGAGE are only sent to the contact email on the account. If you are worried that someone is trying to gain unauthorized access to your account, go ahead and reset your password, or contact us at {{url}} for assistance.",
+                "assistance-vs": "Password changes requested through VIVE Sessions are only sent to the contact email on the account. If you are worried that someone is trying to gain unauthorized access to your account, go ahead and reset your password, or contact us at {{url}} for assistance.",
                 "reset": "Reset Password",
                 "having_trouble": "If you are having trouble clicking the 'Reset Password' link, copy and paste the URL below into your web browser: {{url}}."
             },
@@ -1349,8 +1352,8 @@
             "reschedule": {
                 "subject": "Event {{title}} has been rescheduled",
                 "title": "Event {{title}} has been rescheduled.",
-                "message": "The organizer has updated the date/time for {title}, which you are registered to attend.",
-                "new_date": "The new scheduled date time is {{starts_at_date}} at {{starts_at_time} {{timezone}}.",
+                "message": "The organizer has updated the date/time for {{title}}, which you are registered to attend.",
+                "new_date": "The new scheduled date time is {{starts_at_date}} at {{starts_at_time}} {{timezone}}.",
                 "information": "For more information about this event please follow this link {{url}}.",
                 "cancel": "If you cannot attend this event, you may cancel your attendance at any time.",
                 "feedback": "Please send your questions, comments and feedback related to the event to the event organizer {{name}}."
@@ -1881,7 +1884,7 @@
             "not_url_format": "{{attribute}} cannot be in URL format.",
             "invalid_vat": "We are sorry, the VAT validation has failed!",
             "token_not_found": "{{provider}} user token was not found",
-            "account_not_linked": "Your account is not linked to {provider}. Please refresh the page and connect again.",
+            "account_not_linked": "Your account is not linked to {{provider}}. Please refresh the page and connect again.",
             "could_not_connect": "Could not connect to {{provider}} using user token",
             "unexpected_issue": "There was an unexpected issue connecting to {{provider}}, please try again later",
             "token_invalid": "{{provider}} user token is invalid",
@@ -1890,7 +1893,7 @@
             "include_not_allowed": "Requested include(s) are not allowed."
         },
         "nova": {
-            "group_img_help_text": "File types accepted: <strong>PNG or JPG</strong> | Max file size: <strong>3MB</strong> | Dimensions: <strong>640x360</strong><br><a href=\"{link}\" target=\"_blank\">How to add image</a>",
+            "group_img_help_text": "File types accepted: <strong>PNG or JPG</strong> | Max file size: <strong>3MB</strong> | Dimensions: <strong>640x360</strong><br><a href=\"{{link}}\" target=\"_blank\">How to add image</a>",
             "user_quota_help_text": "The User Quota Is made up of the total of existing members, sub-groups and pending invitations.",
             "unlimited": "Unlimited"
         }
@@ -1920,8 +1923,8 @@
                 "delete_folder": "Delete Folder",
                 "delete_file_permanently": "Delete File Permanently",
                 "quota_text": "{{quota}} of {{total}} used",
-                "quota_reached_text": "You have reached your {quota} upload quota.",
-            "removing_shared_file": "Are you sure that you want to remove the shared file <strong>\"{{name}}\"</strong>?",
+                "quota_reached_text": "You have reached your {{quota}} upload quota.",
+                "removing_shared_file": "Are you sure that you want to remove the shared file <strong>\"{{name}}\"</strong>?",
                 "removing_shared_file_note": "NOTE : Only the file owners can delete the file.",
                 "delete_file_shared": "This file is shared with other people. If you delete it, it will be deleted for all users that it's shared with.",
                 "delete_file_confirmation": "Are you sure that you want to delete <strong>\"{{name}}\"</strong>?",
