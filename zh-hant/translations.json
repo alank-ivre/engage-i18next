@@ -36,6 +36,9 @@
                 "menu_sort_latest": "最新",
                 "menu_sort_featured": "特色",
                 "local_content": "設備內存"
+            },
+            "header": {
+                "title": "Test title (Chinese (Traditional))"
             }
         }
     },
