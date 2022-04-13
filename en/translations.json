@@ -36,6 +36,9 @@
                 "menu_sort_latest": "Latest",
                 "menu_sort_featured": "Featured",
                 "local_content": "Device Storage"
+            },
+            "header": {
+                "title": "Test title"
             }
         }
     },
