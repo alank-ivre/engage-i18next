@@ -36,6 +36,9 @@
                 "menu_sort_latest": "Dernier(ère) en date",
                 "menu_sort_featured": "En vedette",
                 "local_content": "Stockage de l′appareil"
+            },
+            "header": {
+                "title": "Test title (French)"
             }
         }
     },
