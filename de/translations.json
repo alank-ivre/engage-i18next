@@ -36,6 +36,9 @@
                 "menu_sort_latest": "Neueste",
                 "menu_sort_featured": "Hervorgehoben",
                 "local_content": "Gerätespeicher"
+            },
+            "header": {
+                "title": "Test title (German)"
             }
         }
     },
