@@ -36,6 +36,9 @@
                 "menu_sort_latest": "最新",
                 "menu_sort_featured": "类型",
                 "local_content": "设备内存"
+            },
+            "header": {
+                "title": "Test title (Chinese)"
             }
         }
     },
