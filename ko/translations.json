@@ -36,6 +36,9 @@
                 "menu_sort_latest": "최신",
                 "menu_sort_featured": "추천",
                 "local_content": "기기 스토리지"
+            },
+            "header": {
+                "title": "Test title (Korean)"
             }
         }
     },
