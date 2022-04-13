@@ -36,6 +36,9 @@
                 "menu_sort_latest": "最新",
                 "menu_sort_featured": "注目",
                 "local_content": "記録デバイス"
+            },
+            "header": {
+                "title": "Test title (Japanese)"
             }
         }
     },
