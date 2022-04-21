@@ -36,9 +36,6 @@
                 "menu_sort_latest": "최신",
                 "menu_sort_featured": "추천",
                 "local_content": "기기 스토리지"
-            },
-            "header": {
-                "title": "Test title (Korean)"
             }
         }
     },
@@ -507,7 +504,8 @@
             },
             "text": {
                 "allow_deliver": "다른 사용자에게 전달 허용",
-                "answer": "답변 | 답변",
+                "answer_one": "답변",
+                "answer_other": "답변",
                 "answer_name_placeholder": "예: 내 첫 답변은?",
                 "attempts_remaining": "남은 기회",
                 "choose_question": "질문 선택...",

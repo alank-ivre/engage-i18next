@@ -36,9 +36,6 @@
                 "menu_sort_latest": "最新",
                 "menu_sort_featured": "注目",
                 "local_content": "記録デバイス"
-            },
-            "header": {
-                "title": "Test title (Japanese)"
             }
         }
     },
@@ -507,7 +504,8 @@
             },
             "text": {
                 "allow_deliver": "別のユーザーに配信を許可する",
-                "answer": "回答|回答",
+                "answer_one": "回答",
+                "answer_other": "回答",
                 "answer_name_placeholder": "例：私の最初の回答は？",
                 "attempts_remaining": "残りの試行回数",
                 "choose_question": "質問を選択...",

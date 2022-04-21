@@ -36,9 +36,6 @@
                 "menu_sort_latest": "Dernier(ère) en date",
                 "menu_sort_featured": "En vedette",
                 "local_content": "Stockage de l′appareil"
-            },
-            "header": {
-                "title": "Test title (French)"
             }
         }
     },
@@ -508,7 +505,8 @@
             },
             "text": {
                 "allow_deliver": "Permettre à un autre utilisateur de procéder à la distribution",
-                "answer": "Réponse | Réponses",
+                "answer_one": "Réponse",
+                "answer_other": "Réponses",
                 "answer_name_placeholder": "P. ex. Ma première réponse ?",
                 "attempts_remaining": "Tentatives restantes",
                 "choose_question": "Choisir la question...",

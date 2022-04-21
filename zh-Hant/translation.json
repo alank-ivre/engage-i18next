@@ -36,9 +36,6 @@
                 "menu_sort_latest": "最新",
                 "menu_sort_featured": "特色",
                 "local_content": "設備內存"
-            },
-            "header": {
-                "title": "Test title (Chinese (Traditional))"
             }
         }
     },
@@ -507,7 +504,8 @@
             },
             "text": {
                 "allow_deliver": "允許其他使用者傳送",
-                "answer": "回答｜答案",
+                "answer_one": "回答",
+                "answer_other": "答案",
                 "answer_name_placeholder": "例如：我的第一個回答？",
                 "attempts_remaining": "剩餘的嘗試次數",
                 "choose_question": "挑選問題…",

@@ -36,9 +36,6 @@
                 "menu_sort_latest": "Neueste",
                 "menu_sort_featured": "Hervorgehoben",
                 "local_content": "Gerätespeicher"
-            },
-            "header": {
-                "title": "Test title (German)"
             }
         }
     },
@@ -508,7 +505,8 @@
             },
             "text": {
                 "allow_deliver": "Einem anderen Benutzer die Abgabe erlauben",
-                "answer": "Antwort | Antworten",
+                "answer_one": "Antwort",
+                "answer_other": "Antworten",
                 "answer_name_placeholder": "z.B. Meine erste Antwort?",
                 "attempts_remaining": "Verbleibende Versuche",
                 "choose_question": "Frage wählen...",
