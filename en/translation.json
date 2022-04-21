@@ -36,14 +36,12 @@
                 "menu_sort_latest": "Latest",
                 "menu_sort_featured": "Featured",
                 "local_content": "Device Storage"
-            },
-            "header": {
-                "title": "Test title"
             }
         }
     },
     "notes": {
         "ui": {
+            "tab": [],
             "notification": {
                 "cannot_save": "Cannot save. Please resolve any errors in the fields above.",
                 "save_success": "The note was updated successfully",
@@ -80,7 +78,8 @@
                 "sticky_note": "Sticky note",
                 "create_sticky_note": "Create sticky note"
             }
-        }
+        },
+        "validation": []
     },
     "pro": {
         "ui": {
@@ -181,6 +180,8 @@
     },
     "forgot-password": {
         "ui": {
+            "tab": [],
+            "vr": [],
             "text": {
                 "password_reset": "Password Reset",
                 "reset_password": "Reset Password",
@@ -205,6 +206,7 @@
     },
     "payments": {
         "ui": {
+            "tab": [],
             "notification": {
                 "saving_billing_details": "Saving your billing details",
                 "processing_please_wait": "Processing. Please wait",
@@ -221,6 +223,7 @@
                 "coupon_invalid": "The coupon you provided does not seem to be valid. Please provide a valid coupon.",
                 "reload_page": "Please reload this page and try again."
             },
+            "vr": [],
             "text": {
                 "mandatory_field": "Mandatory field",
                 "change_billing_details_next_cycle_note": "Change in the billing details will apply from the next billing cycle",
@@ -239,17 +242,17 @@
                 "record_self_only": "Record yourself only",
                 "tt_public_room": "People can meet in rooms in VR or on desktop for sessions inside ENGAGE. They can run meetings, lessons and experiences with people across the world. Public means anyone can join.",
                 "tt_private_room": "People can meet in rooms in VR or on desktop for sessions inside ENGAGE. They can run meetings, lessons and experiences with people across the world. Private rooms are not listed publicly. People must have the Room ID to join them.",
-                "tt_password_protected": "The ability to add a password to a room session, for that extra level of security and privacy.",
-                "tt_ifx_library": "The Immersive Effects (IFX) library contains a collection of items which people can add to their meetings, lessons, experiences, and recordings. Examples include 3D models, 3D effects, sounds, music, video screens, and many more.",
+                "tt_password_protected": "The ability to add a password to a room session, for that extra level of security and privacy. ",
+                "tt_ifx_library": "The Immersive Effects (IFX) library contains a collection of items which people can add to their meetings, lessons, experiences, and recordings. Examples include 3D models, 3D effects, sounds, music, video screens, and many more. ",
                 "tt_locations_library": "The Locations Library is a collection of rooms and locations which people can use to host their meetings, lessons or experiences. Examples include lecture halls, meeting rooms, the planet Mars, and many more.",
-                "tt_avatar_photo_face_generator": "ENGAGE can generate a 3D model of a person’s head from an uploaded photo, which can then be used as the head of an Avatar inside ENGAGE.",
+                "tt_avatar_photo_face_generator": "ENGAGE can generate a 3D model of a person’s head from an uploaded photo, which can then be used as the head of an Avatar inside ENGAGE. ",
                 "tt_avatar_create": "People are represented by avatars inside ENGAGE. It is possible to create and customize your own avatar. There are many options to choose from and you can save more than one.",
                 "tt_recording": "Recording every detail of your meeting or lesson in full 360 degrees from every angle, not just the fixed camera. Replay that experience and walk around it, or away from the camera point, viewing it from any angle, up close or far away. Play several recordings simultaneously in the same virtual location. These recordings can be added to your meetings, lessons, experiences and even other recordings.",
                 "tt_website_streaming": "People can display webpages on big screens inside virtual locations inside ENGAGE. This is useful for sharing information with other people in meetings and lessons. Streamed website content can even be recorded by the recording feature and played back later inside ENGAGE as part of new meetings, lessons, experiences and even as part of new recordings!",
-                "tt_desktop_share": "People can share their desktop monitor view on a big screen inside virtual locations in ENGAGE. This is useful for sharing information with other people in meetings and lessons. Streamed desktop footage can even be recorded by the recording feature and played back later inside ENGAGE as part of new meetings, lessons, experiences and even as part of new recordings!",
+                "tt_desktop_share": "People can share their desktop monitor view on a big screen inside virtual locations in ENGAGE. This is useful for sharing information with other people in meetings and lessons. Streamed desktop footage can even be recorded by the recording feature and played back later inside ENGAGE as part of new meetings, lessons, experiences and even as part of new recordings! ",
                 "tt_snapshots": "This feature makes it faster to create entertaining lessons, meetings and experiences. Simply place lots of IFX in a room, save it as an IFX Snapshot, then load it into your meeting or lesson, as many times as you like!",
                 "tt_assistants": "When running a meeting, lesson or experience in a virtual location inside ENGAGE, it is possible to give people control to help with playing videos and web media and to record the event.",
-                "tt_selective_form_delivery": "This feature allows people to deliver specific forms such as quizzes or feedback forms to selected people inside a session.",
+                "tt_selective_form_delivery": "This feature allows people to deliver specific forms such as quizzes or feedback forms to selected people inside a session. ",
                 "tt_early_access": "The team is frequently updating ENGAGE with the latest and greatest features. PLUS account holders will get to try these before anyone else and help us shape the future of ENGAGE!",
                 "tt_create_events": "People can create events and schedule meetings to happen inside ENGAGE.",
                 "tt_session_settings_controls": "During a VR session, PLUS users can change settings and use advanced controls. For example, add other users as hosts, change permissions, lock users to seats, remove and ban other users, allow media control.",
@@ -298,10 +301,10 @@
                 "comp_vat_not_validated": "Company VAT Information not validated",
                 "select_plan": "Select different plan",
                 "change_billing_info": "Change",
-                "free_trial_duration_note_1": "Your 1 month free trial will begin on {{date_trial_start}} and will end on {{date_trial_end}}.<br>You can cancel the subscription anytime before {{date_trial_end}} and no payment will be charged.",
+                "free_trial_duration_note_1": "Your 1 month free trial will begin on {{date_trial_start}} and will end on {{date_trial_end}}.<br>You can cancel the subscription anytime before {{date_trial_end}} and no payment will be charged. ",
                 "free_trial_duration_note_2": "1 month free trial starts today and ends on {{date_trial_ends}}.",
                 "free_trial_note_2": "Starting {{date_trial_ends}}, you will be charged {{chargeText}} until canceled.",
-                "free_trial_note_3": "Cancel anytime before {{date_trial_ends}} and no payment will be charged.",
+                "free_trial_note_3": "Cancel anytime before {{date_trial_ends}} and no payment will be charged. ",
                 "free_trial_note_4": "You will not be charged until your free trial ends. We ask for your billing preferences and payment information to provide a seamless subscription experience. You can cancel at any time before {{trial_end_date}}. We will also send you a reminder {{num_days}} days before your free trial ends.",
                 "supported_payments": "Supported payment methods",
                 "auto_renew": "Auto renewing",
@@ -365,7 +368,7 @@
                 "organizations_education_institutions": "Organizations & Education Institutions",
                 "summary": "Summary",
                 "summary_lite": "Basic version of the software to try out features and some demo content only.",
-                "summary_pro": "For independent professionals seeking to host live VR sessions & events with small groups and create recorded training and experiences.",
+                "summary_pro": "For independent professionals seeking to host live VR sessions & events with small groups and create recorded training and experiences. ",
                 "summary_enterprise": "For organizations and education institutes seeking to host sessions & events with large groups for remote work, training and experiences.",
                 "eligibility_notes": "Eligibility & Notes",
                 "note_lite": "Lite Users have very limited access to sessions and recorded content.",
@@ -400,7 +403,8 @@
                 "subscribe": "Subscribe",
                 "subscribe_for": "Subscribe For"
             }
-        }
+        },
+        "validation": []
     },
     "assets": {
         "ui": {
@@ -505,15 +509,16 @@
             },
             "text": {
                 "allow_deliver": "Allow another user to deliver",
-                "answer": "Answer | Answers",
+                "answer_one": "Answer",
+                "answer_other": "Answers",
                 "answer_name_placeholder": "e.g. My first answer?",
                 "attempts_remaining": "Attempts Remaining",
-                "choose_question": "Choose question…",
+                "choose_question": "Choose question...",
                 "correct": "Correct",
                 "create_form_invalid": "Saving failed. The title text contains invalid characters.",
                 "delete_confirmation": "Are you sure you want to delete",
                 "edit_question_add_answers": "Edit question to add answers.",
-                "enter_answer": "Enter answer here…",
+                "enter_answer": "Enter answer here...",
                 "fail": "Fail",
                 "fails_allowed": "Fails Allowed Per Question",
                 "false": "False",
@@ -682,6 +687,7 @@
     },
     "settings": {
         "ui": {
+            "tab": [],
             "notification": {
                 "email_update_success": "Your email address has been successfully changed. Please verify you email address at your earliest.",
                 "error_cannot_save": "Cannot save. Please resolve any errors in the fields above.",
@@ -693,6 +699,7 @@
                 "sub_toaster_cancaled": "Subscription canceled.",
                 "incorrect_password": "Incorrect password entered."
             },
+            "vr": [],
             "text": {
                 "input_current_password": "To change your email, you will need to enter your current password.",
                 "change_password_note": "Please note we will log you out once this update is made. Use your current email and new password to log back in.",
@@ -775,12 +782,14 @@
                 "btn_cancel_subscription": "Cancel subscription",
                 "btn_keep_subscription": "Keep subscription"
             }
-        }
+        },
+        "validation": []
     },
     "profile": {
         "ui": {
+            "tab": [],
             "notification": {
-                "account_verification": "Your account is not verified, Please check your email.<br> After registration you have 72 hours to verify your email address.",
+                "account_verification": "Your account is not verified, Please check your email.<br> After registration you have 72 hours to verify your email address. ",
                 "account_verification_sent_new": "A new verification email was sent to {{email_address}}.",
                 "account_verification_failed_send": "Failed to send user verification email, please try again.",
                 "account_verification_already_sent": "Verification email already sent, please wait at least {{minutes}} minutes and try it again.",
@@ -792,6 +801,7 @@
                 "update_required": "Please update the following fields",
                 "profile_data_required": "Username, Date of Birth, Last Name"
             },
+            "vr": [],
             "text": {
                 "continue_subscription_text": "Continue the subscription process",
                 "drop_files": "Drop files to upload",
@@ -1065,6 +1075,7 @@
                 "back_to_list": "back to list",
                 "main_page": "Main Page"
             },
+            "tab": [],
             "notification": {
                 "toast_error": "There was an error: ",
                 "form_error": "There was an error submitting the form. Please check the fields with errors and try again.",
@@ -1072,6 +1083,7 @@
                 "vuplex_wait_warning": "Please try again in a few seconds",
                 "copied": "Copied"
             },
+            "vr": [],
             "text": {
                 "loading": "Loading...",
                 "retrieve_data_error": "There has been an error retrieving the data, please reload the screen to continue.",
@@ -1463,10 +1475,12 @@
     },
     "login-registration": {
         "ui": {
+            "tab": [],
             "notification": {
                 "session_expired_header": "Session Expired",
                 "session_expired_message": "Your session has expired. Redirecting..."
             },
+            "vr": [],
             "text": {
                 "login_title": "sign in",
                 "new_user_header": "Need an account?",
