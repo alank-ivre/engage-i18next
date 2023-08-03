@@ -9,7 +9,8 @@
             "auth_sso_token_invalid": "提供された{{provider}}のユーザートークンが無効です",
             "auth_sso_token_expired": "提供された{{provider}}のユーザートークンが期限切れです",
             "auth_registration_sso_error": "{{provider}} SSOを使用してユーザーを登録する際に問題が発生しました",
-            "auth_login_sso_error": "{{provider}} SSOを使用しているユーザーのログインに問題が発生しました"
+            "auth_login_sso_error": "{{provider}} SSOを使用しているユーザーのログインに問題が発生しました",
+            "email_mismatch": "ENGAGEアカウントとSSO IDプロバイダーの間でメールアドレスが一致しないため、SSOログインを認証できませんでした。"
         }
     },
     "contents": {
@@ -101,7 +102,7 @@
     "menu": {
         "ui": {
             "text": {
-                "engage_trademark_footer": "ENGAGE™は、Immersive VR Education©2020の商標です。All rights reserved（無断複写・転載を禁じます ）。"
+                "engage_trademark_footer": "© {{year}} ENGAGE XR, Ltd. 無断転載禁止。ENGAGEは、ENGAGE XR, Ltd.の商標です。"
             },
             "button": {
                 "download_engage": "ENGAGEをダウンロード",
@@ -181,18 +182,23 @@
             "text": {
                 "password_reset": "パスワードのリセット",
                 "reset_password": "パスワードをリセット",
-                "login_route": "または次へ移動"
+                "login_route": "または次へ移動",
+                "security_message": "セキュリティ上の理由で、ENGAGEに入る前にパスワードをリセットする必要があります。",
+                "email_message": "ENGAGEアカウントに登録されているメール アドレスを入力してください。パスワードをリセットする方法についての手順が送信されます。"
             },
             "label": {
                 "email": "メールアドレス",
-                "email_placeholder": "発信者メールアドレス",
+                "email_placeholder": "メールアドレスを入力",
                 "password": "パスワード",
                 "confirm_password": "パスワードを確認"
             },
             "button": {
                 "reset_my_password": "パスワードをリセット",
                 "reset_password": "パスワードをリセット",
-                "login": "ログイン"
+                "login": "ログイン",
+                "send": "送信",
+                "cancel": "キャンセル",
+                "return": "ログインへ戻る"
             }
         }
     },
@@ -310,7 +316,8 @@
                 "upload_3d_models_pro": "はい - 制限があります。お問い合わせください。",
                 "dependant_on_enterprise_size": "はい - 金額はENTERPRISE アカウントのサイズによります",
                 "custom_content_menu_enterprise": "はい - ユーザーに表示するコンテンツを選択してください",
-                "full": "決済"
+                "full": "決済",
+                "vat_modal_body": "お客様のVAT番号を確認することができませんでした。VAT番号は、その国の書式と一致する必要があります。詳細は、<a href=\"{{vat_link}}\" target=\"_blank\">VAT number formatting here</a>を参照してください。"
             },
             "label": {
                 "billing_info_title": "お支払い情報",
@@ -382,7 +389,9 @@
                 "custom_environment_uploads": "カスタム環境のアップロード",
                 "custom_branding": "カスタムブランディング",
                 "custom_content_menu": "カスタムコンテンツメニュー",
-                "custom_hosting_options": "カスタム主催オプション"
+                "custom_hosting_options": "カスタム主催オプション",
+                "vat_modal_title": "VAT番号の書式",
+                "vat_modal_button": "VAT番号の書式を表示"
             },
             "button": {
                 "save_billing": "お支払い情報を保存",
@@ -499,13 +508,12 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "ウェブ{{web_url}}上でフォームを作成および編集"
+                    "info_banner": "ウェブ{{web_url}} 上でフォームを作成および編集"
                 }
             },
             "text": {
                 "allow_deliver": "別のユーザーに配信を許可する",
-                "answer_one": "回答",
-                "answer_other": "回答",
+                "answer": "回答|回答",
                 "answer_name_placeholder": "例：私の最初の回答は？",
                 "attempts_remaining": "残りの試行回数",
                 "choose_question": "質問を選択...",
@@ -714,11 +722,26 @@
                 "confirm_delete_account": "本当にアカウントを削除しますか？",
                 "confirm_delete_account_details": "<p>この作業は、アカウントに付随する全ての情報、メディア、ノート、リンク、イベントを< strong>完全に</strong>削除します。</p>",
                 "error_sending_user_email": "削除メールの送信エラー。",
-                "error_deleting_user": "アカウントの削除エラー。"
+                "error_deleting_user": "アカウントの削除エラー。",
+                "min_character_length": "最低{{min_chars}}文字。",
+                "max_character_length": "最大{{max_chars}}文字。",
+                "password_strength_weak": "弱い",
+                "password_strength_medium": "中くらい",
+                "password_strength_good": "良い",
+                "password_strength_strong": "強い",
+                "password_strength_very_strong": "とても強い",
+                "password_valid": "有効なパスワードを入力してください。",
+                "password_common": "このパスワードは、よく使われるパスワードとして検出されました。 <br>安全のためパスワードを変更してください。",
+                "sso_on": "シングルサインオン（SSO）は現在オンになっています",
+                "sso_off": "シングルサインオン（SSO）は現在オフになっています",
+                "sso_on_info": "ご質問がある場合は、{{name}} Enterpriseグループの管理者にお問い合わせください。",
+                "sso_off_info": "このグループでは、SSOは現在設定されておらず使用できません。詳細については、Enterpriseグループの所有者にお問い合わせください。",
+                "sso_enabled_email": "シングルサインオン（SSO） が有効になっている間は、メールアドレスを変更することはできません。ご質問がある場合は、グループ管理者にお問い合わせください。",
+                "sso_enabled_password": "シングルサインオン（SSO） が有効になっている間は、パスワードを変更することはできません。ご質問がある場合は、グループ管理者にお問い合わせください。"
             },
             "label": {
                 "settings_title": "設定",
-                "account_title": "アカウント",
+                "account_title": "セキュリティ&ログイン",
                 "change_email": "メールアドレスを変更",
                 "change_password": "パスワードを変更",
                 "subscription_title": "購読",
@@ -758,7 +781,10 @@
                 "void": "空欄",
                 "status": "状態",
                 "change_phone_number": "携帯番号の変更",
-                "delete_account": "アカウントを削除"
+                "delete_account": "アカウントを削除",
+                "choose_new_password": "新しいパスワードを選択",
+                "sso": "シングルサインオン（SSO）",
+                "privacy_title": "プライバシー"
             },
             "button": {
                 "change_email": "メールアドレスを変更",
@@ -882,7 +908,7 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "ウェブ{{web_url}}上でメディアを追加して管理"
+                    "info_banner": "ウェブ{{web_url}} 上でメディアを追加して管理"
                 }
             },
             "text": {
@@ -1106,12 +1132,9 @@
                 "loading": "読み込み中…",
                 "retrieve_data_error": "データの取得中にエラーが発生しました。続行するには、画面を再読み込みしてください。",
                 "search_empty_list": "表示する項目がありません。別のタブを試すか、検索フィルターを変更してください。",
-                "minute_one": "{{count}}分",
-                "minute_other": "{{count}}分",
-                "second_one": "{{count}}秒",
-                "second_other": "{{count}}秒",
-                "hour_one": "{{count}}時間",
-                "hour_other": "{{count}}時間",
+                "second": "秒| 1秒|{{count}}秒",
+                "minute": "分| 1分|{{count}}分",
+                "hour": "時| 1時間| {{count}}時間",
                 "pass": "おめでとうございます。合格です！",
                 "fail": "不合格でした。また次回頑張りましょう！",
                 "input_case_sensitive": "この入力では大文字と小文字が区別されます。もう一度確認してください。",
@@ -1130,7 +1153,7 @@
                 "no": "いいえ",
                 "terms_of_service": "サービス利用規約",
                 "accept_and_continue": "続行することにより、以下に同意したことになります。：",
-                "footer_trademark_text": "ENGAGE™は、Immersive VR Education©2020の商標です。All rights reserved（無断複写・転載を禁じます ）。",
+                "footer_trademark_text": "© {{year}} ENGAGE XR, Ltd. All rights reserved. ENGAGEは、ENGAGE XR, Ltdの商標です。",
                 "datetime_time": "時間",
                 "empty_list_message": "一覧が空です",
                 "js_time_length_parse_short": "{{minutes}}分{{seconds}}秒",
@@ -1262,10 +1285,10 @@
     "emails": {
         "groups": {
             "group-invitation": {
-                "title": "{{inviter_first_name}}{{inviter_last_name}}さんとチームが、ENGAGEグループへのあなたのご参加を待っています- {{group_name}}",
-                "response": "このグループに参加するには、次のリンクをクリックしてください。{{url}}",
-                "subject": "{{inviter_name}}からENGAGEグループに招待されました- {{group_name}}",
-                "learn_more": "ENGAGEの詳細については、次のリンクにアクセスしてください：<br> <a href=\"https://engagevr.io\">https://engagevr.io</a>",
+                "title": "{{inviter_first_name}} {{inviter_last_name}}とチームが、あなたの{{group_name}}への参加をお待ちしています",
+                "response": "このENGAGEグループに参加するには、次のリンクをクリックまたはタップしてください。： <br> {{url}}",
+                "subject": "新しいグループへの招待状が届いています",
+                "learn_more": "ENGAGEの詳細については、次のURLをご覧ください。<br> <a href=\"https://engagevr.io\">https://engagevr.io</a>",
                 "title-vs": "{{inviter_first_name}}{{inviter_last_name}}さんとチームが、VIVEセッショングループへのあなたのご参加を待っています- {{group_name}}",
                 "subject-vs": "{{inviter_name}}さんがあなたをVIVEセッショングループへご招待しました - {{group_name}}",
                 "learn_more-vs": "Viveセッションについての詳しい説明は、次のリンクを参照ください。:<br> <a href=\"https://vive.com/cn/xr-suite-en/\">https://vive.com/cn/xr-suite-en/</a>"
@@ -1278,7 +1301,7 @@
                 "reminder_link": "超強力な機能",
                 "contact": "サポートが必要な場合は、いつでも{{url}}にお問い合わせください。",
                 "title": "無料月は{{ends_at_date}}の{{ends_at_time}}{{timezone}}に終了します",
-                "reminder": "なお、無料月は{{ends_at_date}}{{ends_at_time}}{{timezone}}に終了します。ENGAGE PROの{{url}}を使用して、バーチャルリアリティによるコミュニケーション、教育、学習を継続されることを願っています。",
+                "reminder": "ENGAGE の無料月間は、{{ends_at_date}} {{ends_at_time}} {{timezone}}に終了します。 いつもENGAGE Plusをご利用いただき誠にありがとうございます。 この体験を楽しんでいただければ幸いです。",
                 "thanks-vs": "VIVEセッションPLUSをご購読いただきありがとうございます。楽しんでいただけると確信しております。",
                 "reminder-vs": "なお、無料月は{{ends_at_date}}の{{ends_at_time}}{{timezone}}に終了します。ViveセッションPLUSの{{url}}を使用して、バーチャルリアリティによるコミュニケーション、教育、学習を継続されることを願っています。"
             }
@@ -1296,30 +1319,35 @@
                 "terms_text": "一般利用規約",
                 "policy": "プライバシーポリシー",
                 "contact": "お問い合わせ",
-                "trademark": "ENGAGE™は、Immersive VR Education©2020の商標です。",
+                "trademark": "© {{year}} ENGAGE XR, Ltd. 無断転載禁止。ENGAGEは、ENGAGE XR, Ltd.の商標です。",
                 "rights": "All rights reserved（無断複写・転載を禁じます ）。",
                 "trademark-vs": "VIVEセッションVIVE © 2020."
             }
         },
         "account": {
             "reset-password": {
-                "subject": "パスワードをリセット",
+                "subject": "パスワードリセットのリクエストを受け取りました",
                 "title": "パスワードリセットのリクエスト",
-                "requested": "アカウントのパスワードのリセットが最近リクエストされました。",
-                "assistance": "ENGAGEを通じてリクエストされたパスワードの変更は、アカウントの連絡先メールにのみ送信されます。誰かがあなたのアカウントに不正にアクセスしようとしているのではないかとご心配な場合は、先に進んでパスワードをリセットするか、サポートのため{{url}} にお問い合わせください。",
+                "requested": "パスワードリセットのリクエストを受け取りました。",
+                "assistance": "リクエストを送った場合は、次のリンクをクリック、またはタップしてパスワードをリセットします。：",
                 "reset": "パスワードをリセット",
-                "having_trouble": "[パスワードをリセット]リンクをクリックできない場合は、以下のURLをコピーしてウェブブラウザに貼り付けてください。{{url}}.",
-                "assistance-vs": "VIVEセッションのパスワード変更は、アカウントの連絡先メールにだけ送信されます。誰かがあなたのアカウントに不正にアクセスしようとしていることが懸念される場合は、先に進み、パスワードをリセットするか、または、{{url}}から当社にご連絡ください。"
+                "having_trouble": "次のアドレスをコピーして、ブラウザに貼り付けることもできます：{{url}}",
+                "assistance-vs": "VIVEセッションのパスワード変更は、アカウントの連絡先メールにだけ送信されます。誰かがあなたのアカウントに不正にアクセスしようとしていることが懸念される場合は、先に進み、パスワードをリセットするか、または、{{url}}から当社にご連絡ください。",
+                "did_not_request": "パスワードリセットをリクエストしていない場合は、このメールを無視してください。",
+                "requested_sso": "このENGAGEアカウントのパスワードリセットリクエストを受け取りました：{{email}}",
+                "assistance_sso": "アカウントは、ログイン認証にシングルサインオン（SSO）に設定されています。 SSOパスワードをリセットする方法が不明な場合は、Enterpriseグループの所有者にお問い合わせください。：{{group_name}}の{{group_owner}}様。"
             },
             "email-verification": {
-                "subject": "ENGAGE用のメールアドレスをご確認ください",
+                "subject": "メールアドレスを確認してください。",
                 "title": "あなたのメールアドレスをご確認ください",
-                "message": "下のリンクをクリックしてあなたのメールアドレスをご確認ください。",
+                "message": "ENGAGEアカウントを作成していただきありがとうございます。 続行するには、下のリンクをクリックまたはタップして、メールアドレスを確認してください。",
                 "verify": "あなたのメールアドレスをご確認ください",
-                "having_trouble": "[メールアドレスの確認]ボタンをクリックできない場合は、次のURLをコピーしてウェブブラウザに貼り付けてください。{{url}}.",
+                "having_trouble": "または次のアドレスをコピーして、ブラウザにペーストします： {{url}}.",
                 "contact": "この変更をリクエストしていない場合は、{{support_email_address}}にお問い合わせください。",
                 "subject-vs": "VIVEセッション用のメールアドレスをご確認ください",
-                "message-vs": "下のリンクをクリックしてあなたのメールアドレスをご確認ください。"
+                "message-vs": "下のリンクをクリックしてあなたのメールアドレスをご確認ください。",
+                "getting_started": "開始に助けが必要な場合は、ビデオチュートリアルをご覧ください：",
+                "tutorials_link": "チュートリアルを表示"
             },
             "deleted-user": {
                 "subject": "あなたの{{region_name}}アカウントは削除されました。",
@@ -1328,37 +1356,41 @@
                 "personal_data": "お客様の個人情報の全てを当社のシステムから削除しました。"
             },
             "new-user": {
-                "subject": "ENGAGEへようこそ！",
+                "subject": "ENGAGEへようこそ！メールアドレスを確認してください。",
                 "title": "ENGAGEへようこそ",
-                "thank_you": "ENGAGEアカウントを作成していただきありがとうございます。続行するには、メールアドレスを確認してください。",
+                "thank_you": "ENGAGEへようこそ。アカウントを作成していただきありがとうございます。続行するには、以下のリンクをクリック、またはタップしてメールアドレスを確認してください。",
                 "verify": "メールアドレスを確認してください",
-                "having_trouble": "[メールアドレスの確認]ボタンをクリックできない場合は、URLをコピーしてウェブブラウザに貼り付けてください。{{url}}.",
-                "getting_started": "開始に役立ついくつかのチュートリアルビデオへのリンクを次に示します。",
+                "having_trouble": "次のアドレスをコピーして、ブラウザに貼り付けることもできます。{{url}}.",
+                "getting_started": "開始に助けが必要な場合は、ビデオチュートリアルをご覧ください。",
                 "tutorials_link": "チュートリアルを表示",
-                "faq": "行き詰まってしまった場合は、こちらのFAQで答えを見つけることができます。",
+                "faq": "また、包括的なドキュメントや、FAQ を表示することもできます。",
                 "faq_link": "よくある質問（FAQ）を表示",
                 "subject-vs": "VIVEセッションへようこそ！",
                 "title-vs": "VIVEセッションへようこそ",
-                "thank_you-vs": "VIVEセッションのアカウントを作成していただきありがとうございます。続行するにはメールアドレスをご確認ください。"
+                "thank_you-vs": "VIVEセッションのアカウントを作成していただきありがとうございます。続行するにはメールアドレスをご確認ください。",
+                "documentation_link": "ドキュメントを表示"
             }
         },
         "events": {
             "attendance-request-denied": {
                 "subject": "イベント{{title}}の出席が拒否されました",
                 "title": "{{title}}の出欠の返事リクエストが拒否されました",
-                "denied": "ホストによりイベント{{title}}への参加リクエストが拒否されました。"
+                "denied": "{{title}}へのリクエストが拒否されました。 主催者が{{title}}のイベントへの参加リクエストを拒否しました。",
+                "automatic_email": "これは自動送信メールです。このメールアドレスに直接返信しないでください。"
             },
             "attendance-removed": {
                 "subject": "イベント{{title}}の出席が削除されました",
-                "title": "{{title}}の{{status}}一覧から削除されました",
-                "message": "ホストによりこのイベントの{{status}}リストから削除されました。",
-                "automatic_email": "これは自動メールです。このメールアドレスに直接返信しないでください。"
+                "title": "イベントの主催者があなたを登録リストから削除しました",
+                "message": "あなたは、{{title}}の{{status}}リストから削除されました。",
+                "automatic_email": "これは自動メールです。このメールアドレスに直接返信しないでください。",
+                "message_2": "主催者は、このイベントの{{status}}リストからあなたを削除しました。 イベントが満席であるか、登録手続きが未完了であった可能性があります。 イベントリストに追加情報が記載されている場合もあります。"
             },
             "cancelled": {
                 "subject": "イベント{{title}}がキャンセルされました",
                 "title": "イベント{{title}}がキャンセルされました",
-                "message": "参加登録済みのイベント{{title}}を主催者がキャンセルしました。",
-                "feedback": "イベントに関する質問、コメント、フィードバックは、イベント主催者の{{name}}までお送りください。"
+                "message": "あなたが参加登録していたイベント{{title}}は、主催者によってキャンセルされました。",
+                "feedback": "イベントに関する質問、コメント、フィードバックは、イベント主催者の{{name}}までお送りください。",
+                "automatic_email": "これは自動送信メールです。このメールアドレスに直接返信しないでください。"
             },
             "attendance": {
                 "subject": "イベント{{title}}の出席が確認されました",
@@ -1366,20 +1398,41 @@
                 "information": "このイベントの詳細については、次のリンクをクリックしてください。{{url}}.",
                 "feedback": "イベントに関する質問、コメント、フィードバックは、イベント主催者の{{name}}までお送りください。",
                 "cancel": "このイベントに参加できない場合は、いつでも参加をキャンセルできます。",
-                "message": "{{title}}にご登録いただきありがとうございます。このイベントの開催は{{starts_at_date}}の{{starts_at_time}}{{timezone}}で、予定時間は{{duration}}です。"
+                "message": "{{title}}にご登録いただきありがとうございます。このイベントの開催は{{starts_at_date}}の{{starts_at_time}}{{timezone}}で、予定時間は{{duration}}です。",
+                "title_concert": "{{title}}へのご参加を承認しました",
+                "message_concert": "イベントの詳細:",
+                "concert_starts": "{{starts_at_date}} at {{starts_at_time}} {{timezone}}",
+                "concert_duration": "イベント終了予定まで：{{duration}}",
+                "what_to_do_before_label": "イベント参加に必要なこと：",
+                "what_to_do_before_1": "{{app_name}} appをインストール。手順は、{{download}}で確認できます",
+                "what_to_do_before_2": "アプリにログインして、アバターをデザインします。 イベントによっては、限定衣装を選べる場合があります。 手順は、{{avatar_link}}で確認できます",
+                "what_to_do_before_3": "あなた自身のプライベートセッションを試すことをお勧めします。こうすることで操作に慣れ、イベント当日は楽しむことに集中できます。 詳細については、{{session_link}}を参照してください",
+                "what_to_do_label": "イベント当日に行うこと",
+                "what_to_do_1": "デバイスが完全に充電されていることを確認してください。 バッテリー切れでイベントの途中で退席になることは、最も避けたいことです。",
+                "what_to_do_2": "イベントの開始予定時刻の数分前に、アプリにログインしてイベントのページに移動します。イベントがライブになると、参加できます。詳細については、{{join_link}} を参照してください",
+                "withdraw": "このイベントに参加できない場合は、{{withdraw_link}}で参加取り消しの方法をご覧ください。",
+                "create_your_avatar": "アバターの作成",
+                "start_your_session": "初めてのセッションを開始",
+                "join_event": "イベントに参加",
+                "withdraw_label": "イベントから退席",
+                "title_concert_2": "ご登録ありがとうございます。 イベントの詳細は以下のとおりです。：",
+                "concert_duration_2": "イベント終了予定まで：{{duration}}",
+                "what_to_do_before_label_2": "このイベントの詳細については、以下をご覧ください。：",
+                "withdraw_2": "このイベントに参加できない場合は、上記のリンクからいつでも参加をキャンセルできます。"
             },
             "reschedule": {
                 "subject": "イベント{{title}}のスケジュールが変更になりました",
                 "title": "イベント{{title}}のスケジュールが変更されました。",
                 "message": "参加登録済みの{{title}}の日時を主催者が更新しました。",
-                "information": "このイベントの詳細については、このリンク{{url}}をクリックしてください。",
-                "cancel": "このイベントに参加できない場合は、いつでも参加をキャンセルできます。",
+                "information": "このイベントの詳細については、次のリンクをクリックまたはタップしてください。： {{url}}.",
+                "cancel": "このイベントに参加できなくなった場合は、上記のリンクでいつでも参加を取り消すことができます。",
                 "new_date": "新しい予定日時は{{starts_at_date}}の{{starts_at_time}}{{timezone}}です。",
-                "feedback": "イベントに関する質問、コメント、フィードバックは、イベント主催者の{{name}}までお送りください。"
+                "feedback": "イベントに関する質問、コメント、フィードバックは、イベント主催者の{{name}}までお送りください。",
+                "automatic_email": "これは自動送信メールです。このメールアドレスに直接返信しないでください。"
             },
             "attendance-reminder": {
-                "subject": "イベント{{title}}はあと1日で始まります",
-                "title": "イベント{{title}}はあと1日で始まります",
+                "subject": "ご登録いただいたENGAGEイベントがまもなく始まります。",
+                "title": "ご登録いただいたENGAGEイベントがまもなく始まります。",
                 "message": "これは参加登録済みのイベント{{title}}のリマインダーメールです。",
                 "event_date_time": "イベントは、翌日{{starts_at_date}}の{{starts_at_time}}{{timezone}}に開始されます。",
                 "information": "イベントにアクセスして詳細を確認するには、このリンクにアクセスしてください - {{url}}。",
@@ -1391,21 +1444,22 @@
                 "information_attending": "参加を表明したため、このイベントに関するメッセージを受け取りました。",
                 "information_waiting": "参加をリクエストしたため、このイベントに関するメッセージを受け取りました。",
                 "subject": "{{title}}のイベント主催者からのメッセージ。",
-                "title": "{{name}}（イベント主催者）からのメッセージ",
+                "title": "{{name}}（イベント主催者）からのメッセージ：",
                 "information": "このイベントの詳細については、次のリンクをクリックしてください。{{url}}.",
-                "feedback": "イベントに関する質問、コメント、フィードバックは、イベント主催者の{{name}}までお送りください。"
+                "feedback": "イベントに関する質問、コメント、フィードバックは、イベント主催者の{{name}}までお送りください。",
+                "automatic_email": "これは自動送信メールです。このメールアドレスに直接返信しないでください。"
             },
             "created": {
                 "subject": "イベント{{title}}が作成されました",
                 "title": "イベント{{title}}が作成されました",
                 "information": "このイベントの詳細については、次のリンクをクリックしてください。{{url}}.",
                 "feedback": "イベントに関する質問、コメント、フィードバックは、イベント主催者の{{name}}（{{email}}）までお送りください。",
-                "message": "主催者が新しいイベント{{title}}を作成しました。予定日時は{{starts_at_date}}の{{starts_at_time}}{{timezone}}で、予定時間は{{duration}}です。"
+                "message": "イベント{{title}}が主催者によって作成されました。<br>予定時刻は{{starts_at_date}} {{starts_at_time}} {{timezone}}で、{{duration}}の予定です。"
             },
             "attendance-request": {
                 "subject": "{{title}}への出席リクエスト",
                 "title": "{{title}}の出欠の返事リクエスト",
-                "message": "次の人がイベントへの参加をリクエストしています",
+                "message": "次の人があなたのイベント{{title}}への参加をリクエストしています",
                 "button": "イベントに移動",
                 "name": "名前",
                 "country": "国",
@@ -1466,7 +1520,9 @@
                 "no_password": "パスワードなし",
                 "type_event": "イベント",
                 "all_users_are_host": "全ユーザーが共同ホスト",
-                "enter_new_password": "新しいパスワードを入力"
+                "enter_new_password": "新しいパスワードを入力",
+                "password_access_to_session": "セッションへアクセスするためのパスワード",
+                "locked": "ロック済"
             },
             "button": {
                 "join": "参加",
@@ -1498,7 +1554,7 @@
                 "session_expired_header": "セッションの有効期限切れ"
             },
             "text": {
-                "login_title": "サインイン",
+                "login_title": "ログイン",
                 "new_user_header": "アカウントが必要です？",
                 "forgot_password_header": "パスワードをお忘れですか？",
                 "register_title": "アカウントを作成",
@@ -1507,8 +1563,11 @@
                 "session_expired": "セッションの有効期限が切れています。続行するにはログインしてください。",
                 "failed_send_verification_email": "ユーザー確認メールを送信できませんでした。もう一度お試しください。",
                 "account_needs_verification": "アカウントを確認する必要があります。<br>確認リンクをメールアカウントへ再送信しました。",
-                "verification_link_expired": "確認リンクの有効期限が切れています。<br>最新の確認メールリンクをクリックしていることを確認してください。",
-                "verification_link_already_sent": "確認リンクは、過去5分以内にメールアドレスに送信されています。"
+                "verification_link_expired": "確認リンクの有効期限が切れています。{{break}} 最新の確認メールリンクをクリックしていることを確認してください。",
+                "verification_link_already_sent": "確認リンクは、過去{{minutes}}分以内にメールアドレスに送信されています。",
+                "sso_type_login": "このアカウントではシングルサインオン（SSO）の使用が必要です",
+                "password_type_login": "このアカウントではシングルサインオン（SSO）を使用しません",
+                "or": "または"
             },
             "label": {
                 "username_email": "ユーザー名またはメールアドレス",
@@ -1523,10 +1582,13 @@
                 "accept_terms_of_service_vive_sessions": "<a href=\"https://business.viveport.cn/documents/cn_cn_zhcn/terms/terms-of-use\" target=\"_blank\">利用規約</a> と<a href=\"https://www.viveport.com/cn-privacy-policy\" target=\"_blank\">プライバシーポリシー</a>に同意します。"
             },
             "button": {
-                "sign_in": "サインイン",
+                "sign_in": "ログイン",
                 "create_account": "サインアップ",
                 "click_here": "こちらをクリック",
-                "login": "ログイン"
+                "login": "ログイン",
+                "forgot_password": "パスワードをお忘れですか？",
+                "sso_login": "SSOでログイン",
+                "password_login": "パスワードでログイン"
             }
         }
     },
@@ -1564,7 +1626,9 @@
     "events": {
         "ui": {
             "link": {
-                "goto_events": "イベントに移動"
+                "goto_events": "イベントに移動",
+                "goto_contact_us": "参加者をもっと増やしたいですか? 試す：",
+                "enterprise": "Enterprise"
             },
             "notification": {
                 "message_sent": "メッセージは送信されました。",
@@ -1751,10 +1815,10 @@
                 "request_will_be_notified": "主催者が参加リクエストを承認すると、メールで通知されます。",
                 "event_guide_alert_text": "Engageでイベントを主催するためのガイドを表示",
                 "overbooking_warning": "オーバーブッキング警告",
-                "overbooking_warning_modal_text_1": "現在、ENGAGEのバーチャルリアリティセッションに参加できるユーザー数は、技術的な制限により50人までです。",
-                "overbooking_warning_modal_text_2": "また、商業用の上限もあります。ENTERPRISEアカウントは50ユーザー。PLUSアカウントは30ユーザー。",
-                "overbooking_warning_modal_text_3": "イベントの最大登録数が商業用ユーザー定員を超える数に設定すると、一部のユーザーは当日イベントに参加できなくなります。",
-                "overbooking_warning_modal_text_4": "より多くのユーザーが参加するイベントを開催するには、次にアクセスしてください：",
+                "overbooking_warning_modal_text_1": "最大登録数に設定した値が、イベントに参加できるユーザーの数を超えています。",
+                "overbooking_warning_modal_text_2": "{{sub_type}}アカウントの最大数は{{max_attendees}}です。イベントに参加する人々は参加順に入場し、 アカウントで設定された制限に達すると、他の人は参加できなくなります。",
+                "overbooking_warning_modal_text_3": "登録した人の一部が参加できないと思われる場合は、意図的にオーバーブッキングすることもできます。",
+                "overbooking_warning_modal_text_4": "オーバーブッキングの詳細については、以下をご覧ください。：",
                 "overbooking_warning_text_1": "xxxxx",
                 "max_registrations": "最大登録数",
                 "max_registrations_tooltip": "イベントに登録できるユーザーの最大数。<br /> これはPLUSアカウントの場合は30、ENTERPRISEアカウントでは50に制限されています。<br />詳細については、イベント ガイドを参照してください。",
@@ -1793,7 +1857,22 @@
                 "vive_event_access_granted_content": "あなたのチケットが認証され、このイベントへの参加が可能になりました。",
                 "redeem_code_expired_title": "有効期限切れの引き換えコード",
                 "redeem_code_expired_text": "このイベントに参加するために使用された引き換えコードの有効期限が切れています。参加には新しいコードが必要です。",
-                "buy_new_redeem_code": "新しい引き換えコードを入手するには、チケットを以下から購入してください。："
+                "buy_new_redeem_code": "新しい引き換えコードを入手するには、チケットを以下から購入してください。：",
+                "only_registered_attendees": "登録済みのユーザーのみがこのイベントに参加できます。",
+                "free_event": "無料イベント",
+                "registration_closes": "登録締め切り日：{{date}}",
+                "heading": "Fatboy Slimの\"Eat Sleep VR Repeat\" - メタバース内",
+                "content_1": "Fatboy Slimは、常に楽しく新しいことを追求してきました。この類のないイベントでは、他のVR コンサートとは異なり、これまで経験したことのない没入型のバーチャルリアリティ体験をお楽しみいただけます！",
+                "content_2": "45分間の冒険はあなたのアバターを、ドライブインダイナーから始まる友人やファンとの交流を含んだFatboy Slimの世界へ導きます。",
+                "content_3": "ファンと一緒にNormのおちゃめなバスに乗ってダンスを楽しみましょう。踊っていないときは、バーチャルなNormanの心へ潜り込んで驚きの体験を！",
+                "content_4": "ENGAGE – クリエイター、教育者、ビジネスプロフェッショナル向けの機能豊富なマルチユーザーメタバースプラットフォーム。 このバーチャルコンサートは、VR、PCVRヘッドセット、またはQuest 2 などの最新のスタンドアロンヘッドセットのいずれかで最高の体験をお届けします。2020年より前に販売されたモバイルデバイスやスタンドアロンヘッドセットは対応外です。",
+                "content_5": "ご希望の時間を以下から選択して、Fatboy Slimのバーチャル体験を開始しましょう。：",
+                "schedule": "スケジュール",
+                "free_entry": "入場無料",
+                "sold_out": "完売",
+                "almost_sold_out": "完売間近",
+                "tickets_available": "チケット有り",
+                "register": "登録"
             },
             "label": {
                 "create_new": "新しいイベントを作成",
@@ -1837,7 +1916,10 @@
                 "none": "無し",
                 "runtime": "ランタイムアクティビティスケジュール",
                 "group_visibility": "グループの可視性",
-                "vive_redeem_code": "引き換えコード"
+                "vive_redeem_code": "引き換えコード",
+                "type_concert": "コンサート",
+                "third_party_optin": "{{partner}}からの直接連絡を可能にする",
+                "third_party_optin_2": "オプトインすると、{{partner}}から不定期の最新情報や特別オファーも届きます。 当社は、お客様の電子メール アドレスを他の第三者に販売または配布することはありません。<a href=′/terms′ target=′_blank′で>プライバシーポリシー</a>をご覧ください。"
             },
             "button": {
                 "delete": "イベントを削除",

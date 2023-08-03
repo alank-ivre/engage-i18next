@@ -9,7 +9,8 @@
             "auth_sso_token_invalid": "Le token utilisateur {{provider}} fourni n′est pas valide",
             "auth_sso_token_expired": "Le token utilisateur {{provider}} fourni a expiré",
             "auth_registration_sso_error": "Un problème est survenu lors de l′enregistrement de l′utilisateur utilisant le SSO {{provider}}",
-            "auth_login_sso_error": "Un problème est survenu lors de la connexion de l′utilisateur utilisant le SSO {{provider}}"
+            "auth_login_sso_error": "Un problème est survenu lors de la connexion de l′utilisateur utilisant le SSO {{provider}}",
+            "email_mismatch": "Nous n′avons pas pu authentifier votre connexion SSO, car l′e-mail de votre compte ENGAGE ne correspond pas à l′e-mail de votre fournisseur d′identité de connexion unique."
         }
     },
     "contents": {
@@ -48,7 +49,7 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Créer et modifier des commentaires sur le Web {{web_url}}"
+                    "info_banner": "Créer et modifier des commentaires sur le Web {{web_url}} "
                 }
             },
             "text": {
@@ -101,7 +102,7 @@
     "menu": {
         "ui": {
             "text": {
-                "engage_trademark_footer": "ENGAGE™ est une marque commerciale d′Immersive VR Education© 2020. Tous droits réservés."
+                "engage_trademark_footer": "© {{year}} ENGAGE XR, Ltd. Tous droits réservés. ENGAGE est une marque déposée d′ENGAGE XR, Ltd."
             },
             "button": {
                 "download_engage": "Télécharger ENGAGE",
@@ -181,18 +182,23 @@
             "text": {
                 "password_reset": "Réinitialisation du mot de passe",
                 "reset_password": "Réinitialiser le mot de passe",
-                "login_route": "ou aller à"
+                "login_route": "ou aller à",
+                "security_message": "Pour des raisons de sécurité, vous devez modifier votre mot de passe avant d′accéder à ENGAGE.",
+                "email_message": "Saisissez l′adresse e-mail liée à votre compte ENGAGE, et vous recevrez des instructions expliquant comme réinitialiser votre mot de passe."
             },
             "label": {
                 "email": "E-mail",
-                "email_placeholder": "Votre adresse e-mail",
+                "email_placeholder": "Saisissez votre adresse e-mail",
                 "password": "Mot de passe",
                 "confirm_password": "Confirmer le mot de passe"
             },
             "button": {
                 "reset_my_password": "Réinitialiser mon mot de passe",
                 "reset_password": "Réinitialiser le mot de passe",
-                "login": "identification"
+                "login": "identification",
+                "send": "Envoyer",
+                "cancel": "Annuler",
+                "return": "Retourner à la page de connexion"
             }
         }
     },
@@ -268,7 +274,7 @@
                 "free_trial_note_4": "Vous ne serez pas facturé avant la fin de votre essai gratuit. Nous vous demandons vos préférences de facturation et vos informations de paiement afin de vous offrir une expérience d′abonnement transparente. Vous pouvez annuler votre abonnement à tout moment avant le {{trial_end_date}}. Nous vous enverrons également un rappel {{num_days}} jours avant la fin de votre essai gratuit.",
                 "supported_payments": "Modes de paiement pris en charge",
                 "auto_renew": "Renouvellement automatique",
-                "sub_payment_starting_at": "Paiement de l′abonnement commençant le {{date_fin_essai}}",
+                "sub_payment_starting_at": "Paiement de l′abonnement commençant le {{date_trial_ends}}",
                 "congratulations": "Félicitations",
                 "thanks_for_the_sub": "Merci pour votre inscription",
                 "restart_the_app": "Redémarrez l′application ENGAGE sur votre ordinateur de bureau pour accéder à votre nouveau compte <br>PLUS. Vous pourrez ainsi profiter des nouvelles fonctionnalités et du nouveau contenu !",
@@ -311,7 +317,8 @@
                 "upload_3d_models_pro": "Sur demande. Des frais supplémentaires peuvent s′appliquer.",
                 "dependant_on_enterprise_size": "Oui - Montant dépendant de la taille du compte ENTREPRISE",
                 "custom_content_menu_enterprise": "Oui - Choisir le contenu à afficher pour les utilisateurs",
-                "full": "Complet"
+                "full": "Complet",
+                "vat_modal_body": "Impossible de valider votre numéro de TVA. Le numéro de TVA doit correspondre au format en vigueur dans votre pays. Consultez le <a href=\"{{vat_link}}\" target=\"_blank\">format requis pour les numéros de TVA ici</a>."
             },
             "label": {
                 "billing_info_title": "Informations de facturation",
@@ -383,7 +390,9 @@
                 "custom_environment_uploads": "Téléchargements d′environnements personnalisés",
                 "custom_branding": "Branding personnalisé",
                 "custom_content_menu": "Menu de contenu personnalisé",
-                "custom_hosting_options": "Options d′hébergement personnalisées"
+                "custom_hosting_options": "Options d′hébergement personnalisées",
+                "vat_modal_title": "Format du numéro de TVA",
+                "vat_modal_button": "Voir le format du numéro de TVA"
             },
             "button": {
                 "save_billing": "Enregistrer les informations de facturation",
@@ -451,7 +460,7 @@
                 "please_provide_details": "Veuillez indiquer le titre.",
                 "please_provide_unity_resource_name": "Veuillez indiquer le nom de la ressource Unity.",
                 "please_provide_category": "Veuillez indiquer la catégorie.",
-                "bundle": "Bundle",
+                "bundle": "Paquet",
                 "manifest": "Manifeste",
                 "create_step_1": "Créer - Étape 01",
                 "create_step_2": "Créer - Étape 02",
@@ -500,13 +509,12 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Créer et modifier des formulaires sur le Web {{web_url}}"
+                    "info_banner": "Créer et modifier des formulaires sur le Web {{web_url}} "
                 }
             },
             "text": {
                 "allow_deliver": "Permettre à un autre utilisateur de procéder à la distribution",
-                "answer_one": "Réponse",
-                "answer_other": "Réponses",
+                "answer": "Réponse | Réponses",
                 "answer_name_placeholder": "P. ex. Ma première réponse ?",
                 "attempts_remaining": "Tentatives restantes",
                 "choose_question": "Choisir la question...",
@@ -715,11 +723,26 @@
                 "confirm_delete_account": "Voulez-vous vraiment supprimer votre compte ?",
                 "confirm_delete_account_details": "<p>Cela annulera <strong>définitivement</strong> toutes les informations et les notes ainsi que tous les médias, les liens, les évènements et les contenus associés à votre compte.</p>",
                 "error_sending_user_email": "Erreur lors de l′envoi de l′e-mail de suppression.",
-                "error_deleting_user": "Erreur lors de la suppression du compte."
+                "error_deleting_user": "Erreur lors de la suppression du compte.",
+                "min_character_length": "Au moins {{min_chars}} characters.",
+                "max_character_length": "{{max_chars}} characters maximum.",
+                "password_strength_weak": "Faible",
+                "password_strength_medium": "Moyen",
+                "password_strength_good": "Bon",
+                "password_strength_strong": "Fort",
+                "password_strength_very_strong": "Très fort",
+                "password_valid": "Vous devez saisir un mot de passe valide.",
+                "password_common": "Ce mot de passe a été détecté comme étant couramment utilisé.<br>Pour des raisons de sécurité, veuillez en saisir un autre.",
+                "sso_on": "L′authentification unique (SSO) est actuellement activée pour vous",
+                "sso_off": "L′authentification unique (SSO) est actuellement désactivée",
+                "sso_on_info": "Si vous avez des questions, veuillez contacter un administrateur du groupe d′entreprise {{name}}.",
+                "sso_off_info": "L′authentification unique est actuellement indisponible pour le groupe auquel vous appartenez. Pour plus d′informations, veuillez contacter le propriétaire du groupe Enterprise.",
+                "sso_enabled_email": "Vous ne pouvez pas modifier votre adresse e-mail lorsque l′authentification unique (SSO) est activée. Si vous avez des questions, veuillez contacter votre administrateur de groupe.",
+                "sso_enabled_password": "Vous ne pouvez pas modifier votre mot de passe lorsque l′authentification unique (SSO) est activée. Si vous avez des questions, veuillez contacter l′administrateur de votre groupe."
             },
             "label": {
                 "settings_title": "Paramètres",
-                "account_title": "Compte",
+                "account_title": "Sécurité et connexion",
                 "change_email": "Modifier l′e-mail",
                 "change_password": "Modifier le mot de passe",
                 "subscription_title": "Abonnement",
@@ -759,7 +782,10 @@
                 "void": "Nul",
                 "status": "Statut",
                 "change_phone_number": "Modifier le numéro de portable",
-                "delete_account": "Supprimer le compte"
+                "delete_account": "Supprimer le compte",
+                "choose_new_password": "Choisir un nouveau mot de passe",
+                "sso": "Authentification unique (SSO)",
+                "privacy_title": "Confidentialité"
             },
             "button": {
                 "change_email": "Modifier l′e-mail",
@@ -789,7 +815,7 @@
                 "profile_info_wrong_data": "Veuillez vérifier les informations que vous avez saisies",
                 "username_already_exist": "Ce nom d′utilisateur n′est pas disponible. Veuillez en choisir un autre.",
                 "update_required": "Veuillez mettre à jour les champs suivants",
-                "account_verification_sent_new": "Un nouvel e-mail de vérification a été envoyé à l′adresse {{e}}-mail_address.",
+                "account_verification_sent_new": "Un nouvel e-mail de vérification a été envoyé à l′adresse {{email_address}}.",
                 "account_verification_failed_send": "L′envoi de l′e-mail de vérification de l′utilisateur a échoué. Veuillez réessayer.",
                 "account_verification_already_sent": "L′e-mail de vérification a déjà été envoyé. Veuillez attendre au moins {{minutes}} minutes et essayer à nouveau.",
                 "profile_data_required": "Nom d′utilisateur, Date de naissance, Nom"
@@ -817,8 +843,8 @@
                 "phone_verification_code_resent": "Le code de vérification a été renvoyé à : {{number}}. Ce code est valable pendant {{minutes}} minutes.",
                 "phone_verification_code_sms_content": "Votre code de vérification est : {{code}}. Ce code est valable pendant {{minutes}} minutes.",
                 "phone_verification_number_verified_already": "Ce numéro a déjà été vérifié.",
-                "phone_verification_code_sent_recently": "Vous devez attendre au moins {{secondes}} secondes avant d′obtenir un nouveau code de vérification.",
-                "phone_verification_number_updated_recently": "Vous devez attendre au moins {{secondes}} secondes avant de mettre à jour votre numéro de portable.",
+                "phone_verification_code_sent_recently": "Vous devez attendre au moins {{seconds}} secondes avant d′obtenir un nouveau code de vérification.",
+                "phone_verification_number_updated_recently": "Vous devez attendre au moins {{seconds}} secondes avant de mettre à jour votre numéro de portable.",
                 "provide_phone_number": "Pour continuer, vous devez fournir votre numéro de portable afin que nous puissions vérifier votre identité.",
                 "phone_number_verified_already": "Votre numéro de portable a déjà été vérifié."
             },
@@ -883,7 +909,7 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Ajouter et gérer les médias sur le Web {{web_url}}"
+                    "info_banner": "Ajouter et gérer les médias sur le Web {{web_url}} "
                 }
             },
             "text": {
@@ -1108,12 +1134,9 @@
                 "loading": "Chargement en cours...",
                 "retrieve_data_error": "Une erreur s′est produite lors de la récupération des données. Veuillez recharger l′écran pour continuer.",
                 "search_empty_list": "Aucun élément à afficher. Essayez un autre onglet ou modifiez les filtres de recherche.",
-                "minute_one": "{{count}} minute",
-                "minute_other": "{{count}} minutes",
-                "second_one": "{{count}} seconde",
-                "second_other": "{{count}} seconds",
-                "hour_one": "{{count}} heure",
-                "hour_other": "{{count}} hours",
+                "second": "secondes | 1 seconde | {{count}} seconds",
+                "minute": "minutes | 1 minute | {{count}} minutes",
+                "hour": "heures | 1 heure | {{count}} hours",
                 "pass": "Félicitations, vous avez réussi !",
                 "fail": "Vous avez échoué. Bonne chance pour la prochaine fois !",
                 "input_case_sensitive": "Cette saisie est sensible à la casse. Veuillez la vérifier.",
@@ -1132,7 +1155,7 @@
                 "no": "Non",
                 "terms_of_service": "Conditions de service",
                 "accept_and_continue": "En poursuivant, vous acceptez les",
-                "footer_trademark_text": "ENGAGE™ est une marque commerciale d′Immersive VR Education© 2020. Tous droits réservés.",
+                "footer_trademark_text": "© {{year}} ENGAGE XR, Ltd. Tous droits réservés. ENGAGE est une marque commerciale d′ENGAGE XR, Ltd.",
                 "datetime_time": "Heure",
                 "empty_list_message": "La liste est vide",
                 "js_time_length_parse_short": "{{minutes}}m {{seconds}}s",
@@ -1264,9 +1287,9 @@
     "emails": {
         "groups": {
             "group-invitation": {
-                "title": "{{inviter_first_name}} {{inviter_last_name}} et votre équipe vous attendent et espèrent que vous rejoindrez le groupe ENGAGE - {{group_name}}",
-                "response": "Pour rejoindre ce groupe, rendez-vous sur ce lien : {{url}}",
-                "subject": "{{inviter_name}} vous a invité(e) à rejoindre le groupe ENGAGE - {{group_name}}",
+                "title": "{{inviter_first_name}} {{inviter_last_name}} et son équipe attendent que vous rejoigniez le groupe {{group_name}}",
+                "response": "Pour rejoindre ce groupe ENGAGE, rendez-vous sur ce lien : {{url}}",
+                "subject": "Vous avez été invité(e) à rejoindre un nouveau groupe",
                 "learn_more": "Pour en savoir plus sur ENGAGE, rendez-vous sur ce lien :<br> <a href=\"https://engagevr.io\">https://engagevr.io</a>",
                 "title-vs": "{{inviter_first_name}} {{inviter_last_name}} et votre équipe vous attendent et espèrent que vous rejoindrez le groupe VIVE Sessions - {{group_name}}",
                 "subject-vs": "{{inviter_name}} vous a invité(e) à rejoindre le groupe VIVE Sessions - {{group_name}}",
@@ -1280,7 +1303,7 @@
                 "reminder_link": "fonctionnalités super puissantes",
                 "contact": "N′oubliez pas que si vous avez besoin d′aide, vous pouvez toujours nous contacter à {{url}}.",
                 "title": "Mois gratuit se terminant le {{ends_at_date}} à {{ends_at_time}} {{timezone}}",
-                "reminder": "Pour rappel, votre mois gratuit se termine le {{ends_at_date}} à {{ends_at_time}} {{timezone}}. Nous espérons que vous continuerez à communiquer, enseigner et apprendre en réalité virtuelle, en vous connectant sur {{url}} d′ENGAGE PLUS.",
+                "reminder": "Votre mois d′essai gratuit de ENGAGE se termine le {{ends_at_date}} à {{ends_at_time}} {{timezone}}. Merci pour votre abonnement à ENGAGE Plus. Nous espérons que vous appréciez l′expérience.",
                 "thanks-vs": "Merci de vous être abonné(e) à VIVE Sessions PRO. Nous espérons que vous appréciez cette expérience.",
                 "reminder-vs": "Pour rappel, votre mois gratuit se termine le {{ends_at_date}} à {{ends_at_time}} {{timezone}}. Nous espérons que vous continuerez à communiquer, enseigner et apprendre en réalité virtuelle, en vous connectant sur {{url}} de Vive Sessions PLUS."
             }
@@ -1298,30 +1321,35 @@
                 "terms_text": "Conditions générales",
                 "policy": "Politique de confidentialité",
                 "contact": "Contactez-nous",
-                "trademark": "ENGAGE™ est une marque commerciale d′Immersive VR Education© 2020.",
+                "trademark": "© {{year}} ENGAGE XR, Ltd. Tous droits réservés. ENGAGE est une marque déposée d′ENGAGE XR, Ltd.",
                 "rights": "Tous droits réservés.",
                 "trademark-vs": "VIVE Sessions© 2020."
             }
         },
         "account": {
             "reset-password": {
-                "subject": "Réinitialiser le mot de passe",
+                "subject": "Nous avons reçu une demande de réinitialisation de votre mot de passe",
                 "title": "Demande de réinitialisation du mot de passe",
-                "requested": "Une réinitialisation du mot de passe a récemment été demandée pour votre compte.",
-                "assistance": "Les changements de mot de passe demandés via ENGAGE ne sont envoyés qu′à l′e-mail de contact du compte. Si vous craignez que quelqu′un tente d′obtenir un accès non autorisé à votre compte, n′hésitez pas à réinitialiser votre mot de passe. Vous pouvez aussi nous contacter à l′adresse {{url}} pour obtenir de l′aide.",
+                "requested": "Nous avons reçu une demande de réinitialisation de votre mot de passe.",
+                "assistance": "Si vous êtes à l′origine de cette demande, accédez au lien suivant pour réinitialiser votre mot de passe :",
                 "reset": "Réinitialiser le mot de passe",
-                "having_trouble": "Si le lien « Réinitialiser le mot de passe » ne fonctionne pas, copiez et collez l′URL dans votre navigateur Web : {{url}}.",
-                "assistance-vs": "Les changements de mot de passe demandés via VIVE Sessions ne sont envoyés qu′à l′e-mail de contact du compte. Si vous craignez que quelqu′un tente d′obtenir un accès non autorisé à votre compte, n′hésitez pas à réinitialiser votre mot de passe. Vous pouvez aussi nous contacter à l′adresse {{url}} pour obtenir de l′aide."
+                "having_trouble": "Vous pouvez également copier et coller l′adresse suivante dans votre navigateur Web : {{url}}",
+                "assistance-vs": "Les changements de mot de passe demandés via VIVE Sessions ne sont envoyés qu′à l′e-mail de contact du compte. Si vous craignez que quelqu′un tente d′obtenir un accès non autorisé à votre compte, n′hésitez pas à réinitialiser votre mot de passe. Vous pouvez aussi nous contacter à l′adresse {{url}} pour obtenir de l′aide.",
+                "did_not_request": "Si vous n′avez pas demandé la réinitialisation de votre mot de passe, vous pouvez ignorer cet e-mail.",
+                "requested_sso": "Nous avons reçu une demande de réinitialisation de mot de passe pour le compte ENGAGE suivant : {{email}}.",
+                "assistance_sso": "Votre compte est paramétré pour utiliser l′authentification unique (SSO) lors de l′authentification de connexion. Si vous avez des doutes sur la réinitialisation de votre mot de passe SSO, contactez le propriétaire du groupe d′entreprise suivant : {{group_owner}} de {{group_name}}."
             },
             "email-verification": {
-                "subject": "Veuillez vérifier votre adresse e-mail pour ENGAGE",
+                "subject": "Veuillez vérifier votre adresse e-mail.",
                 "title": "Veuillez vérifier votre adresse e-mail",
-                "message": "Veuillez cliquer sur le lien ci-dessous pour vérifier votre adresse e-mail.",
+                "message": "Merci d′avoir créé votre compte ENGAGE. Pour continuer, veuillez accéder au lien ci-dessous pour vérifier votre adresse e-mail.",
                 "verify": "Vérifier votre adresse e-mail",
-                "having_trouble": "Si le lien « Vérifier votre adresse e-mail » ne fonctionne pas, copiez et collez l′URL dans votre navigateur Web : {{url}}.",
-                "contact": "Si vous n′avez pas demandé ce changement, veuillez contacter {{support_e}}-mail_address.",
+                "having_trouble": "Vous pouvez également copier et coller l′adresse suivante dans votre navigateur Web : {{url}}.",
+                "contact": "Si vous n′avez pas demandé ce changement, veuillez contacter {{support_email_address}}.",
                 "subject-vs": "Veuillez vérifier votre adresse e-mail pour VIVE Sessions",
-                "message-vs": "Veuillez cliquer sur le lien ci-dessous pour vérifier votre adresse e-mail."
+                "message-vs": "Veuillez cliquer sur le lien ci-dessous pour vérifier votre adresse e-mail.",
+                "getting_started": "Si vous avez besoin d′aide pour démarrer, vous pouvez consulter nos tutoriels vidéo :",
+                "tutorials_link": "Consulter les tutoriels"
             },
             "deleted-user": {
                 "subject": "Votre compte {{region_name}} a été supprimé.",
@@ -1330,62 +1358,87 @@
                 "personal_data": "Toutes vos informations personnelles ont été effacées de nos systèmes."
             },
             "new-user": {
-                "subject": "Bienvenue chez ENGAGE !",
+                "subject": "Bienvenue sur ENGAGE ! Veuillez vérifier votre adresse e-mail.",
                 "title": "Bienvenue chez ENGAGE",
-                "thank_you": "Merci d′avoir créé un compte ENGAGE. Veuillez confirmer votre adresse e-mail pour continuer.",
+                "thank_you": "Bienvenue sur ENGAGE. Merci d′avoir créé un compte. Pour continuer, veuillez confirmer votre adresse e-mail en cliquant sur le lien ci-dessous.",
                 "verify": "Vérifier votre adresse e-mail",
-                "having_trouble": "Si le lien « Vérifier votre adresse e-mail » ne fonctionne pas, copiez et collez l′URL dans votre navigateur Web : {{url}}.",
-                "getting_started": "Pour commencer, voici un lien vers des tutoriels vidéo :",
+                "having_trouble": "Vous pouvez également copier et coller l′adresse suivante dans votre navigateur Web : {{url}}.",
+                "getting_started": "Si vous avez besoin d′aide pour démarrer, vous pouvez consulter nos tutoriels vidéo :",
                 "tutorials_link": "Voir les tutoriels",
-                "faq": "Si vous rencontrez des difficultés, vous pourrez trouver des réponses dans notre FAQ ici :",
+                "faq": "Vous pouvez également consulter notre documentation détaillée ou notre FAQ ici :",
                 "faq_link": "Voir la FAQ",
                 "subject-vs": "Bienvenue chez VIVE Sessions !",
                 "title-vs": "Bienvenue chez VIVE Sessions",
-                "thank_you-vs": "Merci d′avoir créé un compte VIVE Sessions. Veuillez confirmer votre adresse e-mail pour continuer."
+                "thank_you-vs": "Merci d′avoir créé un compte VIVE Sessions. Veuillez confirmer votre adresse e-mail pour continuer.",
+                "documentation_link": "Consulter la documentation"
             }
         },
         "events": {
             "attendance-request-denied": {
                 "subject": "Présence à l′événement {{title}} refusée",
                 "title": "Demande de RSVP refusée pour {{title}}",
-                "denied": "L′hôte a refusé votre demande de participation à l′événement {{title}}."
+                "denied": "Demande refusée pour {{title}}. L′hôte a refusé votre demande de participation à l′événement {{title}}.",
+                "automatic_email": "Ceci est un e-mail automatique. Ne répondez pas directement à cette adresse."
             },
             "attendance-removed": {
                 "subject": "Présence à l′événement {{title}} supprimée",
-                "title": "Vous avez été retiré(e) de la liste {{status}} de {{title}}",
-                "message": "L′hôte vous a retiré(e) de la liste {{status}} de cet événement.",
-                "automatic_email": "Il s′agit d′un e-mail automatique. Ne répondez pas directement à cette adresse."
+                "title": "L′hôte a retiré votre nom de la liste des inscrits",
+                "message": "L′hôte vous a retiré(e) de la liste {{status}} de l′événement {{title}}.",
+                "automatic_email": "Il s′agit d′un e-mail automatique. Ne répondez pas directement à cette adresse.",
+                "message_2": "L′hôte vous a retiré(e) de la liste {{status}} de cet événement. Il se peut que l′événement soit complet ou que vous n′ayez pas réalisé toutes les étapes nécessaires à l′inscription. Des informations supplémentaires peuvent être disponibles sur la page de l′événement."
             },
             "cancelled": {
                 "subject": "L′événement {{title}} a été annulé",
                 "title": "L′événement {{title}} a été annulé",
-                "message": "L′organisateur a annulé l′événement {{title}}, auquel vous êtes inscrit(e).",
-                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{nom}}."
+                "message": "L′événement {{title}}, auquel vous êtes inscrit(e), a été annulé par l′organisateur.",
+                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{name}}.",
+                "automatic_email": "Ceci est un e-mail automatique. Ne répondez pas directement à cette adresse."
             },
             "attendance": {
                 "subject": "Présence à l′événement {{title}} confirmée",
                 "title": "Présence à l′événement {{title}} confirmée",
                 "information": "Pour plus d′informations sur cet événement, rendez-vous sur ce lien : {{url}}.",
-                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{nom}}.",
+                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{name}}.",
                 "cancel": "Si vous ne pouvez pas assister à cet événement, vous pouvez annuler votre participation à tout moment.",
-                "message": "Merci pour votre inscription à {{title}}. L′événement est prévu le {{starts_at_date}} à {{starts_at_time}} {{timezone}} et doit durer {{duration}}."
+                "message": "Merci pour votre inscription à {{title}}. L′événement est prévu le {{starts_at_date}} à {{starts_at_time}} {{timezone}} et doit durer {{duration}}.",
+                "title_concert": "Votre inscription à l′événement {{title}} est confirmée",
+                "message_concert": "Voici les détails de l′événement :",
+                "concert_starts": "{{starts_at_date}} à {{starts_at_time}} {{timezone}}",
+                "concert_duration": "Durée estimée de l′événement : {{duration}}",
+                "what_to_do_before_label": "Choses à faire avant l′événement",
+                "what_to_do_before_1": "Installer l′application {{app_name}}. Rendez-vous sur {{download}} pour obtenir des instructions.",
+                "what_to_do_before_2": "Connectez-vous à l′application et créez votre avatar. En fonction de l′événement, des vêtements exclusifs peuvent être disponibles. Rendez-vous sur {{avatar_link}} pour obtenir des instructions.",
+                "what_to_do_before_3": "Nous vous conseillons de lancer votre propre session privée. Ainsi, vous pouvez vous familiariser avec les commandes et vous pourrez profiter pleinement de l′expérience le jour de l′événement. Rendez-vous sur {{session_link}} pour plus d′informations.",
+                "what_to_do_label": "Choses à faire le jour de l′événement",
+                "what_to_do_1": "Assurez-vous que la batterie de votre dispositif est entièrement chargée. Cela évitera à votre expérience d′être interrompue en plein milieu à cause d′une batterie à plat.",
+                "what_to_do_2": "Quelques minutes avant le début de l′événement, connectez-vous à l′application et rendez-vous sur la page de l′événement. Lorsque l′événement commence, vous pourrez rejoindre la session. Rendez-vous sur {{join_link}} pour plus d′informations.",
+                "withdraw": "Nous espérons que vous apprécierez l’événement. Si vous ne pouvez pas y participer, vous trouverez les étapes à suivre pour annuler votre participation ici : {{withdraw_link}}",
+                "create_your_avatar": "Créer votre avatar",
+                "start_your_session": "Démarrer votre première session",
+                "join_event": "Participer à un événement",
+                "withdraw_label": "Retirer sa participation à un événement",
+                "title_concert_2": "Merci pour votre inscription. Voici les détails de l′événement :",
+                "concert_duration_2": "Durée attendue de l′événement : {{duration}}",
+                "what_to_do_before_label_2": "Pour plus d′informations sur l′événement, veuillez consulter :",
+                "withdraw_2": "Si vous ne pouvez pas participer à cet événement, vous pouvez cliquer sur le lien ci-dessus et annuler votre participation à tout moment."
             },
             "reschedule": {
                 "subject": "L′événement {{title}} a été reprogrammé",
                 "title": "L′événement {{title}} a été reprogrammé.",
                 "message": "L′organisateur a mis à jour la date/l′heure de {{title}}, événement auquel vous êtes inscrit(e).",
-                "information": "Pour plus d′informations sur cet événement, rendez-vous sur ce lien {{url}}.",
-                "cancel": "Si vous ne pouvez pas assister à cet événement, vous pouvez annuler votre participation à tout moment.",
-                "new_date": "La nouvelle programmation est {{starts_at_date}} à {{starts_at_time}} {{timezone}}.",
-                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{nom}}."
+                "information": "Pour plus d′informations sur cet événement, veuillez cliquer sur le lien suivant : {{url}}.",
+                "cancel": "Si vous ne pouvez pas assister à cet événement, vous pouvez annuler votre participation à tout moment en accédant au lien ci-dessus.",
+                "new_date": "La nouvelle programmation est le {{starts_at_date}} à {{starts_at_time}} {{timezone}}.",
+                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{name}}.",
+                "automatic_email": "Ceci est un e-mail automatique. Ne répondez pas directement à cette adresse."
             },
             "attendance-reminder": {
-                "subject": "L′événement {{title}} démarre dans 1 jour",
-                "title": "L′événement {{title}} démarre dans 1 jour",
+                "subject": "L′événement ENGAGE auquel vous êtes inscrit(e) démarre bientôt.",
+                "title": "L′événement ENGAGE auquel vous êtes inscrit(e) démarre bientôt.",
                 "message": "Il s′agit d′un e-mail de rappel pour l′événement {{title}} auquel vous êtes inscrit(e).",
                 "event_date_time": "L′événement démarrera dans 1 jour, le {{starts_at_date}} à {{starts_at_time}} {{timezone}}.",
                 "information": "Pour accéder à l′événement et en savoir plus, rendez-vous sur ce lien - {{url}}.",
-                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{nom}}."
+                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{name}}."
             },
             "host-message-user": {
                 "information_hosting": "Il s′agit d′une copie du message que vous avez envoyé.",
@@ -1393,21 +1446,22 @@
                 "information_attending": "Vous avez reçu un message concernant cet événement, car vous avez indiqué que vous y participiez.",
                 "information_waiting": "Vous avez reçu un message concernant cet événement, car vous avez demandé à y assister.",
                 "subject": "Message de l′organisateur de l′événement de {{title}}.",
-                "title": "Message de {{name}} (organisateur de l′événement)",
+                "title": "Message de {{name}} (organisateur de l′événement) :",
                 "information": "Pour plus d′informations sur cet événement, rendez-vous sur ce lien : {{url}}.",
-                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{nom}}."
+                "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{name}}.",
+                "automatic_email": "Ceci est un e-mail automatique. Ne répondez pas directement à cette adresse."
             },
             "created": {
                 "subject": "L′événement {{title}} a été créé",
                 "title": "L′événement {{title}} a été créé",
                 "information": "Pour plus d′informations sur cet événement, rendez-vous sur ce lien : {{url}}.",
                 "feedback": "Veuillez envoyer vos questions, commentaires et feed-back concernant l′événement à l′organisateur de l′événement {{name}} ({{email}}).",
-                "message": "L′organisateur a créé un nouvel événement {{title}}. L′événement est prévu le {{starts_at_date}} à {{starts_at_time}} {{timezone}} et doit durer {{duration}}."
+                "message": "L′événement {{title}} a été créé par l′organisateur. <br> Cet événement est prévu le {{starts_at_date}} à {{starts_at_time}} {{timezone}} et doit durer {{duration}}."
             },
             "attendance-request": {
                 "subject": "Demande de participation pour {{titre}}",
                 "title": "Demande de RSVP pour {{titre}}",
-                "message": "L′utilisateur suivant a demandé à assister à votre événement",
+                "message": "L′utilisateur suivant a demandé à assister à votre événement {{title}}",
                 "button": "ALLER À L′ÉVÉNEMENT",
                 "name": "Nom",
                 "country": "Pays",
@@ -1468,7 +1522,9 @@
                 "no_password": "Aucun mot de passe",
                 "type_event": "Événement",
                 "all_users_are_host": "Tous les utilisateurs sont co-hôtes",
-                "enter_new_password": "Entrer nouveau mot de passe"
+                "enter_new_password": "Entrer nouveau mot de passe",
+                "password_access_to_session": "Mot de passe pour accéder à la session",
+                "locked": "Verrouillée"
             },
             "button": {
                 "join": "Rejoindre",
@@ -1500,7 +1556,7 @@
                 "session_expired_header": "Session expirée"
             },
             "text": {
-                "login_title": "connexion",
+                "login_title": "Connexion",
                 "new_user_header": "Besoin d′un compte ?",
                 "forgot_password_header": "Mot de passe oublié ?",
                 "register_title": "Créer un compte",
@@ -1510,7 +1566,10 @@
                 "failed_send_verification_email": "L′envoi de l′e-mail de vérification de l′utilisateur a échoué. Veuillez réessayer.",
                 "account_needs_verification": "Votre compte doit être vérifié. <br>Nous avons renvoyé un lien de vérification sur votre compte e-mail.",
                 "verification_link_expired": "Le lien de vérification a expiré. {{break}} Vérifiez que vous cliquez bien sur le lien de l′e-mail de vérification le plus récent.",
-                "verification_link_already_sent": "Un lien de vérification a déjà été envoyé à votre adresse e-mail il y a quelques minutes."
+                "verification_link_already_sent": "Un lien de vérification a déjà été envoyé à votre adresse e-mail il y a quelques minutes.",
+                "sso_type_login": "Ce compte nécessite l′utilisation de l′authentification unique (SSO)",
+                "password_type_login": "Ce compte n′utilise pas l′authentification unique (SSO)",
+                "or": "ou"
             },
             "label": {
                 "username_email": "Votre nom d′utilisateur ou adresse e-mail",
@@ -1528,7 +1587,10 @@
                 "sign_in": "Connexion",
                 "create_account": "Inscription",
                 "click_here": "Cliquez ici",
-                "login": "Identification"
+                "login": "Identification",
+                "forgot_password": "Vous avez oublié votre mot de passe ?",
+                "sso_login": "Se connecter avec SSO",
+                "password_login": "Se connecter avec mot de passe"
             }
         }
     },
@@ -1566,7 +1628,9 @@
     "events": {
         "ui": {
             "link": {
-                "goto_events": "Accéder aux événements"
+                "goto_events": "Accéder aux événements",
+                "goto_contact_us": "Vous souhaitez plus de participants ? Essayez",
+                "enterprise": "Enterprise"
             },
             "notification": {
                 "message_sent": "Votre message a été envoyé.",
@@ -1753,10 +1817,10 @@
                 "request_will_be_notified": "Vous recevrez une notification par e-mail si l′hôte accepte votre demande d′assistance.",
                 "event_guide_alert_text": "Consulter le guide d′hébergement des événements dans ENGAGE",
                 "overbooking_warning": "Avertissement de surréservation",
-                "overbooking_warning_modal_text_1": "Actuellement, une limite technique impose que seuls 50 utilisateurs puissent assister à une session de réalité virtuelle dans ENGAGE.",
-                "overbooking_warning_modal_text_2": "Il existe également des limites commerciales. 50 utilisateurs pour les comptes ENTREPRISE. 30 utilisateurs pour les comptes PLUS.",
-                "overbooking_warning_modal_text_3": "Si vous fixez le nombre maximal d′inscriptions à un nombre supérieur aux capacités techniques et commerciales, certains utilisateurs ne pourront pas accéder à votre événement le jour même.",
-                "overbooking_warning_modal_text_4": "Pour héberger un événement ouvert à davantage d′utilisateurs, rendez-vous sur",
+                "overbooking_warning_modal_text_1": "La valeur saisie en tant que nombre maximal d′inscriptions est supérieur au nombre d′utilisateurs pouvant participer à l′événement.",
+                "overbooking_warning_modal_text_2": "Avec votre compte {{sub_type}} account, le nombre maximal de participants est de {{max_attendees}}. Les places sont attribuées aux personnes quand elles rejoignent l′événement, au fur et à mesure. Quand la limite définie dans votre compte est atteinte, plus personne ne peut rejoindre l′événement.",
+                "overbooking_warning_modal_text_3": "Vous pouvez choisir de surbooker un événement de manière délibérée si vous supposez qu′un pourcentage de personnes inscrites ne participeront pas à la session.",
+                "overbooking_warning_modal_text_4": "Pour plus d′informations sur le surbooking, rendez-vous sur",
                 "overbooking_warning_text_1": "xxxxx",
                 "max_registrations": "Nombre maximum d′inscriptions",
                 "max_registrations_tooltip": "Nombre maximum d′utilisateurs pouvant s′inscrire à l′événement.<br /> Ce nombre est limité à 30 pour les comptes PLUS et à 50 pour les comptes ENTREPRISE.<br /> Pour plus d′informations, consultez le guide des événements.",
@@ -1795,7 +1859,22 @@
                 "vive_event_access_granted_content": "Votre ticket a été vérifié et vous pouvez désormais accéder à l′évènement.",
                 "redeem_code_expired_title": "Code d′échange expiré",
                 "redeem_code_expired_text": "Le code d′échange utilisé pour accéder à cet évènement a expiré. Un nouveau code est nécessaire pour accéder à l′évènement.",
-                "buy_new_redeem_code": "Obtenir un nouveau code d′échange en achetant un ticket sur"
+                "buy_new_redeem_code": "Obtenir un nouveau code d′échange en achetant un ticket sur",
+                "only_registered_attendees": "Cet événement est uniquement accessible aux utilisateurs déjà enregistrés.",
+                "free_event": "Événement gratuit",
+                "registration_closes": "Clôture des inscriptions le {{date}}",
+                "heading": "« Eat Sleep VR Repeat » de Fatboy Slim - dans le Métavers",
+                "content_1": "La carrière de Fatboy Slim a toujours été ponctuée par des événements festifs et inédits. Cette aventure unique en son genre vous plongera dans une expérience immersive de réalité virtuelle. Un concert en RV comme vous n′en avez jamais vu auparavant !",
+                "content_2": "Pendant 45 minutes, votre avatar sera transporté au plus profond de l′âme de Fatboy Slim : l′aventure commencera dans un drive-in et continuera entourée d′amis et de fans.",
+                "content_3": "Préparez-vous à danser en voyant Norm arriver dans son bus décoré, prêt à se joindre à la fête. Vous pourrez également vous téléporter dans les tréfonds de l′esprit de Norman et profiter d′une expérience inoubliable !",
+                "content_4": "ENGAGE, la plateforme de Métavers multi-utilisateurs aux nombreuses fonctionnalités, conçue pour les créateurs, les enseignants et les professionnels des affaires. Bénéficiez d′une expérience virtuelle optimale en RV, avec un casque PCVR ou avec l′un des derniers casques de réalité virtuelle comme le Quest 2. Les dispositifs mobiles et les casques de réalité virtuelle sortis avant 2020 ne sont pas pris en charge.",
+                "content_5": "Entamez votre voyage virtuel avec Fatboy Slim ici en choisissant l′horaire qui vous convient :",
+                "schedule": "Horaire",
+                "free_entry": "Entrée gratuite",
+                "sold_out": "Complet",
+                "almost_sold_out": "Presque complet",
+                "tickets_available": "Places disponibles",
+                "register": "Inscription"
             },
             "label": {
                 "create_new": "Créer un nouvel événement",
@@ -1805,7 +1884,7 @@
                 "events": "Évènements",
                 "refresh": "Actualiser",
                 "on": "On",
-                "off": "Off",
+                "off": "Désactivé",
                 "status_active": "Planifié",
                 "status_cancelled": "Annulé",
                 "status_live": "Live",
@@ -1839,7 +1918,10 @@
                 "none": "Aucun",
                 "runtime": "Calendrier des activités d′exécution",
                 "group_visibility": "Visibilité du groupe",
-                "vive_redeem_code": "CODE D′ÉCHANGE"
+                "vive_redeem_code": "CODE D′ÉCHANGE",
+                "type_concert": "Concert",
+                "third_party_optin": "Abonnez-vous pour recevoir des communications directes de {{partner}}",
+                "third_party_optin_2": "Une fois abonné(e), vous recevrez également des informations occasionnelles et des offres spéciales de {{partner}}. Nous ne vendrons ni ne distribuerons jamais votre adresse e-mail à des tiers. Consultez notre <a href=′/terms′ target=′_blank′>Politique de confidentialité</a>."
             },
             "button": {
                 "delete": "Supprimer un événement",
@@ -2041,7 +2123,7 @@
                 "delete_file_permanently": "Supprimer le fichier définitivement",
                 "restore_file_confirmation": "Êtes-vous sûr(e) de vouloir restaurer le fichier supprimé ?",
                 "delete_file_permanently_confirmation": "Êtes-vous sûr(e) de vouloir supprimer définitivement ce fichier ?",
-                "message_bin_notice": "Les fichiers présents dans la corbeille seront éliminés de manière définitive après 5 jours. Vous pouvez les supprimer définitivement afin de libérer de l′espace de stockage.",
+                "message_bin_notice": "Les fichiers présents dans la corbeille seront éliminés de manière définitive après 5 jours. Ces fichiers ne sont pas comptabilisés dans votre capacité de stockage autorisée.",
                 "item_restored_successfully": "Le fichier a été restauré avec succès.",
                 "error_restoring_item": "Une erreur est survenue lors de la restauration de cet objet. Veuillez réessayer plus tard.",
                 "bin": "Corbeille",

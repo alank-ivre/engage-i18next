@@ -5,11 +5,12 @@
     },
     "sso": {
         "error": {
-            "auth_sso_unknown_error": "将用户帐户连接到:供应者时出现问题",
-            "auth_sso_token_invalid": "供应者： 提供者用户令牌无效",
-            "auth_sso_token_expired": "提供者: 提供者用户令牌已过期",
-            "auth_registration_sso_error": "使用:提供者SSO 单点登录注册用户时出现问题",
-            "auth_login_sso_error": "用户使用提供者单点登录时出现问题"
+            "auth_sso_unknown_error": "将用户帐户连接到{{provider}} 时出现问题",
+            "auth_sso_token_invalid": "提供的 {{provider}} 用户令牌无效",
+            "auth_sso_token_expired": "提供的 {{provider}} 用户令牌已过期",
+            "auth_registration_sso_error": "使用 {{provider}} SSO 单点登录注册用户时出现问题",
+            "auth_login_sso_error": "用户使用 {{provider}} 单点登录时出现问题",
+            "email_mismatch": "由于您的ENGAGE帐户与SSO身份提供程序之间的电子邮件不匹配，我们无法验证您的SSO登录。"
         }
     },
     "contents": {
@@ -48,7 +49,7 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "在 Web {{web_url}} 上创建并编辑备注"
+                    "info_banner": "在 Web {{web_url}}  上创建并编辑备注"
                 }
             },
             "text": {
@@ -102,7 +103,7 @@
     "menu": {
         "ui": {
             "text": {
-                "engage_trademark_footer": "ENGAGE & #8482; 是 Immersive VR Education © 的商标，2021 年版权所有。保留所有权利。"
+                "engage_trademark_footer": "©{{year}} ENGAGE XR, Ltd. 保留所有权利。ENGAGE是ENGAGE XR有限公司的商标。"
             },
             "button": {
                 "download_engage": "下载 ENGAGE",
@@ -182,18 +183,23 @@
             "text": {
                 "password_reset": "密码重置",
                 "reset_password": "重置密码",
-                "login_route": "或前往"
+                "login_route": "或前往",
+                "security_message": "出于安全原因，在进入ENGAGE之前，您必须重置密码。",
+                "email_message": "请输入与您的ENGAGE账户注册的电子邮件地址，我们将向您发送重置密码的说明。"
             },
             "label": {
                 "email": "电子邮件",
-                "email_placeholder": "您的电子邮件地址",
+                "email_placeholder": "输入电子邮件地址",
                 "password": "密码",
                 "confirm_password": "确认密码"
             },
             "button": {
                 "reset_my_password": "重置我的密码",
                 "reset_password": "重置密码",
-                "login": "登录"
+                "login": "登录",
+                "send": "发送",
+                "cancel": "取消",
+                "return": "返回登录"
             }
         }
     },
@@ -311,7 +317,8 @@
                 "upload_3d_models_pro": "按请求。可能会收取额外费用。",
                 "dependant_on_enterprise_size": "是的 - 金额取决于企业帐户大小",
                 "custom_content_menu_enterprise": "是的 - 选择您希望向用户显示的内容",
-                "full": "全"
+                "full": "全",
+                "vat_modal_body": "我们无法验证您的增值税号码。增值税号码需要与该国家的格式相匹配。请参见所需的 <a href=\"{{vat_link}}\" target=\"_blank\"> 此处的增值税编号格式</a>。"
             },
             "label": {
                 "billing_info_title": "账单信息",
@@ -383,7 +390,9 @@
                 "custom_environment_uploads": "自定义环境上传",
                 "custom_branding": "定制品牌",
                 "custom_content_menu": "定制内容菜单",
-                "custom_hosting_options": "主机定制选项"
+                "custom_hosting_options": "主机定制选项",
+                "vat_modal_title": "增值税编号格式",
+                "vat_modal_button": "查看增值稅編號格式"
             },
             "button": {
                 "save_billing": "保存账单信息",
@@ -500,13 +509,12 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "在 Web {{web_url}} 上创建并编辑表格"
+                    "info_banner": "在 Web {{web_url}}  上创建并编辑表格"
                 }
             },
             "text": {
                 "allow_deliver": "允许其他用户递送",
-                "answer_one": "答案",
-                "answer_other": "答案",
+                "answer": "答案 | 答案",
                 "answer_name_placeholder": "例如：我的第一个答案？",
                 "attempts_remaining": "剩余尝试次数",
                 "choose_question": "选择问题……",
@@ -715,11 +723,26 @@
                 "confirm_delete_account": "您确定要删除您的帐户吗？",
                 "confirm_delete_account_details": "<p>这将 <strong>永久</strong> 删除与您的帐户相关的任何信息、媒体、笔记、链接、活动和内容。</p>",
                 "error_sending_user_email": "发送删除邮件时出错。",
-                "error_deleting_user": "删除帐户时出错。"
+                "error_deleting_user": "删除帐户时出错。",
+                "min_character_length": "至少{{min_chars}}个字符。",
+                "max_character_length": "最多{{max_chars}}个字符。",
+                "password_strength_weak": "弱",
+                "password_strength_medium": "中等",
+                "password_strength_good": "好",
+                "password_strength_strong": "强",
+                "password_strength_very_strong": "很强",
+                "password_valid": "您必须输入有效的密码。",
+                "password_common": "出于安全原因，您必须选择一个新密码，因为该密码被检测为常用密码。",
+                "sso_on": "当前为您开启了单点登录（SSO）",
+                "sso_off": "当前已关闭单点登录（SSO）",
+                "sso_on_info": "如果您有任何问题，请联系 {{name}} 企业组的管理员。",
+                "sso_off_info": "当前您所在的组尚未设置和启用SSO。请联系您所在企业组的所有者获取更多信息。",
+                "sso_enabled_email": "在启用单点登录（SSO）时，您无法更改电子邮件地址。如有任何疑问，请联系您的组管理员。",
+                "sso_enabled_password": "在启用单点登录（SSO）时，您无法更改密码。如有任何疑问，请联系您的组管理员。"
             },
             "label": {
                 "settings_title": "设置",
-                "account_title": "账户",
+                "account_title": "安全& 与登录",
                 "change_email": "更改电子邮件",
                 "change_password": "更改密码",
                 "subscription_title": "订阅",
@@ -759,7 +782,10 @@
                 "void": "空号",
                 "status": "状态",
                 "change_phone_number": "更改手机号码",
-                "delete_account": "删除账户"
+                "delete_account": "删除账户",
+                "choose_new_password": "选择新密码",
+                "sso": "单点登录（SSO）",
+                "privacy_title": "隐私"
             },
             "button": {
                 "change_email": "更改电子邮件",
@@ -883,7 +909,7 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "在 Web {{web_url}} 中添加并管理媒体"
+                    "info_banner": "在 Web {{web_url}}  中添加并管理媒体"
                 }
             },
             "text": {
@@ -924,7 +950,7 @@
             },
             "button": {
                 "disconnect_item": "断开连接 {{item_name}}",
-                "connector": "连接 {{item_name}}",
+                "connector": "连接 {{connection_name}}",
                 "disconnect": "断开连接",
                 "info": "信息"
             }
@@ -1107,12 +1133,9 @@
                 "loading": "正在加载……",
                 "retrieve_data_error": "检索数据时出错，请重新加载屏幕，才能继续。",
                 "search_empty_list": "没有要显示的项目。请尝试不同的选项卡或更改搜索过滤器。",
-                "minute_one": "{{count}} 分钟",
-                "minute_other": "{{count}} 分钟计数",
-                "second_one": "{{count}} 秒",
-                "second_other": "{{count}} ：秒计数",
-                "hour_one": "{{count}} 小时",
-                "hour_other": "{{count}} 小时计数",
+                "second": "秒 | 1 秒 | {{count}} 秒",
+                "minute": "分钟 | 1 分钟 | {{count}} 分钟",
+                "hour": "小时 | 1 小时 | {{count}} 小时",
                 "pass": "恭喜您通过了！",
                 "fail": "您失败了。下次好运！",
                 "input_case_sensitive": "该输入是区分大小写的，请仔细检查。",
@@ -1131,7 +1154,7 @@
                 "no": "否",
                 "terms_of_service": "服务条款",
                 "accept_and_continue": "如要继续，您接受",
-                "footer_trademark_text": "ENGAGE™是Immersive VR Education©2021的商标。保留所有权利。",
+                "footer_trademark_text": "© {{year}} ENGAGE XR, Ltd.保留所有权利。ENGAGE是ENGAGE XR, Ltd.的商标。",
                 "datetime_time": "时间",
                 "empty_list_message": "列表为空",
                 "js_time_length_parse_short": "{{minutes}} 分钟 {{seconds}} 秒",
@@ -1263,10 +1286,10 @@
     "emails": {
         "groups": {
             "group-invitation": {
-                "title": "{{inviter_first_name}} {{inviter_last_name}} 和您的团队正在等待您加入 ENGAGE 群组 {{group_name}}",
-                "response": "如需加入该群组，请点击以下链接： {{url}}",
-                "subject": "{{inviter_name}} 已邀请您加入 ENGAGE 群组 {{group_name}}",
-                "learn_more": "如需了解有关 ENGAGE 的更多信息，请访问以下链接： <a href=\"https://engagevr.io\">https://engagevr.io</a>",
+                "title": "{{inviter_first_name}} {{inviter_last_name}} 和团队正在等待您的加入 {{group_name}}",
+                "response": "如需加入该ENGAGE 群组，请点击或轻触此链接： <br> {{url}}",
+                "subject": "您已被邀请加入一个新群组",
+                "learn_more": "如需了解有关 ENGAGE 的更多信息，请访问以下链接：<br> <a href=\"https://engagevr.io\">https://engagevr.io</a>",
                 "title-vs": "{{inviter_first_name}} {{inviter_last_name}}和您的团队正在等待您加入VIVE 会议小组- {{group_name}}",
                 "subject-vs": "{{inviter_name}} 邀请您加入VIVE 会议小组—— {{group_name}}",
                 "learn_more-vs": "要了解有关Vive 会议的更多信息，请访问以下链接:<br> <a href=\"https://vive.com/cn/xr-suite-en/\">https://vive.com/cn/xr-suite-en/</a>"
@@ -1279,7 +1302,7 @@
                 "reminder_link": "超强功能",
                 "contact": "如需帮助，请随时访问 {{url}} 联系我们。",
                 "title": "免费月结束时间为 {{ends_at_date}} {{ends_at_time}} （{{timezone}} 时区）",
-                "reminder": "特此提醒，您的免费月结束时间为 {{ends_at_date}} {{ends_at_time}} （{{timezone}} 时区）希望您继续使用 ENGAGE PLUS 的 {{url}} 在虚拟现实中进行交流、教学和学习。",
+                "reminder": "您的免费ENGAGE 结束时间为 {{ends_at_date}} {{ends_at_time}} （{{timezone}} 时区）感谢您使用 ENGAGE PLUS 。我们希望您喜欢这次经历。",
                 "thanks-vs": "感谢订阅VIVE会议PLUS。我们希望您喜欢这个体验。",
                 "reminder-vs": "作为提醒，您的免费月份的结束时间为{{ends_at_date}} at {{ends_at_time}} {{timezone}}。我们希望您能够继续使用{{Vive}} Sessions PLUS {{url}}在虚拟现实中进行交流、教学和学习。"
             }
@@ -1297,30 +1320,35 @@
                 "terms_text": "一般条款与条件",
                 "policy": "隐私政策",
                 "contact": "联系我们",
-                "trademark": "ENGAGE™ 是 Immersive VR Education © 的商标，2021 年版权所有。",
+                "trademark": "©{{year}} ENGAGE XR, Ltd. 保留所有权利。ENGAGE是ENGAGE XR有限公司的商标。",
                 "rights": "保留所有权利。",
                 "trademark-vs": "2021年VIVE会议。"
             }
         },
         "account": {
             "reset-password": {
-                "subject": "重置密码",
+                "subject": "我们收到了重置您的密码的请求。",
                 "title": "密码重置请求",
-                "requested": "最近请求为您的账户重置密码。",
-                "assistance": "通过 ENGAGE 执行的密码更改请求只会发送给账户上的联系电子邮件。如果您担心他人试图未经授权访问您的账户，请重置密码，或访问 {{url}} 联系我们寻求帮助。",
+                "requested": "我們已收到您重置密碼的請求。",
+                "assistance": "如果是您提出的请求，请单击或点击以下链接来重置您的密码:",
                 "reset": "重置密码",
-                "having_trouble": "如果您无法点击“重置密码”链接，请复制下方的 URL 并将其粘贴到您的网页浏览器中：{{url}}。",
-                "assistance-vs": "通过VIVE 会议请求更改密码仅会发送到帐户上的电子邮件中。如果您担心有人试图未经授权访问您的帐户，请继续重置密码，或通过以下网址联系我们来获得帮助。"
+                "having_trouble": "您也可以复制以下地址，并将其粘贴到您的网页浏览器中：{{url}}",
+                "assistance-vs": "通过VIVE 会议请求更改密码仅会发送到帐户上的电子邮件中。如果您担心有人试图未经授权访问您的帐户，请继续重置密码，或通过以下网址联系我们来获得帮助。{{url}}",
+                "did_not_request": "如果您没有请求重置密码，则可以忽略此电子邮件。",
+                "requested_sso": "我们收到了设置该ENGAGE账户（{{email}}）的新密码的请求。",
+                "assistance_sso": "您的帐户已设置为使用单点登录（SSO）进行登录身份验证。如果您不确定如何重置SSO密码，请联系企业组所有者{{group_owner}}，来自{{group_name}}。"
             },
             "email-verification": {
-                "subject": "请验证您在 ENGAGE 中使用的电子邮件地址",
+                "subject": "请验证您的电子邮箱",
                 "title": "请验证您的电子邮件地址",
-                "message": "请单击以下的链接验证您的电子邮件地址。",
+                "message": "感谢您创建ENGAGE帐户。如要继续，请单击或点击下面的链接来验证您的电子邮件地址。",
                 "verify": "验证您的电子邮件地址",
-                "having_trouble": "如果您无法点击“验证您的电子邮件地址”的按钮，请将网址复制并粘贴到您的网页浏览器中：{{url}}。",
-                "contact": "如果未请求更改，请联系：support_email_address。",
+                "having_trouble": "或者，将以下地址复制并粘贴到您的网络浏览器中: {{url}}。",
+                "contact": "如果未请求更改，请联系 {{support_email_address}}。",
                 "subject-vs": "请验证您参加VIVE会议的电子邮件地址",
-                "message-vs": "请单击下面的链接验证您的电子邮件地址。"
+                "message-vs": "请单击下面的链接验证您的电子邮件地址。",
+                "getting_started": "如果您需要一些初始帮助，可以观看我们的视频教程:",
+                "tutorials_link": "观看教程"
             },
             "deleted-user": {
                 "subject": "您的{{region_name}}帐户已被删除。",
@@ -1329,37 +1357,41 @@
                 "personal_data": "我们在系统中已删除了您的所有个人数据。"
             },
             "new-user": {
-                "subject": "欢迎加入 ENGAGE！",
+                "subject": "欢迎加入 ENGAGE！请验证您的电子邮件地址。",
                 "title": "欢迎加入 ENGAGE",
-                "thank_you": "感谢您创建 ENGAGE 账户。请确认您的电子邮件地址，以便继续使用。",
+                "thank_you": "欢迎使用ENGAGE。感谢您创建账户。请点击下方的链接验证您的电子邮件地址，以继续操作。",
                 "verify": "验证您的电子邮件地址",
-                "having_trouble": "如果您无法点击“验证您的电子邮件地址”按钮，请复制 URL 并将其粘贴到您的网页浏览器中：{{url}}。",
-                "getting_started": "开始之前，先点击此链接，观看一些教学视频：",
+                "having_trouble": "您也可以复制以下地址，并将其粘贴到您的网页浏览器中：{{url}}。",
+                "getting_started": "如果您需要一些初始帮助，可以观看我们的视频教程:",
                 "tutorials_link": "查看教程",
-                "faq": "如果遇到困难，请从此处的常见问题解答中寻找答案：",
+                "faq": "您还可以阅读我们全面文档或查看常见问题解答:",
                 "faq_link": "查看常见问题解答",
                 "subject-vs": "欢迎来到VIVE会议！",
                 "title-vs": "欢迎来到VIVE 会议",
-                "thank_you-vs": "感谢您创建VIVE会议帐户。如要继续，请确认您的电子邮件地址。"
+                "thank_you-vs": "感谢您创建VIVE会议帐户。如要继续，请确认您的电子邮件地址。",
+                "documentation_link": "查看文档"
             }
         },
         "events": {
             "attendance-request-denied": {
                 "subject": "参加活动 {{title}} 已拒绝",
                 "title": "{{title}} 的 RSVP 请求已拒绝",
-                "denied": "主持人拒绝了您参加活动 {{title}} 的请求。"
+                "denied": "请求被拒绝{{title}}。主持人拒绝了您参加活动 {{title}} 的请求。",
+                "automatic_email": "这是一封自动发送的邮件，请不要直接回复此邮件地址。"
             },
             "attendance-removed": {
                 "subject": "参加活动 {{title}} 已移除",
-                "title": "您已从 {{title}} 的 {{status}} 列表中移除。",
-                "message": "主持人已将您从该活动的 {{status}} 列表中移除。",
-                "automatic_email": "这是自动发送的电子邮件，请勿直接回复至此电子邮件地址。"
+                "title": "活动主持人已将您从注册列表中删除",
+                "message": "您{{title}}已从{{status}}列表中移除。",
+                "automatic_email": "这是自动发送的电子邮件，请勿直接回复至此电子邮件地址。",
+                "message_2": "主持人已将您从此活动的{{status}}列表中删除。活动可能已满，或者您还有一个注册步骤没有完成。活动列表可以提供更多信息。"
             },
             "cancelled": {
                 "subject": "活动 {{title}} 已取消",
                 "title": "活动 {{title}} 已取消",
-                "message": "组织者已取消您注册参加的活动 {{title}}。",
-                "feedback": "请将活动相关问题、评论和反馈发送给活动组织者 {{name}}。"
+                "message": "您注册参加的活动 {{title}} 已被组织者取消。",
+                "feedback": "请将活动相关问题、评论和反馈发送给活动组织者 {{name}}。",
+                "automatic_email": "这是一封自动发送的邮件，请不要直接回复此邮件。"
             },
             "attendance": {
                 "subject": "参加活动 {{title}} 已确认",
@@ -1367,20 +1399,41 @@
                 "information": "请访问以下链接，了解有关该活动的更多信息：{{url}}。",
                 "feedback": "请将活动相关问题、评论和反馈发送给活动组织者 {{name}}。",
                 "cancel": "若因故无法参加该活动，您可随时取消参加。",
-                "message": "感谢您注册 {{title}}。活动开始时间为 {{starts_at_date}} {{starts_at_time}}（{{timezone}} 时区），预计持续 {{duration}}。"
+                "message": "感谢您注册 {{title}}。活动开始时间为 {{starts_at_date}} {{starts_at_time}}（{{timezone}} 时区），预计持续 {{duration}}。",
+                "title_concert": "已确认您的参加 {{title}}。",
+                "message_concert": "活动详情如下:",
+                "concert_starts": "{{starts_at_date}} 于 {{starts_at_time}} {{timezone}}",
+                "concert_duration": "预计持续时间为 {{duration}}",
+                "what_to_do_before_label": "在活动之前需要做",
+                "what_to_do_before_1": "安装 {{app_name}} 应用。 相关说明，请访问 {{download}}",
+                "what_to_do_before_2": "登录应用程序，设计您的头像。根据活动的不同，可能会有专属服装供您选择。有关说明，请访问 {{avatar_link}}",
+                "what_to_do_before_3": "我们建议您在私人会议中先自己进行尝试。这样您可以熟悉控制，在活动当天，您可以专注于体验。有关更多信息，请访问 {{session_link}}",
+                "what_to_do_label": "活动当天可以做什么",
+                "what_to_do_1": "确保您的设备充满电。您最不希望的事情就是因为电池没电而中途退出。",
+                "what_to_do_2": "在活动计划开始前几分钟，登录应用程序并转到活动页面。当活动开始时，您就可以加入了。更多信息，请访问{{join_link}}",
+                "withdraw": "我们希望您能享受活动。如果您不能参加，请查找 {{withdraw_link}} 上的撤销指南。",
+                "create_your_avatar": "正在创建您的头像",
+                "start_your_session": "开始您的第一次会议",
+                "join_event": "加入活动",
+                "withdraw_label": "退出活动",
+                "title_concert_2": "感谢您的注册。以下是活动的详细信息：",
+                "concert_duration_2": "该活动预计持续时间为 {{duration}}",
+                "what_to_do_before_label_2": "有关此活动的更多信息，请参见：",
+                "withdraw_2": "如果您无法参加此活动，您可以随时点击上面的链接取消您的参与。"
             },
             "reschedule": {
                 "subject": "活动 {{title}} 已重新安排",
                 "title": "活动 {{title}} 已重新安排。",
                 "message": "组织者已更新您注册参加的活动 {{title}} 的日期/时间。",
-                "information": "了解有关该活动的更多信息请访问链接 {{url}}。",
-                "cancel": "若因故无法参加该活动，您可随时取消参加。",
-                "new_date": "重新安排的日期和时间为 {{starts_at_date}} {{starts_at_time}}（{{timezone}} 时区）。",
-                "feedback": "请将活动相关问题、评论和反馈发送给活动组织者 {{name}}。"
+                "information": "了解有关此次活动的更多信息，请点击或轻按此链接 {{url}}",
+                "cancel": "如果您不能再参加本次活动，您可以点击上面的链接，随时取消出席。",
+                "new_date": "现在安排在 {{starts_at_date}} {{starts_at_time}}（{{timezone}} 时区）。",
+                "feedback": "请将活动相关问题、评论和反馈发送给活动组织者 {{name}}。",
+                "automatic_email": "这是一封自动发送的邮件，请不要直接回复此邮件。"
             },
             "attendance-reminder": {
-                "subject": "距离活动 {{title}} 开始还有 1 天",
-                "title": "距离活动 {{title}} 开始还有 1 天",
+                "subject": "您注册的ENGAGE活动即将开始。",
+                "title": "您注册的ENGAGE活动即将开始。",
                 "message": "这是一封提醒您参加您注册参加的活动 {{title}} 的电子邮件。",
                 "event_date_time": "活动时间为 {{starts_at_date}} {{starts_at_time}}（{{timezone}} 时区），距离活动开始还有 1 天。",
                 "information": "如需参加活动并了解更多信息，请访问链接 {{url}}。",
@@ -1392,21 +1445,22 @@
                 "information_attending": "您收到了有关该活动的消息，因为您曾表示正在参加。",
                 "information_waiting": "您收到了有关该活动的消息，因为您曾请求参加。",
                 "subject": "来自活动 {{title}} 组织者的消息。",
-                "title": "来自 {{name}}（活动组织者）的消息",
+                "title": "{{name}}(活动组织者)向您发送了一条消息:",
                 "information": "请访问以下链接，了解有关该活动的更多信息：{{url}}。",
-                "feedback": "请将活动相关问题、评论和反馈发送给活动组织者 {{name}}。"
+                "feedback": "请将活动相关问题、评论和反馈发送给活动组织者 {{name}}。",
+                "automatic_email": "这是一封自动发送的邮件，请不要直接回复此邮件。"
             },
             "created": {
                 "subject": "活动 {{title}} 已创建",
                 "title": "活动 {{title}} 已创建",
                 "information": "请访问以下链接，了解有关该活动的更多信息：{{url}}。",
                 "feedback": "请将活动相关问题、评论和反馈发送给活动组织者 {{name}}({{email}})。",
-                "message": "组织者创建了一个新活动 {{title}}，预定日期和时间为 {{starts_at_date}} {{starts_at_time}}（{{timezone}} 时区），预计持续 {{duration}}。"
+                "message": "组织者创建了一个新活动 {{title}}，预定日期和时间为 {{starts_at_date}} {{starts_at_time}}（{{timezone}} 时区），活动时长 {{duration}}。"
             },
             "attendance-request": {
                 "subject": "请求参加 {{title}}",
                 "title": "{{title}} 的 RSVP 请求",
-                "message": "下述人员已请求参加您的活动",
+                "message": "下列人员已请求参加您的活动 {{title}}",
                 "button": "转至活动",
                 "name": "姓名",
                 "country": "国家/地区",
@@ -1467,7 +1521,9 @@
                 "no_password": "没有密码",
                 "type_event": "活动",
                 "all_users_are_host": "所有用户联合主办人",
-                "enter_new_password": "输入新密码"
+                "enter_new_password": "输入新密码",
+                "password_access_to_session": "访问会话的密码",
+                "locked": "已锁定"
             },
             "button": {
                 "join": "加入",
@@ -1508,12 +1564,15 @@
                 "session_expired": "您的会话已过期。请登录，以便继续使用。",
                 "failed_send_verification_email": "发送用户验证电子邮件失败，请重试。",
                 "account_needs_verification": "您的账户需要验证。<br>我们向您的电子邮件账户重新发送了验证链接。",
-                "verification_link_expired": "验证链接已过期。<br>请确保您点击的是最新的验证电子邮件链接。",
-                "verification_link_already_sent": "验证链接已在过去5分钟内发送到了您的电子邮件地址。"
+                "verification_link_expired": "验证链接已过期。{{break}} 请确保您点击的是最新的验证电子邮件链接。",
+                "verification_link_already_sent": "验证链接已在过去{{minutes}}分钟内发送到了您的电子邮件地址。",
+                "sso_type_login": "该账户要求您使用单点登录（SSO）",
+                "password_type_login": "该账户不使用单点登录（SSO）",
+                "or": "或"
             },
             "label": {
                 "username_email": "您的用户名或电子邮件地址",
-                "username_email_placeholder": "电子邮件地址或用户名",
+                "username_email_placeholder": "电子邮件或用户名",
                 "password": "密码",
                 "confirm_password": "确认密码",
                 "remember_me": "记住我",
@@ -1527,7 +1586,10 @@
                 "sign_in": "登录",
                 "create_account": "注册",
                 "click_here": "点击此处",
-                "login": "登录"
+                "login": "登录",
+                "forgot_password": "忘记密码了吗？",
+                "sso_login": "使用SSO登录",
+                "password_login": "使用密码登录"
             }
         }
     },
@@ -1565,7 +1627,9 @@
     "events": {
         "ui": {
             "link": {
-                "goto_events": "转至活动"
+                "goto_events": "转至活动",
+                "goto_contact_us": "想要更多的参与者吗？尝试",
+                "enterprise": "企业"
             },
             "notification": {
                 "message_sent": "消息发送成功。",
@@ -1752,14 +1816,14 @@
                 "request_will_be_notified": "如果主机同意你的要求，你将会收到电子邮件通知。",
                 "event_guide_alert_text": "在ENGAGE活动中查看指南",
                 "overbooking_warning": "超额预订警告",
-                "overbooking_warning_modal_text_1": "目前，在ENGAGE的虚拟现实会话中只能有50个用户，这是一个技术限制。",
-                "overbooking_warning_modal_text_2": "商业账户也有上限。ENTERPRISE 帐户最多50个账户。PLUS帐户最多30个账户。",
-                "overbooking_warning_modal_text_3": "通过将活动的最大注册人数设置为多于技术和商业用户的限额，某些用户将无法在当天参加活动。",
-                "overbooking_warning_modal_text_4": "要举办有更多用户参加的活动，请访问",
+                "overbooking_warning_modal_text_1": "您设置的最大注册数量超过了可以参加活动的用户数量。",
+                "overbooking_warning_modal_text_2": "对于您的 {{sub_type}} 帐户，最大参与人数为 {{max_attendees}}。名额按照人们加入活动的顺序分配。当达到您帐户设置的限制时，其他人将无法加入。",
+                "overbooking_warning_modal_text_3": "您可能希望有意超过活动的最大注册人数，因为您怀疑会有一部分注册的人不会参加。",
+                "overbooking_warning_modal_text_4": "有关超额预约的更多信息，请访问",
                 "overbooking_warning_text_1": "xxxxx",
                 "max_registrations": "最大注册数",
                 "max_registrations_tooltip": "可以注册该事件的最大用户数。<br /> 专业账户的上限是30，企业账户的上限是50。<br /> 有关更多信息，请参见事件指南。",
-                "event_ends_at_date_validation": "最大事件持续时间不应超过: 小时 小时。",
+                "event_ends_at_date_validation": "最大事件持续时间不应超过 {{hours}} 小时。",
                 "cancel_button": "取消",
                 "join_options": "加入选项",
                 "join_scalable_event_text_1": "你即将加入一个大型的会议。",
@@ -1794,7 +1858,22 @@
                 "vive_event_access_granted_content": "您的入场券已经过验证，现在您可以访问此活动。",
                 "redeem_code_expired_title": "过期的兑换代码",
                 "redeem_code_expired_text": "用于访问此活动的兑换代码已过期。您将需要一个新代码来参与。",
-                "buy_new_redeem_code": "通过在以下位置购买入场券获得新的兑换代码"
+                "buy_new_redeem_code": "通过在以下位置购买入场券获得新的兑换代码",
+                "only_registered_attendees": "此活动仅对已经注册的用户开放。",
+                "free_event": "免费活动",
+                "registration_closes": "注册截止于{{date}}",
+                "heading": "Fatboy Slim的“Eat Sleep VR Repeat” - 在元宇宙中",
+                "content_1": "Fatboy Slim的职业生涯中总是充满着乐趣和开创先河，这次独一无二的活动将带您体验身临其境的虚拟现实体验，这与您之前体验过的任何其他VR音乐会都不一样！",
+                "content_2": "这段45分钟的冒险旅程将带着您的化身进入Fatboy Slim的思维洞穴；从汽车餐馆开始，在那里，您将开始与朋友和粉丝的旅程。",
+                "content_3": "准备好跳舞吧，Norm将驾驶他的恶作剧巴士加入这场盛宴。当你不再跳舞时，你可以穿越Norman心灵的虚拟洞穴，获得一次难忘的体验！",
+                "content_4": "ENGAGE——面向创意人员、教育工作者和商业人士的功能丰富的多用户元宇宙平台。这种虚拟音乐会最好在VR中体验，在PCVR耳机或最新的独立耳机如Quest 2上体验。不支持2020年之前发布的移动设备和独立耳机。",
+                "content_5": "从下面选择您喜欢的时间，开始虚拟旅程:",
+                "schedule": "日程",
+                "free_entry": "免费入场",
+                "sold_out": "售罄",
+                "almost_sold_out": "几乎售罄",
+                "tickets_available": "有票",
+                "register": "注册"
             },
             "label": {
                 "create_new": "创建新活动",
@@ -1838,7 +1917,10 @@
                 "none": "无",
                 "runtime": "运行时活动时间表",
                 "group_visibility": "小组可见性",
-                "vive_redeem_code": "兑换代码"
+                "vive_redeem_code": "兑换代码",
+                "type_concert": "音乐会",
+                "third_party_optin": "选择接收直接来自 {{partner}} 的通信",
+                "third_party_optin_2": "选择加入后，您还会收到来自{{partner}}的不定期更新和特别优惠。我们不会在任何时候向任何其他第三方出售或分发您的电子邮件地址。查看我们的 <a href=′/terms′ target=′_blank′>隐私条例</a>."
             },
             "button": {
                 "delete": "删除活动",
@@ -1952,8 +2034,8 @@
                 "descending": "递减",
                 "delete_file": "删除文件",
                 "delete_folder": "删除文件夹",
-                "delete_file_confirmation": "您确定要删除此 <强>\":名称\"</强> 的文件?",
-                "delete_folder_confirmation": "您确定要删除此 <强>\":名称\"</强> 的文件夹?",
+                "delete_file_confirmation": "您确定要删除此 <strong>\"{{name}}\"</strong> 的文件?",
+                "delete_folder_confirmation": "您确定要删除此 <strong>\"{{name}}\"</strong> 的文件夹?",
                 "delete_folder_warning": "注意-该文件夹将被永久删除。该文件夹中的文件将被删除到回收站。",
                 "file": "文件",
                 "files": "文件",
@@ -2019,7 +2101,7 @@
                 "file_uploaded_successfully": "文件已成功上传。",
                 "error_uploading_file": "上传文件时出错。请稍后再试。",
                 "message_action_not_allowed": "您没有执行此操作的权限。",
-                "quota_text": ":配额: 已使用总数",
+                "quota_text": "{{quota}} 已使 {{total}}",
                 "quota_reached_text": "您已达到 {{quota}}上传额度。",
                 "removing_file": "由于您不是此文件的所有者，因此您只能将其从您的文件列表中删除。",
                 "delete_file_shared": "当前文件已与其他人共享。如果您要删除它，其他所有用户共享的文件也将被删除。",
@@ -2032,7 +2114,7 @@
                 "error_file_upload": "上传此文件时出错。请稍后再试。",
                 "filetype_validation": "文件类型必须是:",
                 "remove_shared_file": "删除共享文件",
-                "removing_shared_file": "您确定要删除共享文件<强>\":名称\"</强>?",
+                "removing_shared_file": "您确定要删除共享文件<strong>\"{{name}}\"</strong>?",
                 "removing_shared_file_note": "注意:只有文件所有者才能删除文件。",
                 "date_deleted": "删除日期",
                 "restore_file": "还原文件",
@@ -2040,7 +2122,7 @@
                 "delete_file_permanently": "永久删除文件",
                 "restore_file_confirmation": "您确定要还原这个删除的文件吗？",
                 "delete_file_permanently_confirmation": "您确定要永久删除此文件吗？",
-                "message_bin_notice": "回收站中的文件将在5天后被永久删除。您可以永久删除文件以释放您的存储空间。",
+                "message_bin_notice": "回收站中的文件将在5天后被永久删除。这些文件将不计入您的总存储空间。",
                 "item_restored_successfully": "已成功还原文件。",
                 "error_restoring_item": "还原此项时出错。请稍后再试。",
                 "bin": "回收站",
@@ -2060,7 +2142,7 @@
                 "upload_will_overflow_quota_heading": "超过云存储容量",
                 "upload_will_overflow_quota_content_reason": "您试图将此文件复制到云中，已经超出了您的云存储限制。",
                 "upload_will_overflow_quota_content_fixup": "您可以通过查看和删除云上的旧文件来释放空间。",
-                "upload_will_overflow_quota_queries_contact": "如果您有任何疑问，请联系&lt;href=′mailto:support@engagevr.io′&gtsupport@engagevr.io&lt;/a&gt;",
+                "upload_will_overflow_quota_queries_contact": "如果您有任何疑问，请联系<a href=′mailto:support@engagevr.io′>support@engagevr.io</a>",
                 "file_preview_not_available_video": "视频预览不可用",
                 "file_preview_not_available": "预览不可用",
                 "file_owner": "文件所有者",

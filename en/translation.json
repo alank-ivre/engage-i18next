@@ -9,7 +9,8 @@
             "auth_sso_token_invalid": "The provided {{provider}} user token is invalid",
             "auth_sso_token_expired": "The provided {{provider}} user token expired",
             "auth_registration_sso_error": "There was a problem registering user using {{provider}} SSO",
-            "auth_login_sso_error": "There was a problem login in user using {{provider}} SSO"
+            "auth_login_sso_error": "There was a problem login in user using {{provider}} SSO",
+            "email_mismatch": "We were unable to authenticate your SSO login due to an email mismatch between your ENGAGE account and the SSO identity provider."
         }
     },
     "contents": {
@@ -49,7 +50,7 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Create and edit notes on the web {{web_url}}"
+                    "info_banner": "Create and edit notes on the web {{web_url}} "
                 }
             },
             "text": {
@@ -96,7 +97,7 @@
     "passwords": {
         "password": "Passwords must be at least six characters and match the confirmation.",
         "reset": "Your password has been reset!",
-        "sent": "We have e-mailed your password reset link!",
+        "sent": "If <strong>{{email}}</strong> is registered as an ENGAGE account, you will receive an email with further instructions on how to reset your password shortly.",
         "throttled": "Please wait before retrying.",
         "token": "This password reset token is invalid.",
         "user": "We can't find a user with that e-mail address."
@@ -185,18 +186,23 @@
             "text": {
                 "password_reset": "Password Reset",
                 "reset_password": "Reset Password",
-                "login_route": "or go to"
+                "email_message": "Enter the email address that is registered to your ENGAGE account and we’ll send you instructions on how to reset your password.",
+                "login_route": "or go to",
+                "security_message": "For security reasons, you must reset your password before entering ENGAGE."
             },
             "label": {
                 "email": "Email",
-                "email_placeholder": "Your email address",
+                "email_placeholder": "Enter email address",
                 "password": "Password",
                 "confirm_password": "Confirm Password"
             },
             "button": {
                 "reset_my_password": "Reset my password",
                 "reset_password": "Reset password",
-                "login": "login"
+                "send": "Send",
+                "login": "login",
+                "cancel": "Cancel",
+                "return": "Return to Log-in"
             }
         }
     },
@@ -504,13 +510,12 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Create and edit forms on the web {{web_url}}"
+                    "info_banner": "Create and edit forms on the web {{web_url}} "
                 }
             },
             "text": {
                 "allow_deliver": "Allow another user to deliver",
-                "answer_one": "Answer",
-                "answer_other": "Answers",
+                "answer": "Answer | Answers",
                 "answer_name_placeholder": "e.g. My first answer?",
                 "attempts_remaining": "Attempts Remaining",
                 "choose_question": "Choose question...",
@@ -703,6 +708,15 @@
             "text": {
                 "input_current_password": "To change your email, you will need to enter your current password.",
                 "change_password_note": "Please note we will log you out once this update is made. Use your current email and new password to log back in.",
+                "min_character_length": "{{min_chars}} characters minimum.",
+                "max_character_length": "{{max_chars}} characters maximum.",
+                "password_strength_weak": "Weak",
+                "password_strength_medium": "Medium",
+                "password_strength_good": "Good",
+                "password_strength_strong": "Strong",
+                "password_strength_very_strong": "Very Strong",
+                "password_valid": "You must enter a valid password.",
+                "password_common": "This password has been detected as a commonly used password.<br>For security reasons, you must choose a new password.",
                 "sub_change_note": "* Any change to your subscription may take up to 72 hours to process.",
                 "sub_no_active_record": "No records of an active subscription.",
                 "sub_no_history": "No historical subscriptions found.",
@@ -721,15 +735,24 @@
                 "confirm_delete_account_details": "<p>This will <strong>permanently</strong> delete any information, media, notes, links, events and content associated with your account.</p>",
                 "error_sending_user_email": "Error sending deletion email.",
                 "error_deleting_user": "Error deleting acount.",
-                "cancel_subscription_warning": "<p>Once you cancel your subscription, you will no longer have access to PLUS features or content. </p><p><strong>There are no refunds for any monthly or yearly subscriptions which have already been charged to your account. </strong></p>"
+                "cancel_subscription_warning": "<p>Once you cancel your subscription, you will no longer have access to PLUS features or content. </p><p><strong>There are no refunds for any monthly or yearly subscriptions which have already been charged to your account. </strong></p>",
+                "sso_on": "Single Sign-On (SSO) is currently turned on for you",
+                "sso_off": "Single Sign-On (SSO) is currently turned off",
+                "sso_on_info": "If you have any questions, please contact an administrator of the {{name}} Enterprise group.",
+                "sso_off_info": "SSO is currently not set up and available for the group you're in. Please contact your Enterprise group owner for more information.",
+                "sso_enabled_email": "You cannot change your email address while single sign-on (SSO) is enabled. If you have any questions, please contact your group administrator.",
+                "sso_enabled_password": "You cannot change your password while single sign-on (SSO) is enabled. If you have any questions, please contact your group administrator."
             },
             "label": {
                 "settings_title": "Settings",
-                "account_title": "Account",
+                "account_title": "Security & Log-in",
                 "change_email": "Change Email",
                 "change_password": "Change Password",
+                "choose_new_password": "Choose a New Password",
                 "delete_account": "Delete Account",
                 "change_phone_number": "Change Mobile Number",
+                "sso": "Single Sign-On (SSO)",
+                "privacy_title": "Privacy",
                 "subscription_title": "Subscription",
                 "subscription_history": "Subscription History",
                 "billing_details": "Billing Details",
@@ -891,7 +914,7 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Add and manage media on the web {{web_url}}"
+                    "info_banner": "Add and manage media on the web {{web_url}} "
                 }
             },
             "text": {
@@ -1090,12 +1113,9 @@
                 "search_empty_list": "No items to display. Try a different tab or change the search filters.",
                 "empty_list_message": "The list is empty",
                 "ok": "OK",
-                "minute_one": "{{count}} minute",
-                "minute_other": "{{count}} minutes",
-                "second_one": "{{count}} second",
-                "second_other": "{{count}} seconds",
-                "hour_one": "{{count}} hour",
-                "hour_other": "{{count}} hours",
+                "second": "seconds | 1 second | {{count}} seconds",
+                "minute": "minutes | 1 minute | {{count}} minutes",
+                "hour": "hours | 1 hour | {{count}} hours",
                 "js_time_length_parse_short": "{{minutes}}m {{seconds}}s",
                 "pass": "Congratulations, you passed!",
                 "fail": "You failed. Better luck next time!",
@@ -1116,7 +1136,7 @@
                 "no": "No",
                 "terms_of_service": "Terms of Service",
                 "accept_and_continue": "By continuing, you accept the ",
-                "footer_trademark_text": "ENGAGE ™ is a trademark of Immersive VR Education © 2021. All rights reserved.",
+                "footer_trademark_text": "© {{year}} ENGAGE XR, Ltd. All rights reserved. ENGAGE is a trademark of ENGAGE XR, Ltd.",
                 "datetime_time": "Time",
                 "authentication_required": "Authentication Required",
                 "true": "True",
@@ -1244,12 +1264,12 @@
     "emails": {
         "groups": {
             "group-invitation": {
-                "title": "{{inviter_first_name}} {{inviter_last_name}} and your team are waiting for you to join ENGAGE group - {{group_name}}",
+                "title": "{{inviter_first_name}} {{inviter_last_name}} and team are waiting for you to join {{group_name}}",
                 "title-vs": "{{inviter_first_name}} {{inviter_last_name}} and your team are waiting for you to join VIVE Sessions group - {{group_name}}",
-                "response": "To join this group please follow this link: {{url}}",
-                "subject": "{{inviter_name}} has invited you to ENGAGE Group - {{group_name}}",
+                "response": "To join this ENGAGE group, click or tap this link: <br> {{url}}",
+                "subject": "You have been invited to join a new group",
                 "subject-vs": "{{inviter_name}} has invited you to VIVE Sessions Group - {{group_name}}",
-                "learn_more": "To learn more about ENGAGE please follow this link:<br> <a href=\"https://engagevr.io\">https://engagevr.io</a>",
+                "learn_more": "To learn more about ENGAGE, go to :<br> <a href=\"https://engagevr.io\">https://engagevr.io</a>",
                 "learn_more-vs": "To learn more about Vive Sessions please follow this link:<br> <a href=\"https://vive.com/cn/xr-suite-en/\">https://vive.com/cn/xr-suite-en/</a>"
             }
         },
@@ -1259,7 +1279,7 @@
                 "title": "Free month ending {{ends_at_date}} at {{ends_at_time}} {{timezone}}",
                 "thanks": "Thanks for subscribing to ENGAGE PLUS. We hope you are enjoying the experience.",
                 "thanks-vs": "Thanks for subscribing to VIVE Sessions PLUS. We hope you are enjoying the experience.",
-                "reminder": "As a reminder, your free month ends {{ends_at_date}} at {{ends_at_time}} {{timezone}}. We hope you will continue to communicate, teach and learn in virtual reality using {{url}} of ENGAGE PLUS.",
+                "reminder": "Your free month of ENGAGE ends {{ends_at_date}} at {{ends_at_time}} {{timezone}}. Thank you for subscribing to ENGAGE Plus. We hope you are enjoying the experience.",
                 "reminder-vs": "As a reminder, your free month ends {{ends_at_date}} at {{ends_at_time}} {{timezone}}. We hope you will continue to communicate, teach and learn in virtual reality using {{url}} of Vive Sessions PLUS.",
                 "reminder_link": "super powered features",
                 "contact": "Remember, if you need support, you can always contact us at {{url}}."
@@ -1285,22 +1305,27 @@
         },
         "account": {
             "reset-password": {
-                "subject": "Reset Password",
+                "subject": " We received a request to reset your password ",
                 "title": "Password reset request",
-                "requested": "A password reset was recently requested for your account.",
-                "assistance": "Password changes requested through ENGAGE are only sent to the contact email on the account. If you are worried that someone is trying to gain unauthorized access to your account, go ahead and reset your password, or contact us at {{url}} for assistance.",
+                "requested": "We received a request to reset your password.",
+                "assistance": "If you made the request, click or tap the following link to reset your password: ",
                 "assistance-vs": "Password changes requested through VIVE Sessions are only sent to the contact email on the account. If you are worried that someone is trying to gain unauthorized access to your account, go ahead and reset your password, or contact us at {{url}} for assistance.",
                 "reset": "Reset Password",
-                "having_trouble": "If you are having trouble clicking the 'Reset Password' link, copy and paste the URL below into your web browser: {{url}}."
+                "having_trouble": "You can also copy the following address, and paste it into your web browser: {{url}}",
+                "did_not_request": "If you did not request the password reset, you can ignore this email.",
+                "requested_sso": "We've received a request to set a new password for this ENGAGE account: {{email}}.",
+                "assistance_sso": "Your account is set up to use single sign-on (SSO) for log-in authentication. If you are unsure how to reset your SSO password, please contact the Enterprise group owner: {{group_owner}} from {{group_name}}."
             },
             "email-verification": {
-                "subject": "Please Verify your Email Address for ENGAGE",
+                "subject": "Please verify your email address.",
                 "subject-vs": "Please Verify your Email Address for VIVE Sessions",
                 "title": "Please Verify Your Email Address",
-                "message": "Please click the link below to verify your email address.",
+                "message": "Thank you for creating an ENGAGE account. To continue, please click or tap the link below to verify your email address.",
                 "message-vs": "Please click the link below to verify your email address.",
                 "verify": "Verify your email address",
-                "having_trouble": "If you're having trouble clicking the 'Verify your email address' button, copy and paste the URL into your web browser: {{url}}.",
+                "having_trouble": "Alternatively, copy the following address, and paste it into your web browser:  {{url}}.",
+                "getting_started": "If you need some help to get started, you can watch our video tutorials: ",
+                "tutorials_link": "View Tutorials",
                 "contact": "If you did not request this change, then please contact {{support_email_address}}."
             },
             "deleted-user": {
@@ -1310,37 +1335,41 @@
                 "personal_data": "All your personal data has been deleted from our systems. "
             },
             "new-user": {
-                "subject": "Welcome to ENGAGE!",
+                "subject": "Welcome to ENGAGE! Please verify your email address. ",
                 "subject-vs": "Welcome to VIVE Sessions!",
                 "title": "Welcome to ENGAGE",
                 "title-vs": "Welcome to VIVE Sessions",
-                "thank_you": "Thank you for creating an ENGAGE account. Please confirm your email address to continue.",
+                "thank_you": "Welcome to ENGAGE. Thank you for creating an account. To continue, please click or tap the link below to verify your email address.  ",
                 "thank_you-vs": "Thank you for creating an VIVE Sessions account. Please confirm your email address to continue.",
                 "verify": "Verify your email address",
-                "having_trouble": "If you're having trouble clicking the 'Verify your email address' button, copy and paste the URL into your web browser: {{url}}.",
-                "getting_started": "To get started, here is a link to some tutorial videos:",
+                "having_trouble": "You can also copy the following address, and paste it into your web browser: {{url}}.",
+                "getting_started": "If you need some help to get started, you can watch our video tutorials: ",
                 "tutorials_link": "View Tutorials",
-                "faq": "If you get stuck, you can find answers on our FAQ here:",
-                "faq_link": "View FAQ"
+                "faq": "You can also read our comprehensive documentation or view the FAQs: ",
+                "faq_link": "View FAQs",
+                "documentation_link": "View Documentation"
             }
         },
         "events": {
             "attendance-request-denied": {
                 "subject": "Event {{title}} attendance denied",
                 "title": "RSVP request denied for {{title}}",
-                "denied": "The host has declined your request to attend the event, {{title}}."
+                "denied": "Request denied for {{title}}. The host has declined your request to attend the event, {{title}}. ",
+                "automatic_email": "This is an automatic email, do not respond directly to this email address."
             },
             "attendance-removed": {
                 "subject": "Event {{title}} attendance removed",
-                "title": "You have been removed from the {{status}} list of {{title}}",
-                "message": "The host has removed you from the {{status}} list of this event.",
+                "title": "The host of the event has removed you from the registration list",
+                "message": "You have been removed from the {{status}} list for {{title}}. ",
+                "message_2": "The host has removed you from the {{status}} list of this event. The event may be full or there was an additional registration step you did not complete. The event listing may provide additional information. ",
                 "automatic_email": "This is an automatic email, do not respond directly to this email address."
             },
             "cancelled": {
                 "subject": "Event {{title}} has been canceled",
                 "title": "Event {{title}} has been canceled",
-                "message": "The organizer has canceled the event {{title}}, which you are registered to attend.",
-                "feedback": "Please send your questions, comments and feedback related to the event to the event organizer {{name}}."
+                "message": "The event {{title}}, that you were registered to attend, has been cancelled by the organizer. ",
+                "feedback": "Please send your questions, comments and feedback related to the event to the event organizer {{name}}.",
+                "automatic_email": "This is an automatic email, do not respond directly to this email address."
             },
             "attendance": {
                 "subject": "Event {{title}} attendance confirmed",
@@ -1348,20 +1377,41 @@
                 "message": "Thank you for registering for {{title}}. The event is on {{starts_at_date}} at {{starts_at_time}} {{timezone}} and is expected to last {{duration}}.",
                 "information": "For more information about this event please follow this link: {{url}}.",
                 "feedback": "Please send your questions, comments and feedback related to the event to the event organizer {{name}}.",
-                "cancel": "If you cannot attend this event, you may cancel your attendance at any time."
+                "cancel": "If you cannot attend this event, you may cancel your attendance at any time.",
+                "title_concert": "Your attendance of {{title}} is confirmed",
+                "title_concert_2": "Thank you for registering. The event details are as follows: ",
+                "message_concert": "The event details are as follows: ",
+                "concert_starts": "{{starts_at_date}} at {{starts_at_time}} {{timezone}}",
+                "concert_duration": "It is expected to last {{duration}}",
+                "concert_duration_2": "The event is expected to last {{duration}}",
+                "what_to_do_before_label": "What to do before the event",
+                "what_to_do_before_label_2": "For more information about this event please see: ",
+                "what_to_do_before_1": "Install the {{app_name}} app. For instructions, go to {{download}}",
+                "what_to_do_before_2": "Log into the app and design your avatar. Depending on the event, there may be exclusive clothing options that you can choose. For instructions, go to {{avatar_link}}",
+                "what_to_do_before_3": "We recommend that you try your own, private session. This way you can become familiar with the controls, and on the day of the event, you can concentrate on enjoying the experience. For more information, go to {{session_link}}",
+                "what_to_do_label": "What to do on the day of the event",
+                "what_to_do_1": "Ensure that your device is fully charged. The last thing that you want is to drop out in the middle of the event because of a flat battery.",
+                "what_to_do_2": "A few minutes before the event is scheduled to begin, log into the app and go to the event’s page. When the event goes live, you can join. For more information, go to {{join_link}}",
+                "withdraw": "We hope that you enjoy the event. If you can’t attend, you can find instructions on how to withdraw at {{withdraw_link}}",
+                "withdraw_2": "If you cannot attend this event, you may follow the link above and cancel your attendance at any time. ",
+                "create_your_avatar": "Creating your avatar",
+                "start_your_session": "Starting your first Session",
+                "join_event": "Joining an Event",
+                "withdraw_label": "Withdrawing from an Event"
             },
             "reschedule": {
                 "subject": "Event {{title}} has been rescheduled",
                 "title": "Event {{title}} has been rescheduled.",
                 "message": "The organizer has updated the date/time for {{title}}, which you are registered to attend.",
-                "new_date": "The new scheduled date time is {{starts_at_date}} at {{starts_at_time}} {{timezone}}.",
-                "information": "For more information about this event please follow this link {{url}}.",
-                "cancel": "If you cannot attend this event, you may cancel your attendance at any time.",
-                "feedback": "Please send your questions, comments and feedback related to the event to the event organizer {{name}}."
+                "new_date": "It is now scheduled for {{starts_at_date}} at {{starts_at_time}} {{timezone}}.",
+                "information": "For more information about this event, please click or tap this link:  {{url}}.",
+                "cancel": "If you can no longer attend this event, you may follow the link above and cancel your attendance at any time. ",
+                "feedback": "Please send your questions, comments and feedback related to the event to the event organizer {{name}}.",
+                "automatic_email": "This is an automatic email, do not respond directly to this email address."
             },
             "attendance-reminder": {
-                "subject": "Event {{title}} will start in 1 day",
-                "title": "Event {{title}} will start in 1 day",
+                "subject": "The ENGAGE event you registered for will start soon. ",
+                "title": "The ENGAGE event you registered for will start soon. ",
                 "message": "This is a reminder email for the event {{title}} which you are registered to attend.",
                 "event_date_time": "The event will start in 1 day, on {{starts_at_date}} at {{starts_at_time}} {{timezone}}.",
                 "information": "To go to the event and find out more info, go to this link - {{url}}.",
@@ -1369,9 +1419,10 @@
             },
             "host-message-user": {
                 "subject": "Message from event organizer of {{title}}.",
-                "title": "Message from {{name}} (Event Organizer)",
+                "title": "{{name}} (event organiser) has sent you a message: ",
                 "information": "For more information about this event please follow this link: {{url}}.",
                 "feedback": "Please send your questions, comments and feedback related to the event to the event organizer {{name}}.",
+                "automatic_email": "This is an automatic email, do not respond directly to this email address.",
                 "information_hosting": "This is a copy of the message you sent.",
                 "information_interested": "You received a message about this event because you indicated you were interested in attending.",
                 "information_attending": "You received a message about this event because you indicated you were attending.",
@@ -1380,14 +1431,14 @@
             "created": {
                 "subject": "Event {{title}} has been created",
                 "title": "Event {{title}} has been created",
-                "message": "The organizer has created a new event {{title}}, the scheduled date time is {{starts_at_date}} at {{starts_at_time}} {{timezone}} and is expected to last {{duration}}.",
+                "message": "Event {{title}} has been created by the organizer. <br> The scheduled time is {{starts_at_date}} at {{starts_at_time}} {{timezone}} , and is expected to last {{duration}}.",
                 "information": "For more information about this event please follow this link: {{url}}.",
                 "feedback": "Please send your questions, comments and feedback related to the event to the event organizer {{name}} ({{email}})."
             },
             "attendance-request": {
                 "subject": "Attendance request for {{title}}",
                 "title": "RSVP request for {{title}}",
-                "message": "The following person has requested to attend your event",
+                "message": "The following person has requested to attend your event, {{title}}",
                 "button": "GO TO EVENT",
                 "name": "Name",
                 "country": "Country",
@@ -1449,7 +1500,8 @@
                 "no_password": "No password",
                 "enter_new_password": "Enter new password",
                 "password_access_to_session": "Password access to session",
-                "all_users_are_host": "All Users are Co-Host"
+                "all_users_are_host": "All Users are Co-Host",
+                "locked": "Locked"
             },
             "button": {
                 "join": "Join",
@@ -1482,7 +1534,7 @@
             },
             "vr": [],
             "text": {
-                "login_title": "sign in",
+                "login_title": "Log in",
                 "new_user_header": "Need an account?",
                 "forgot_password_header": "Forgot your password?",
                 "register_title": "Create an account",
@@ -1492,11 +1544,14 @@
                 "failed_send_verification_email": "Failed to send user verification email, please try again.",
                 "account_needs_verification": "Your account needs to be verified. <br>We have resent a verification link to your email account.",
                 "verification_link_expired": "The verification link has expired. {{break}} Please ensure you are clicking on the latest verification email link.",
-                "verification_link_already_sent": "A verification link has already been sent to your email address within the last {{minutes}} minutes."
+                "verification_link_already_sent": "A verification link has already been sent to your email address within the last {{minutes}} minutes.",
+                "sso_type_login": "This account requires you to use single sign-on (SSO)",
+                "password_type_login": "This account doesn't use single sign-on (SSO)",
+                "or": "or"
             },
             "label": {
                 "username_email": "Your username or email address",
-                "username_email_placeholder": "Email address or Username",
+                "username_email_placeholder": "Email or Username",
                 "password": "Password",
                 "confirm_password": "Confirm Password",
                 "remember_me": "Remember me",
@@ -1507,10 +1562,12 @@
                 "accept_terms_of_service_vive_sessions": "I agree to the <a href=\"https://business.viveport.cn/documents/cn_cn_zhcn/terms/terms-of-use\" target=\"_blank\">Terms of Service</a> and <a href=\"https://www.viveport.com/cn-privacy-policy\" target=\"_blank\">Privacy Policy</a>"
             },
             "button": {
-                "sign_in": "Sign in",
+                "sign_in": "Log in",
                 "create_account": "Sign Up",
-                "click_here": "Click here",
-                "login": "Login"
+                "forgot_password": "Forgot your password?",
+                "login": "Login",
+                "sso_login": "Log in with SSO",
+                "password_login": "Log in with password"
             }
         }
     },
@@ -1541,7 +1598,9 @@
     "events": {
         "ui": {
             "link": {
-                "goto_events": "Go to Events"
+                "goto_events": "Go to Events",
+                "goto_contact_us": "Want more attendees? Try ",
+                "enterprise": "Enterprise"
             },
             "notification": {
                 "message_sent": "Your message has been sent.",
@@ -1631,13 +1690,13 @@
                 "open_in_app": "Open in App",
                 "event_guide_alert_text": "View a guide to hosting events in ENGAGE",
                 "overbooking_warning": "Overbooking Warning",
-                "overbooking_warning_modal_text_1": "Currently, it is a technical limitation that only 50 users can be present in a virtual reality session in ENGAGE.",
-                "overbooking_warning_modal_text_2": "There are also commercial max limits. 50 users for ENTERPRISE accounts. 30 users for PLUS accounts. ",
-                "overbooking_warning_modal_text_3": "By setting the max registrations for your event to a number higher than the technical and commercial user capacity, some users will not be able to enter the event on the day. ",
-                "overbooking_warning_modal_text_4": "To host an event with more users, please go to",
+                "overbooking_warning_modal_text_1": "The value that you’ve set for Max Registrations is more than the number of users that can join the event.",
+                "overbooking_warning_modal_text_2": "With your {{sub_type}} account, the maximum number is {{max_attendees}}. Places are allocated to people as they join an event. When the limit set by your account is reached, nobody else can join. ",
+                "overbooking_warning_modal_text_3": "You may want to deliberately overbook an event if you suspect that a percentage of people who register will not attend. ",
+                "overbooking_warning_modal_text_4": "For more information about overbooking, go to",
                 "overbooking_warning_text_1": "xxxxx",
                 "max_registrations": "Max Registrations",
-                "max_registrations_tooltip": "Max number of users who can register for the event.<br /> This is capped at 30 for PLUS accounts and 50 for ENTERPRISE accounts.<br /> For more information, see the events guide.",
+                "max_registrations_tooltip": "Max number of users who can register for the event.<br /> This is capped at {{max_reg_plus}} for PLUS accounts and {{max_reg_enterprise}} for ENTERPRISE accounts.<br /> For more information, see the events guide.",
                 "message": "Message",
                 "message_guests": "Message Guests",
                 "more_people": "Want more people in your sessions",
@@ -1755,7 +1814,22 @@
                 "vive_event_access_granted_content": "Your ticket has been verified and you now have access to this event.",
                 "redeem_code_expired_title": "Expired redemption code",
                 "redeem_code_expired_text": "The redemption code used to access this event has expired. You will need a new code to join.",
-                "buy_new_redeem_code": "Get a new redemption code by buying a ticket at"
+                "buy_new_redeem_code": "Get a new redemption code by buying a ticket at",
+                "only_registered_attendees": "This event is only available to users who have already registered.",
+                "free_event": "Free Event",
+                "registration_closes": "Registration closes {{date}}",
+                "heading": "Fatboy Slim's \"Eat Sleep VR Repeat\" - in the Metaverse",
+                "content_1": "Fatboy Slim's career has always been punctuated with fun and firsts and this first-of-its-kind event will take you on an immersive virtual reality experience, unlike any other VR concert that you’ve experienced before!",
+                "content_2": "The 45-minute adventure will take your avatar into the burrows of Fatboy Slim’s mind; starting at the drive-in diner, where you’ll begin the journey with friends and fans.",
+                "content_3": "Get ready to dance as Norm drives up in his prankster bus and joins the fun. When you aren't dancin' you can teleport through the virtual burrows of Norman's mind for an unforgettable experience! ",
+                "content_4": "ENGAGE – the feature-rich, multi-user metaverse platform for creatives, educators, and business professionals. This virtual concert is best experienced in VR, on PCVR headsets or one of the latest standalone headsets such as Quest 2. Mobile devices and standalone headsets released prior to 2020 are not supported.",
+                "content_5": "Start your virtual journey with Fatboy Slim here by choosing your preferred time below:",
+                "schedule": "Schedule",
+                "free_entry": "Free Entry",
+                "sold_out": "Sold out",
+                "almost_sold_out": "Almost sold out",
+                "tickets_available": "Tickets available",
+                "register": "Register"
             },
             "label": {
                 "create_new": "Create New Event",
@@ -1787,6 +1861,7 @@
                 "type_class": "Class",
                 "type_meeting": "Meeting",
                 "type_casual": "Casual",
+                "type_concert": "Concert",
                 "type_conference": "Conference",
                 "not_registered": "Not Registered",
                 "meridian_am": "am",
@@ -1799,7 +1874,9 @@
                 "none": "None",
                 "runtime": "Runtime Activity Schedule",
                 "group_visibility": "Group Visibility",
-                "vive_redeem_code": "REDEMPTION CODE"
+                "vive_redeem_code": "REDEMPTION CODE",
+                "third_party_optin": "Opt-in to receive communications directly from {{partner}}",
+                "third_party_optin_2": "After Opting In you will also receive occasional updates and special offers from {{partner}}. We will not sell or distribute your email address to any other third party at any time. View our <a href='/terms' target='_blank'>Privacy Policy</a>."
             },
             "button": {
                 "attend": "Attend",

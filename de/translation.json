@@ -9,7 +9,8 @@
             "auth_sso_token_invalid": "Das Benutzertoken für {{provider}} ist ungültig",
             "auth_sso_token_expired": "Das Benutzertoken für {{provider}} ist abgelaufen",
             "auth_registration_sso_error": "Bei der Registrierung des Benutzers mittels {{provider}} SSO ist ein Fehler aufgetreten",
-            "auth_login_sso_error": "Bei der Anmeldung des Benutzers mittels {{provider}} SSO ist ein Fehler aufgetreten"
+            "auth_login_sso_error": "Bei der Anmeldung des Benutzers mittels {{provider}} SSO ist ein Fehler aufgetreten",
+            "email_mismatch": "Wir konnten Ihre SSO-Anmeldung nicht authentifizieren, weil Ihr ENGAGE-Konto und der SSO-Identitätsanbieter nicht übereinstimmen."
         }
     },
     "contents": {
@@ -48,7 +49,7 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Hinweise im Web {{web_url}} erstellen und bearbeiten"
+                    "info_banner": "Hinweise im Web {{web_url}}  erstellen und bearbeiten"
                 }
             },
             "text": {
@@ -102,7 +103,7 @@
     "menu": {
         "ui": {
             "text": {
-                "engage_trademark_footer": "ENGAGE &#8482; ist eine Marke der Immersive VR Education © 2020. Alle Rechte vorbehalten."
+                "engage_trademark_footer": "© {{year}} ENGAGE XR, Ltd. Alle Rechte vorbehalten. ENGAGE ist eine Marke von ENGAGE XR, Ltd."
             },
             "button": {
                 "download_engage": "ENGAGE herunterladen",
@@ -182,18 +183,23 @@
             "text": {
                 "password_reset": "Passwort zurücksetzen",
                 "reset_password": "Passwort zurücksetzen",
-                "login_route": "oder hier"
+                "login_route": "oder hier",
+                "security_message": "Aus Sicherheitsgründen müssen Sie Ihr Passwort zurücksetzen, bevor Sie ENGAGE betreten.",
+                "email_message": "Geben Sie die E-Mail-Adresse ein, die für Ihr ENGAGE-Konto registriert ist, und wir senden Ihnen Anweisungen, wie Sie Ihr Passwort zurücksetzen können."
             },
             "label": {
                 "email": "E-Mail",
-                "email_placeholder": "Ihre E-Mail-Adresse",
+                "email_placeholder": "E-Mail eingeben",
                 "password": "Passwort",
                 "confirm_password": "Passwort bestätigen"
             },
             "button": {
                 "reset_my_password": "Mein Passwort zurücksetzen",
                 "reset_password": "Passwort zurücksetzen",
-                "login": "Anmelden"
+                "login": "Anmelden",
+                "send": "Senden",
+                "cancel": "Abbrechen",
+                "return": "Zurück zur Anmeldung"
             }
         }
     },
@@ -281,7 +287,7 @@
                 "tt_session_settings_controls": "Während einer VR-Sitzung können PLUS-Benutzer die Einstellungen ändern und genießen Zugriff auf erweiterte Steuerfunktionen. So können Sie beispielsweise andere Benutzer als Gastgeber hinzufügen, Berechtigungen ändern, Sitzplatzsperren verhängen, andere Benutzer entfernen und ausschließen und die Mediensteuerung zulassen.",
                 "active_subscription_already": "Sie haben bereits ein aktives Abo.",
                 "users_per_session_lite": "3 Benutzer pro Session maximal",
-                "users_per_session": "{{Benutzer}} pro Session / {{lite_users}} Lite Benutzermaximum",
+                "users_per_session": "{{users}} pro Session / {{lite_users}} Lite Benutzermaximum",
                 "tt_sell_live_training": "ENGAGE bietet eine umfassende Plattform für Live-Virtual-Reality-Schulungen, -Kurse und -Erlebnisse. Diese Option ist für ENTERPRISE-Abonnenten reserviert.",
                 "tt_sell_recorded_training": "ENGAGE bietet eine umfassende Plattform zur Erstellung und Aufzeichnung von Virtual-Reality-Schulungen, -Kursen und -Erlebnissen. Diese ist sowohl für PLUS- als auch für ENTERPRISE-Abonnenten verfügbar. Kontaktieren Sie uns, um mehr über die Veröffentlichungsbedingungen zu erfahren.",
                 "tt_public_session": "Teilnehmer können sich in VR-Sitzungen oder auf dem Desktop innerhalb von ENGAGE treffen. Sie können Meetings, Lektionen und Erfahrungen mit Menschen auf der ganzen Welt durchführen. Öffentlich bedeutet, dass jeder teilnehmen kann.",
@@ -311,7 +317,8 @@
                 "upload_3d_models_pro": "Auf Anfrage. Es können zusätzliche Gebühren anfallen.",
                 "dependant_on_enterprise_size": "Ja - Betrag hängt von der ENTERPRISE-Kontogröße ab",
                 "custom_content_menu_enterprise": "Ja - Wählen Sie den Inhalt, den Sie Ihren Benutzern anzeigen möchten",
-                "full": "Voll"
+                "full": "Voll",
+                "vat_modal_body": "Ihre VAT-Nummer konnte nicht validiert werden. Die VAT-Nummer muss der Formattierung des jeweiligen Landes entsprechen. Siehe <a href=\"{{vat_link}}\" target=\"_blank\">VAT-Nummer Formattierung hier</a>."
             },
             "label": {
                 "billing_info_title": "Rechnungsinformationen",
@@ -383,7 +390,9 @@
                 "custom_environment_uploads": "Benutzerdefinierte Umgebungen hochladen",
                 "custom_branding": "Benutzerdefiniertes Branding",
                 "custom_content_menu": "Benutzerdefiniertes Content-Menü",
-                "custom_hosting_options": "Benutzerdefinierte Hosting-Optionen"
+                "custom_hosting_options": "Benutzerdefinierte Hosting-Optionen",
+                "vat_modal_title": "VAT-Nummer Formattierung",
+                "vat_modal_button": "VAT-Nummer Formattierung ansehen"
             },
             "button": {
                 "save_billing": "Rechnungsinformationen speichern",
@@ -438,7 +447,7 @@
                 "menu_search_placeholder": "Suche",
                 "menu_tags_placeholder": "Wählen Sie einige Tags aus",
                 "preview_footer_tags_title": "Tags",
-                "preview_footer_collections_title": "Bestände",
+                "preview_footer_collections_title": "Sammlungen",
                 "empty_list_message": "Die Liste ist leer.",
                 "no_filters": "Keine Filter in dieser Suche gefunden",
                 "no_tags": "Keine Tags in dieser Suche gefunden",
@@ -500,13 +509,12 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Formulare im Web {{web_url}} erstellen und bearbeiten"
+                    "info_banner": "Formulare im Web {{web_url}}  erstellen und bearbeiten"
                 }
             },
             "text": {
                 "allow_deliver": "Einem anderen Benutzer die Abgabe erlauben",
-                "answer_one": "Antwort",
-                "answer_other": "Antworten",
+                "answer": "Antwort | Antworten",
                 "answer_name_placeholder": "z.B. Meine erste Antwort?",
                 "attempts_remaining": "Verbleibende Versuche",
                 "choose_question": "Frage wählen...",
@@ -715,11 +723,26 @@
                 "confirm_delete_account": "Sind Sie sicher, dass Sie Ihr Konto löschen möchten?",
                 "confirm_delete_account_details": "<p>Hiermit werden alle Informationen, Medien, Notizen, Links, Events und Inhalte, die mit Ihrem Konto assoziiert sind, <strong>permanentl</strong> gelöscht.</p>",
                 "error_sending_user_email": "Fehler beim Senden der Lösch-Email.",
-                "error_deleting_user": "Fehler beim Löschen des Kontos."
+                "error_deleting_user": "Fehler beim Löschen des Kontos.",
+                "min_character_length": "Mindestens {{min_chars}} Zeichen.",
+                "max_character_length": "{{max_chars}} Zeichen maximal.",
+                "password_strength_weak": "Schwach",
+                "password_strength_medium": "Mittelmäßig",
+                "password_strength_good": "Gut",
+                "password_strength_strong": "Stark",
+                "password_strength_very_strong": "Sehr stark",
+                "password_valid": "Sie müssen ein gültiges Passwort eingeben.",
+                "password_common": "Dieses Passwort wurde als ein häufig verwendetes Passwort erkannt.<br> Aus Sicherheitsgründen müssen Sie ein neues Passwort wählen.",
+                "sso_on": "Single Sign-On (SSO) ist derzeit für Sie aktiviert",
+                "sso_off": "Single Sign-On (SSO) ist derzeit deaktiviert",
+                "sso_on_info": "Wenn Sie Fragen haben, wenden Sie sich bitte an einen Administrator {{name}} Enterprise-Gruppe.",
+                "sso_off_info": "SSO ist derzeit nicht für diese Gruppe eingerichtet und verfügbar. Bitte wenden Sie sich an den Eigentümer Ihrer Enterprise-Gruppe, um weitere Informationen zu erhalten.",
+                "sso_enabled_email": "Sie können Ihre E-Mail-Adresse nicht ändern, solange Single Sign-On (SSO) aktiviert ist. Wenn Sie Fragen haben, wenden Sie sich bitte an Ihren Gruppen-Administrator.",
+                "sso_enabled_password": "Sie können Ihr Passwort nicht ändern, solange Single Sign-On (SSO) aktiviert ist. Wenn Sie Fragen haben, wenden Sie sich bitte an Ihren Gruppen-Administrator."
             },
             "label": {
                 "settings_title": "Einstellungen",
-                "account_title": "Konto",
+                "account_title": "Sicherheit & Anmeldung",
                 "change_email": "E-Mail ändern",
                 "change_password": "Passwort ändern",
                 "subscription_title": "Abo",
@@ -759,7 +782,10 @@
                 "void": "Ungültig",
                 "status": "Status",
                 "change_phone_number": "Handynummer ändern",
-                "delete_account": "Konto löschen"
+                "delete_account": "Konto löschen",
+                "choose_new_password": "Wählen Sie ein neues Passwort",
+                "sso": "Einmalige Anmeldung (SSO)",
+                "privacy_title": "Datenschutz"
             },
             "button": {
                 "change_email": "E-Mail ändern",
@@ -883,14 +909,14 @@
             },
             "vr": {
                 "text": {
-                    "info_banner": "Medien im Web hinzufügen und verwalten {{web_url}}"
+                    "info_banner": "Medien im Web hinzufügen und verwalten {{web_url}} "
                 }
             },
             "text": {
                 "title": "Medien",
                 "feature_description": "Speichern Sie Medienlinks für Videos und Websites, um während Ihrer Virtual-Reality-Sitzungen schnell darauf zugreifen zu können.",
                 "disconnect_confirmation_header": "Trennung bestätigen",
-                "disconnect_confirmation_body": "Sind Sie sicher, dass Sie die Verbindung zu {{connection_name}} trennen wollen?",
+                "disconnect_confirmation_body": "Sind Sie sicher, dass Sie die Verbindung zu {{connection_name}} trennen wollen",
                 "search_filename_placeholder": "Nach Dateinamen suchen",
                 "descending": "Absteigend",
                 "empty_folder": "Dieser Ordner ist leer.",
@@ -1108,12 +1134,9 @@
                 "retrieve_data_error": "Beim Abrufen der Daten ist ein Fehler aufgetreten. Bitte laden Sie den Bildschirm neu, um fortzufahren.",
                 "search_empty_list": "Keine Ergebnisse. Bitte versuchen Sie, die Filter zu ändern.",
                 "empty_list_message": "Die Liste ist leer",
-                "minute_one": "{{count}} Minute",
-                "minute_other": "{{count}} Minuten",
-                "second_one": "{{count}} Sekunde",
-                "second_other": "{{count}} Sekunden",
-                "hour_one": "{{count}} Stunde",
-                "hour_other": "{{count}} Stunden",
+                "second": "Sekunden | 1 Sekunde | {{count}} Sekunden",
+                "minute": "Minuten | 1 Minute | {{count}} Minuten",
+                "hour": "Stunden | 1 Stunde | {{count}} Stunden",
                 "js_time_length_parse_short": "{{minutes}}m {{seconds}}s",
                 "pass": "Herzlichen Glückwunsch, Sie haben bestanden!",
                 "fail": "Sie haben es nicht geschafft. Mehr Glück beim nächsten Mal!",
@@ -1134,7 +1157,7 @@
                 "no": "Nein",
                 "terms_of_service": "Nutzungsbedingungen",
                 "accept_and_continue": "Indem Sie fortfahren, akzeptieren Sie die",
-                "footer_trademark_text": "ENGAGE ™ ist eine Marke der Immersive VR Education © 2020. Alle Rechte vorbehalten.",
+                "footer_trademark_text": "© {{year}} ENGAGE XR, Ltd. Alle Rechte vorbehalten. ENGAGE ist eine Marke von ENGAGE XR, Ltd.",
                 "datetime_time": "Zeit",
                 "authentication_required": "Authentifizierung erforderlich",
                 "true": "Richtig",
@@ -1263,10 +1286,10 @@
     "emails": {
         "groups": {
             "group-invitation": {
-                "title": "{{inviter_first_name}} {{inviter_last_name}} und Ihr Team warten darauf, dass Sie der ENGAGE-Gruppe {{group_name}} beitreten",
-                "response": "Um dieser Gruppe beizutreten, folgen Sie bitte diesem Link: {{url}}",
-                "subject": "{{inviter_name}} hat Sie zur ENGAGE-Gruppe {{group_name}} eingeladen",
-                "learn_more": "Um mehr über ENGAGE zu erfahren, folgen Sie bitte diesem Link:<br> <a href=\"https://engagevr.io\">https://engagevr.io</a>",
+                "title": "{{inviter_first_name}} {{inviter_last_name}} und Team warten darauf, dass Sie {{group_name}} beitreten",
+                "response": "Um dieser ENGAGE Gruppe beizutreten, klicken oder tippen Sie bitte diesen Link: <br> {{url}}",
+                "subject": "Sie wurden eingeladen, einer neuen Gruppe beizutreten",
+                "learn_more": "Um mehr über ENGAGE zu erfahren, besuchen Sie :<br> <a href=\"https://engagevr.io\">https://engagevr.io</a>",
                 "title-vs": "{{inviter_first_name}} {{inviter_last_name}} und dein Team warten darauf, dass du dich der {{group_name}} VIVE Session anschließt",
                 "subject-vs": "{{inviter_name}} hat Sie zu der VIVE Sessions Gruppe - {{group_name}} eingeladen",
                 "learn_more-vs": "Um mehr über Vive Sessions zu lernen, besuchen Sie bitte den folgenden Link:<br> <a href=\"https://vive.com/cn/xr-suite-en/\">https://vive.com/cn/xr-suite-en/</a>"
@@ -1277,7 +1300,7 @@
                 "subject": "Ihr Probezeit endet bald!",
                 "title": "Kostenloser Monat endet am {{ends_at_date}} um {{ends_at_time}} {{timezone}}",
                 "thanks": "Vielen Dank, dass Sie ENGAGE PLUS abonnieren. Wir hoffen, dass Sie das Erlebnis genießen.",
-                "reminder": "Zur Erinnerung: Ihr kostenloser Monat endet am {{ends_at_date}} um {{ends_at_time}} {{timezone}}. Wir hoffen, dass Sie weiterhin in der virtuellen Realität kommunizieren, lehren und lernen mit {{url}} von ENGAGE PLUS.",
+                "reminder": "Ihr kostenloser Monat ENGAGE endet am {{ends_at_date}} um {{ends_at_time}} {{timezone}}. Danke, dass Sie ENGAGE Plus abonniert haben. Wir hoffen, dass es Ihnen gefällt.",
                 "reminder_link": "Leistungsstarke Funktionen",
                 "contact": "Wenn Sie Unterstützung benötigen, können Sie uns jederzeit unter {{url}} kontaktieren.",
                 "thanks-vs": "Vielen Dank, dass Sie VIVE Sessions PLUS abonniert haben. Wir hoffen, dass es Ihnen gefällt.",
@@ -1297,30 +1320,35 @@
                 "terms_text": "AGB",
                 "policy": "Datenschutzrichtlinie",
                 "contact": "Kontaktieren Sie uns",
-                "trademark": "ENGAGE™ ist eine Marke der Immersive VR Education © 2020.",
+                "trademark": "© {{year}} ENGAGE XR, Ltd. Alle Rechte vorbehalten. ENGAGE ist eine Marke von ENGAGE XR, Ltd.",
                 "rights": "Alle Rechte vorbehalten.",
                 "trademark-vs": "VIVE Sessions © 2020."
             }
         },
         "account": {
             "reset-password": {
-                "subject": "Passwort zurücksetzen",
+                "subject": "Wir haben eine Anfrage erhalten, Ihr Passwort zurückzusetzen",
                 "title": "Anfrage zum Zurücksetzen des Passworts",
-                "requested": "Für Ihr Konto wurde kürzlich angefragt, das Passwort zurückzusetzen.",
-                "assistance": "Passwortänderungen, die über ENGAGE angefordert werden, werden nur an die im Konto gespeicherte Kontakt-E-Mail gesendet. Wenn Sie befürchten, dass jemand versucht, unbefugten Zugang zu Ihrem Konto zu erhalten, sollten Sie jetzt Ihr Passwort zurücksetzen oder uns zur Unterstützung unter {{url}} kontaktieren.",
+                "requested": "Wir haben eine Anfrage erhalten, Ihr Passwort zurückzusetzen.",
+                "assistance": "Wenn Sie die Anfrage gestellt haben, klicken oder tippen Sie auf den folgenden Link, um Ihr Passwort zurückzusetzen:",
                 "reset": "Passwort zurücksetzen",
-                "having_trouble": "Wenn Sie Probleme haben, auf den Link „Passwort zurücksetzen“ zu klicken, kopieren Sie die nachstehende URL und fügen Sie sie in Ihren Webbrowser ein: {{url}}.",
-                "assistance-vs": "Passwortänderungen, die über VIVE Sessions beantragt werden, werden nur an die im Konto angegeben Kontakt-E-Mail gesendet. Wenn Sie den Verdacht haben, dass jemand versucht, sich unbefugt Zugang zu Ihrem Konto zu verschaffen, setzen Sie Ihr Passwort zurück oder kontaktieren Sie uns unter {{url}} für Hilfestellung."
+                "having_trouble": "Sie können auch die folgende Adresse kopieren und in Ihren Webbrowser einfügen: {{url}}",
+                "assistance-vs": "Passwortänderungen, die über VIVE Sessions beantragt werden, werden nur an die im Konto angegeben Kontakt-E-Mail gesendet. Wenn Sie den Verdacht haben, dass jemand versucht, sich unbefugt Zugang zu Ihrem Konto zu verschaffen, setzen Sie Ihr Passwort zurück oder kontaktieren Sie uns unter {{url}} für Hilfestellung.",
+                "did_not_request": "Wenn Sie die Zurücksetzung Ihres Passworts nicht beantragt haben, können Sie diese E-Mail ignorieren.",
+                "requested_sso": "Wir haben eine Anfrage erhalten, ein neues Passwort für dieses ENGAGE Konto einzurichten: {{email}}.",
+                "assistance_sso": "Ihr Konto ist so eingerichtet, dass die Authentifizierung bei der Anmeldung über Single Sign-On (SSO) erfolgt. Wenn Sie nicht wissen, wie Sie Ihr SSO-Passwort zurücksetzen können, wenden Sie sich bitte an den Eigentümer der Enterprise-Gruppe: {{group_owner}} von {{group_name}}."
             },
             "email-verification": {
-                "subject": "Bitte verifizieren Sie Ihre neue E-Mail-Adresse für ENGAGE",
+                "subject": "Bitte verifizieren Sie Ihre E-Mail-Adresse.",
                 "title": "Bitte verifizieren Ihre neue E-Mail-Adresse",
-                "message": "Bitte klicken Sie auf den nachfolgenden Link, um Ihre E-Mail-Adresse zu verifizieren.",
+                "message": "Danke, dass Sie ein ENGAGE-Konto eingerichtet haben. Um fortzufahren, klicken oder tippen Sie bitte auf den Link unten, um Ihre E-Mail-Adresse zu bestätigen.",
                 "verify": "Verifizieren Sie Ihre E-Mail-Adresse",
-                "having_trouble": "Wenn Sie Probleme haben, auf die Schaltfläche „Verifizieren Sie Ihre E-Mail-Adresse“ zu klicken, kopieren Sie die URL und fügen Sie sie in Ihren Webbrowser ein: {{url}}.",
+                "having_trouble": "Alternativ können Sie die folgende Adresse kopieren und in Ihren Webbrowser einfügen: {{url}}.",
                 "contact": "Wenn Sie diese Änderung nicht angefordert haben, wenden Sie sich bitte an {{support_email_address}}.",
                 "subject-vs": "Bitte verifzieren Sie Ihre E-Mail-Adresse für VIVE-Sitzungen",
-                "message-vs": "Bitte klicken Sie auf den nachstehenden Link, um Ihre E-Mail-Adresse zu verifizieren."
+                "message-vs": "Bitte klicken Sie auf den nachstehenden Link, um Ihre E-Mail-Adresse zu verifizieren.",
+                "getting_started": "Wenn Sie Starthilfe benötigen, können Sie sich unsere Video-Tutorials ansehen:",
+                "tutorials_link": "Anleitungen ansehen"
             },
             "deleted-user": {
                 "subject": "Ihr {{region_name}} Konto wurde gelöscht.",
@@ -1329,37 +1357,41 @@
                 "personal_data": "Alle personenbezogenen Daten wurden aus unseren Systemen gelöscht."
             },
             "new-user": {
-                "subject": "Willkommen bei ENGAGE!",
+                "subject": "Willkommen bei ENGAGE! Bitte verifizieren Sie Ihre E-Mail-Adresse.",
                 "title": "Willkommen bei ENGAGE",
-                "thank_you": "Vielen Dank, dass Sie ein ENGAGE-Konto erstellt haben. Bitte bestätigen Sie Ihre E-Mail-Adresse, um fortzufahren.",
+                "thank_you": "Willkommen bei ENGAGE. Vielen Dank, dass Sie ein Konto erstellt haben. Um fortzufahren, klicken oder tippen Sie bitte auf den nachstehenden Link, um Ihre E-Mail-Adresse zu bestätigen.",
                 "verify": "Verifizieren Sie Ihre E-Mail-Adresse",
-                "having_trouble": "Wenn Sie Probleme haben, auf die Schaltfläche „Verifizieren Sie Ihre E-Mail-Adresse“ zu klicken, kopieren Sie die URL und fügen Sie sie in Ihren Webbrowser ein: {{url}}.",
-                "getting_started": "Für den Anfang ein Link zu einigen Tutorial-Videos:",
+                "having_trouble": "Sie können auch die folgende Adresse kopieren und in Ihren Webbrowser einfügen: {{url}}.",
+                "getting_started": "Wenn Sie Hilfe bei den ersten Schritten benötigen, können Sie sich unsere Video-Tutorials ansehen:",
                 "tutorials_link": "Tutorials anzeigen",
-                "faq": "Wenn Sie nicht weiterkommen, finden Sie hier Antworten auf unsere FAQ:",
+                "faq": "Sie können auch unsere umfassende Dokumentation lesen oder sich die Häufig gestellten Fragen ansehen:",
                 "faq_link": "FAQ anzeigen",
                 "subject-vs": "Willkommen bei VIVE-Sessions!",
                 "title-vs": "Willkommen bei VIVE Sessions",
-                "thank_you-vs": "Vielen Dank, dass Sie ein VIVE Sessions Konto erstellt haben. Bitte bestätigen Sie Ihre E-Mail-Adresse, um fortzufahren."
+                "thank_you-vs": "Vielen Dank, dass Sie ein VIVE Sessions Konto erstellt haben. Bitte bestätigen Sie Ihre E-Mail-Adresse, um fortzufahren.",
+                "documentation_link": "Dokumentation ansehen"
             }
         },
         "events": {
             "attendance-request-denied": {
                 "subject": "Teilnahme an Veranstaltung {{title}} verweigert",
                 "title": "RSVP-Anfrage abgelehnt für {{title}}",
-                "denied": "Der Gastgeber hat Ihre Anfrage zur Teilnahme an der Veranstaltung {{title}} abgelehnt."
+                "denied": "Anfrage für {{title}} abgelehnt. Der Gastgeber hat Ihre Anfrage zur Teilnahme an der Veranstaltung {{title}} abgelehnt.",
+                "automatic_email": "Hierbei handelt es sich um eine automatische E-Mail, bitte antworten Sie nicht direkt auf diese E-Mail-Adresse."
             },
             "attendance-removed": {
                 "subject": "Teilnahme an Veranstaltung {{title}} zurückgenommen",
-                "title": "Sie wurden aus der {{status}}-Liste von {{title}} entfernt",
-                "message": "Der Gastgeber hat Sie aus der {{status}}-Liste dieser Veranstaltung entfernt.",
-                "automatic_email": "Dies ist eine automatische E-Mail, antworten Sie nicht direkt auf diese E-Mail-Adresse."
+                "title": "Der Gastgeber der Veranstaltung hat Sie von der Anmeldeliste entfernt",
+                "message": "Sie wurden von der {{status}} list für {{title}} entfernt.",
+                "automatic_email": "Dies ist eine automatische E-Mail, antworten Sie nicht direkt auf diese E-Mail-Adresse.",
+                "message_2": "Der Gastgeber hat Sie von der {{status}} list dieser Veranstaltung entfernt. Es kann sein, dass die Veranstaltung voll ist oder dass es einen zusätzlichen Anmeldeschritt gab, den Sie nicht abgeschlossen haben. Die Veranstaltungsliste kann zusätzliche Informationen enthalten."
             },
             "cancelled": {
                 "subject": "Veranstaltung {{title}} wurde abgesagt",
                 "title": "Veranstaltung {{title}} wurde abgesagt",
-                "message": "Der Veranstalter hat die Veranstaltung {{title}}, zu der Sie angemeldet sind, abgesagt.",
-                "feedback": "Bitte senden Sie Ihre Fragen, Kommentare und Rückmeldungen zu dieser Veranstaltung an den Veranstalter {{name}}."
+                "message": "Die Veranstaltung {{title}}, zu der Sie angemeldet waren, wurde vom Veranstalter abgesagt.",
+                "feedback": "Bitte senden Sie Ihre Fragen, Kommentare und Rückmeldungen zu dieser Veranstaltung an den Veranstalter {{name}}.",
+                "automatic_email": "Dies ist eine automatische E-Mail, bitte antworten Sie nicht direkt auf diese E-Mail-Adresse."
             },
             "attendance": {
                 "subject": "Teilnahme an Veranstaltung {{title}} bestätigt",
@@ -1367,20 +1399,41 @@
                 "message": "Vielen Dank für Ihre Anmeldung zu {{title}}. Die Veranstaltung findet statt am {{starts_at_date}} um {{starts_at_time}} {{timezone}} und wird voraussichtlich {{duration}} dauern.",
                 "information": "Für weitere Informationen zu dieser Veranstaltung folgen Sie bitte diesem Link: {{url}}.",
                 "feedback": "Bitte senden Sie Ihre Fragen, Kommentare und Rückmeldungen zu dieser Veranstaltung an den Veranstalter {{name}}.",
-                "cancel": "Wenn Sie an dieser Veranstaltung nicht teilnehmen können, können Sie Ihre Teilnahme jederzeit absagen."
+                "cancel": "Wenn Sie an dieser Veranstaltung nicht teilnehmen können, können Sie Ihre Teilnahme jederzeit absagen.",
+                "title_concert": "Ihre Teilnahme an {{title}} ist bestätigt",
+                "message_concert": "Die Event-Details sind wie folgt:",
+                "concert_starts": "{{starts_at_date}} um {{starts_at_time}} {{timezone}}",
+                "concert_duration": "Voraussichtliche Dauer {{duration}}",
+                "what_to_do_before_label": "Was ist vor der Veranstaltung zu tun",
+                "what_to_do_before_1": "Installieren Sie die {{app_name}} App. Die Anleitung finden Sie hier {{download}}",
+                "what_to_do_before_2": "Melden Sie sich bei der App an und gestalten Sie Ihren Avatar. Je nach Veranstaltung gibt es exklusive Kleidungsoptionen zur Auswahl. Eine Anleitung finden Sie unter {{avatar_link}}",
+                "what_to_do_before_3": "Wir empfehlen Ihnen, Ihre eigene, private Sitzung auszuprobieren. So können Sie sich mit der Steuerung vertraut machen und sich am Tag der Veranstaltung ganz auf das Erlebnis konzentrieren. Weitere Informationen finden Sie unter {{session_link}}",
+                "what_to_do_label": "Das ist am Tag des Events zu tun",
+                "what_to_do_1": "Stellen Sie sicher, dass Ihr Gerät vollständig geladen ist. Das Letzte, was Sie wollen, ist, dass Ihnen mitten in der Veranstaltung des Akku ausgeht.",
+                "what_to_do_2": "Loggen Sie sich einige Minuten vor dem geplanten Event-Beginn in die App ein und rufen Sie die Event-Seite auf. Wenn das Event live geht, können Sie beitreten. Weitere Informationen finden Sie unter {{join_link}}",
+                "withdraw": "Wir hoffen, dass Ihnen die Veranstalung gefallen wird. Wenn Sie nicht teilnehmen können, finden Sie Hinweise zum Rücktritt unter {{withdraw_link}}",
+                "create_your_avatar": "Erstellen des Avatars",
+                "start_your_session": "Ihre erste Sitzung",
+                "join_event": "Teilnahme an einem Event",
+                "withdraw_label": "Rücktritt von einem Event",
+                "title_concert_2": "Danke für Ihre Registierung. Die Event-Details sind wie folgt:",
+                "concert_duration_2": "Voraussichtliche Event-Dauer {{duration}}",
+                "what_to_do_before_label_2": "Weitere Informationen zu dieser Veranstaltung finden Sie unter:",
+                "withdraw_2": "Wenn Sie nicht länger an diesem Event teilnehmen können, können Sie dem obigen Link folgen und Ihre Teilnahme jederzeit stornieren."
             },
             "reschedule": {
                 "subject": "Veranstaltung {{title}} wurde verschoben",
                 "title": "Veranstaltung {{title}} wurde verschoben.",
                 "message": "Der Veranstalter hat das Datum/die Uhrzeit für {{title}} aktualisiert, zu der Sie angemeldet sind.",
-                "new_date": "Der neue geplante Termin ist {{starts_at_date}} um {{starts_at_time}} {{timezone}}.",
-                "information": "Für weitere Informationen zu dieser Veranstaltung folgen Sie bitte diesem Link {{url}}.",
-                "cancel": "Wenn Sie an dieser Veranstaltung nicht teilnehmen können, können Sie Ihre Teilnahme jederzeit absagen.",
-                "feedback": "Bitte senden Sie Ihre Fragen, Kommentare und Rückmeldungen zu dieser Veranstaltung an den Veranstalter {{name}}."
+                "new_date": "Der neue Startermin ist {{starts_at_date}} um {{starts_at_time}} {{timezone}}.",
+                "information": "Für weitere Informationen zu dieser Veranstaltung klicken oder tippen Sie bitte den folgenden Link: {{url}}.",
+                "cancel": "Wenn Sie nicht länger an dieser Veranstaltung teilnehmen können, können Sie Ihre Teilnahme jederzeit absagen.",
+                "feedback": "Bitte senden Sie Ihre Fragen, Kommentare und Rückmeldungen zu dieser Veranstaltung an den Veranstalter {{name}}.",
+                "automatic_email": "Dies ist eine automatische E-Mail, bitte antworten Sie nicht direkt auf diese E-Mail-Adresse."
             },
             "attendance-reminder": {
-                "subject": "Veranstaltung {{title}} beginnt in 1 Tag",
-                "title": "Veranstaltung {{title}} beginnt in 1 Tag",
+                "subject": "Die ENGAGE-Veranstaltung, für die Sie sich angemeldet haben, beginnt in Kürze.",
+                "title": "Die ENGAGE-Veranstaltung, für die Sie sich angemeldet haben, beginnt in Kürze.",
                 "message": "Dies ist eine Erinnerungs-E-Mail für die Veranstaltung {{title}}, für die Sie zur Teilnahme registriert sind.",
                 "event_date_time": "Die Veranstaltung beginnt in 1 Tag, am {{starts_at_date}} um {{starts_at_time}} {{timezone}}.",
                 "information": "Um die Veranstaltung aufzusuchen und mehr Informationen zu erhalten, folgen Sie diesem Link – {{url}}.",
@@ -1388,25 +1441,26 @@
             },
             "host-message-user": {
                 "subject": "Nachricht vom Veranstalter von {{title}}.",
-                "title": "Nachricht von {{name}} (Veranstalter)",
+                "title": "{{name}} (Veranstalter) hat Ihnen eine Nachricht geschickt:",
                 "information": "Für weitere Informationen zu dieser Veranstaltung folgen Sie bitte diesem Link: {{url}}.",
                 "feedback": "Bitte senden Sie Ihre Fragen, Kommentare und Rückmeldungen zu dieser Veranstaltung an den Veranstalter {{name}}.",
                 "information_hosting": "Dies ist eine Kopie der Nachricht, die Sie gesendet haben.",
                 "information_interested": "Sie haben eine Nachricht zu dieser Veranstaltung erhalten, weil Sie angegeben haben, dass Sie daran interessiert sind.",
                 "information_attending": "Sie haben eine Nachricht zu dieser Veranstaltung erhalten, weil Sie angegeben haben, dass Sie daran teilnehmen.",
-                "information_waiting": "Sie haben eine Nachricht zu dieser Veranstaltung erhalten, weil Sie um Teilnahme gebeten haben."
+                "information_waiting": "Sie haben eine Nachricht zu dieser Veranstaltung erhalten, weil Sie um Teilnahme gebeten haben.",
+                "automatic_email": "Dies ist eine automatische E-Mail, bitte antworten Sie nicht direkt auf diese E-Mail-Adresse."
             },
             "created": {
                 "subject": "Veranstaltung {{title}} wurde erstellt",
                 "title": "Veranstaltung {{title}} wurde erstellt",
-                "message": "Der Veranstalter hat eine neue Veranstaltung {{title}} erstellt, mit dem geplanten Termin {{starts_at_date}} um {{starts_at_time}} {{timezone}}, und sie wird voraussichtlich {{duration}} dauern.",
+                "message": "Die Veranstaltung {{title}} wurde vom Organisator erstellt. <br> Die geplante Startzeit ist {{starts_at_date}} um {{starts_at_time}} {{timezone}}, die Veranstaltung wird voraussichtlich {{duration}} dauern.",
                 "information": "Für weitere Informationen zu dieser Veranstaltung folgen Sie bitte diesem Link: {{url}}.",
                 "feedback": "Bitte senden Sie Ihre Fragen, Kommentare und Rückmeldungen zu dieser Veranstaltung an den Veranstalter {{name}} ({{email}})."
             },
             "attendance-request": {
                 "subject": "Teilnahmeanfrage für {{title}}",
                 "title": "RSVP-Anfrage für {{title}}",
-                "message": "Die folgende Person hat um Teilnahme an Ihrer Veranstaltung gebeten",
+                "message": "Die folgende Person hat um die Teilnahme an Ihrer Veranstaltung gebeten, {{title}}",
                 "button": "ZUR VERANSTALTUNG GEHEN",
                 "name": "Name",
                 "country": "Land",
@@ -1467,7 +1521,9 @@
                 "no_password": "Kein Passwort",
                 "type_event": "Event",
                 "all_users_are_host": "Alle Benutzer sind Mitveranstalter",
-                "enter_new_password": "Neues Passwort eingeben"
+                "enter_new_password": "Neues Passwort eingeben",
+                "password_access_to_session": "Passwort-Zugang zur Sitzung",
+                "locked": "Gesperrt"
             },
             "button": {
                 "join": "Beitreten",
@@ -1499,7 +1555,7 @@
                 "session_expired_message": "Ihre Sitzung ist abgelaufen. Sie werden umgeleitet..."
             },
             "text": {
-                "login_title": "anmelden",
+                "login_title": "Anmelden",
                 "new_user_header": "Brauche ein Konto?",
                 "forgot_password_header": "Passwort vergessen?",
                 "register_title": "Ein Konto erstellen",
@@ -1508,12 +1564,15 @@
                 "session_expired": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich an, um fortzufahren.",
                 "failed_send_verification_email": "Die Verifizierungs-E-Mail konnte nicht verschickt werden. Bitte versuchen Sie es erneut.",
                 "account_needs_verification": "Ihr Konto muss verifiziert werden. <br>Wir haben erneut einen Verifizierungslink an Ihr E-Mail-Konto geschickt.",
-                "verification_link_expired": "Der Verifizierungslink ist abgelaufen.<br>Bitte vergewissern Sie sich, dass Sie auf den neuesten E-Mail-Verifizierungslink klicken.",
-                "verification_link_already_sent": "Wir haben innerhalb der letzten 15 Minuten einen Verifizierungslink an Ihre E-Mail-Adresse versandt."
+                "verification_link_expired": "Der Verifizierungslink ist abgelaufen. {{break}} Bitte vergewissern Sie sich, dass Sie auf den neuesten E-Mail-Verifizierungslink klicken.",
+                "verification_link_already_sent": "Wir haben innerhalb der letzten 15 Minuten einen Verifizierungslink an Ihre E-Mail-Adresse versandt.",
+                "sso_type_login": "Für dieses Konto müssen Sie Single Sign-On (SSO) verwenden",
+                "password_type_login": "Dieses Konto verwendet kein Single Sign-On (SSO)",
+                "or": "oder"
             },
             "label": {
                 "username_email": "Ihr Benutzername oder Ihre E-Mail-Adresse",
-                "username_email_placeholder": "E-Mail-Adresse oder Benutzername",
+                "username_email_placeholder": "E-Mail oder Benutzername",
                 "password": "Passwort",
                 "confirm_password": "Passwort bestätigen",
                 "remember_me": "An mich erinnern",
@@ -1527,7 +1586,10 @@
                 "sign_in": "Anmelden",
                 "create_account": "Anmelden",
                 "click_here": "Hier klicken",
-                "login": "Anmelden"
+                "login": "Anmelden",
+                "forgot_password": "Passwort vergessen?",
+                "sso_login": "Mit SSO anmelden",
+                "password_login": "Mit Passwort anmelden"
             }
         }
     },
@@ -1565,7 +1627,9 @@
     "events": {
         "ui": {
             "link": {
-                "goto_events": "Events besuchen"
+                "goto_events": "Events besuchen",
+                "goto_contact_us": "Möchten Sie mehr Teilnehmer? Versuchen Sie",
+                "enterprise": "Enterprise"
             },
             "notification": {
                 "message_sent": "Ihre Nachricht wurde gesendet.",
@@ -1739,10 +1803,10 @@
                 "request_will_be_notified": "Sie werden per E-Mail benachrichtigt, wenn der Gastgeber Ihre Teilnahmeanfrage genehmigt.",
                 "event_guide_alert_text": "Leitfaden zum Hosten von ENGAGE-Events anzeigen",
                 "overbooking_warning": "Überbuchungswarnung",
-                "overbooking_warning_modal_text_1": "Derzeit gibt es eine technische Einschränkung, laut der nur 50 Benutzer auf einmal an einer Virtual-Reality-Sitzung in ENGAGE teilnehmen können.",
-                "overbooking_warning_modal_text_2": "Es gibt auch kommerzielle Höchstgrenzen. 50 Benutzer für ENTERPRISE-Konten. 30 Benutzer für PLUS-Konten.",
-                "overbooking_warning_modal_text_3": "Wenn Sie die maximale Anzahl der Registrierungen für Ihr Event auf eine Zahl setzen, die höher ist als die technische und kommerzielle Nutzerkapazität, können einige Benutzer die Veranstaltung an diesem Tag nicht betreten.",
-                "overbooking_warning_modal_text_4": "Um ein Event mit mehr Benutzern zu hosten, besuchen Sie",
+                "overbooking_warning_modal_text_1": "Der Wert, den Sie für Maximale Anmeldungen festgelegt haben, ist höher als die Anzahl der Benutzer, die an der Veranstaltung teilnehmen können.",
+                "overbooking_warning_modal_text_2": "Bei Ihrem {{sub_type}}-Konto liegt die maximale Teilnehmerzahl bei {{max_attendees}}. Die Plätze werden den Teilnehmern zugewiesen, sobald sie einer Veranstaltung beitreten. Wenn das von Ihrem Konto festgelegte Limit erreicht ist, kann niemand mehr beitreten.",
+                "overbooking_warning_modal_text_3": "Sie können eine Veranstaltung absichtlich überbuchen, wenn Sie vermuten, dass ein bestimmter Prozentsatz der angemeldeten Personen nicht teilnehmen wird.",
+                "overbooking_warning_modal_text_4": "Weitere Informationen zur Überbuchung finden Sie unter",
                 "overbooking_warning_text_1": "xxxxx",
                 "max_registrations": "Max. Registrierungen",
                 "max_registrations_tooltip": "Maximale Anzahl der Benutzer, die sich für das Event registrieren können.<br /> Diese Anzahl liegt für PLUS-Kunden bei 30 und für ENTERPRISE-Kunden bei 50. <br /> Für nähere Informationen besuchen Sie bitte den Events-Leitfaden.",
@@ -1781,7 +1845,22 @@
                 "vive_event_access_granted_content": "Ihr Ticket wurde überprüft und Sie haben nun Zugang zu diesem Event.",
                 "redeem_code_expired_title": "Abgelaufener Einlösecode",
                 "redeem_code_expired_text": "Der für den Zugang zu dieser Veranstaltung verwendete Einlösecode ist abgelaufen. Sie benötigen einen neuen Code, um teilzunehmen.",
-                "buy_new_redeem_code": "Holen Sie sich einen neuen Einlösecode, indem Sie ein Ticket kaufen bei"
+                "buy_new_redeem_code": "Holen Sie sich einen neuen Einlösecode, indem Sie ein Ticket kaufen bei",
+                "only_registered_attendees": "Dieses Event ist nur für Nutzer verfügbar, die sich bereits registriert haben.",
+                "free_event": "Kostenloses Event",
+                "registration_closes": "Anmeldeschluss {{date}}",
+                "heading": "Fatboy Slim′s \"Eat Sleep VR Repeat\" im Metaverse",
+                "content_1": "Die Karriere von Fatboy Slim war schon immer von Spaß und Premieren geprägt. Dieses einzigartige Event wird Sie auf eine immersive Virtual-Reality-Erfahrung mitnehmen, wie Sie sie noch bei keinem anderen VR-Konzert erlebt haben!",
+                "content_2": "Das 45-minütige Abenteuer führt Ihren Avatar in die Tiefen von Fatboy Slims Geist. Es beginnt im Drive-In-Diner, wo Sie die Reise mit Freunden und Fans antreten.",
+                "content_3": "Machen Sie sich bereit zu tanzen, wenn Norm mit seinem Prankster-Bus vorfährt und sich dem Spaß anschließt. Wenn Sie nicht gerade am Tanzen sind, können Sie sich durch die virtuellen Höhlen von Normans Verstand teleportieren - ein wahrlich unvergessliches Erlebnis!",
+                "content_4": "ENGAGE - eine funktionsreiche Multi-User-Metaverse-Plattform für Kreative, Pädagogen und Geschäftsleute. Dieses virtuelle Konzert lässt sich am besten in VR auf PCVR-Headsets oder einem der neuesten Standalone-Headsets wie dem Quest 2 erleben. Mobile Geräte und Standalone-Headsets, die vor 2020 veröffentlicht wurden, werden nicht unterstützt.",
+                "content_5": "Starten Sie Ihre virtuelle Reise mit Fatboy Slim hier, indem Sie unten Ihre bevorzugte Zeit auswählen:",
+                "schedule": "Zeitplan",
+                "free_entry": "Kostenlose Teilnahme",
+                "sold_out": "Ausverkauft",
+                "almost_sold_out": "Fast ausverkauft",
+                "tickets_available": "Tickets erhältlich",
+                "register": "Registrieren"
             },
             "label": {
                 "create_new": "Neue Veranstaltung erstellen",
@@ -1825,7 +1904,10 @@
                 "none": "Keine",
                 "runtime": "Laufzeit-Aktivitätsplan",
                 "group_visibility": "Gruppensichtbarkeit",
-                "vive_redeem_code": "EINLÖSECODE"
+                "vive_redeem_code": "EINLÖSECODE",
+                "type_concert": "Konzert",
+                "third_party_optin": "Abonnieren Sie Mitteilungen direkt von {{partner}}",
+                "third_party_optin_2": "Nachdem Sie sich angemeldet haben, erhalten Sie auch gelegentliche Updates und Sonderangebote von {{partner}}. Wir werden Ihre E-Mail-Adresse zu keinem Zeitpunkt an Dritte verkaufen oder weitergeben. Lesen Sie unsere <a href=′/terms′ target=′_blank′>Datenschutzerklärung</a>."
             },
             "button": {
                 "attend": "Teilnehmen",
@@ -2027,7 +2109,7 @@
                 "delete_file_permanently": "Datei permanent löschen",
                 "restore_file_confirmation": "Sind Sie sicher, dass Sie die gelöschte Datei wiederherstellen möchten?",
                 "delete_file_permanently_confirmation": "Sind Sie sicher, dass Sie die Datei permanent löschen möchten?",
-                "message_bin_notice": "Dateien im Mülleimer werden nach 5 Tagen endgültig gelöscht. Sie können Dateien dauerhaft löschen, um Speicherplatz freizumachen.",
+                "message_bin_notice": "Dateien im Mülleimer werden nach 5 Tagen endgültig gelöscht. Diese Dateien werden nicht auf Ihren Gesamtspeicherplatz angerechnet.",
                 "item_restored_successfully": "Datei erfolgreich wiederhergestellt.",
                 "error_restoring_item": "Beim Wiederherstellen ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.",
                 "bin": "Abfallkorb",
