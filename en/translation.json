@@ -10,7 +10,8 @@
             "auth_sso_token_expired": "The provided {{provider}} user token expired",
             "auth_registration_sso_error": "There was a problem registering user using {{provider}} SSO",
             "auth_login_sso_error": "There was a problem login in user using {{provider}} SSO",
-            "email_mismatch": "We were unable to authenticate your SSO login due to an email mismatch between your ENGAGE account and the SSO identity provider."
+            "email_mismatch": "We were unable to authenticate your SSO login due to an email mismatch between your ENGAGE account and the SSO identity provider.",
+            "invalid_credentials": "We are unable to authenticate you with your SSO identity provider."
         }
     },
     "contents": {
@@ -706,6 +707,12 @@
             },
             "vr": [],
             "text": {
+                "sso_enabled_email": "You cannot change your email address while single sign-on (SSO) is enabled. If you have any questions, please contact your group administrator. {{group}}",
+                "sso_enabled_password": "You cannot change your password while single sign-on (SSO) is enabled. If you have any questions, please contact your group administrator.",
+                "sso_off": "Single Sign-On (SSO) is currently turned off",
+                "sso_on": "Single Sign-On (SSO) is currently turned on for you",
+                "sso_off_info": "SSO is currently not set up and available for the group you're in. Please contact your Enterprise group owner for more information.",
+                "sso_on_info": "If you have any questions, please contact an administrator of the {{group}} Enterprise group.",
                 "input_current_password": "To change your email, you will need to enter your current password.",
                 "change_password_note": "Please note we will log you out once this update is made. Use your current email and new password to log back in.",
                 "min_character_length": "{{min_chars}} characters minimum.",
@@ -724,17 +731,11 @@
                 "sub_auto_renew_on_note": "The Subscription will be set to auto renew and you will be billed monthly or yearly as before.",
                 "ph_no_records": "No records of payment.",
                 "payment_pending": "Payment pending. Please check back later",
-                "delete_account": "Delete Account",
                 "input_current_password_for_delete": "To delete your account, you will need to enter your current password.",
                 "confirmation": "Confirmation",
                 "pro_deletion_title": "Cancel PLUS Subscription",
-                "deleting_user": "Deleting Account",
                 "pro_deletion_info": "You must cancel your PLUS subscription before deleting your account.",
                 "pro_deletion_prompt": "Would you like to cancel your subscription now ?",
-                "confirm_delete_account": "Are you sure you want to delete your account?",
-                "confirm_delete_account_details": "<p>This will <strong>permanently</strong> delete any information, media, notes, links, events and content associated with your account.</p>",
-                "error_sending_user_email": "Error sending deletion email.",
-                "error_deleting_user": "Error deleting acount.",
                 "cancel_subscription_warning": "<p>Once you cancel your subscription, you will no longer have access to PLUS features or content. </p><p><strong>There are no refunds for any monthly or yearly subscriptions which have already been charged to your account. </strong></p>",
                 "sso_on": "Single Sign-On (SSO) is currently turned on for you",
                 "sso_off": "Single Sign-On (SSO) is currently turned off",
@@ -749,7 +750,6 @@
                 "change_email": "Change Email",
                 "change_password": "Change Password",
                 "choose_new_password": "Choose a New Password",
-                "delete_account": "Delete Account",
                 "change_phone_number": "Change Mobile Number",
                 "sso": "Single Sign-On (SSO)",
                 "privacy_title": "Privacy",
@@ -793,7 +793,6 @@
             "button": {
                 "change_email": "Change email",
                 "change_password": "Change password",
-                "delete_account": "Delete account",
                 "sub_auto_renew_off": "Turn off auto renew",
                 "sub_auto_renew_on": "Turn on auto renew",
                 "sub_renew_modal_off": "Turn off",
@@ -1545,9 +1544,10 @@
                 "account_needs_verification": "Your account needs to be verified. <br>We have resent a verification link to your email account.",
                 "verification_link_expired": "The verification link has expired. {{break}} Please ensure you are clicking on the latest verification email link.",
                 "verification_link_already_sent": "A verification link has already been sent to your email address within the last {{minutes}} minutes.",
+                "or": "or",
+                "sso_password_type_login": "This account doesn't use single sign-on (SSO)",
                 "sso_type_login": "This account requires you to use single sign-on (SSO)",
-                "password_type_login": "This account doesn't use single sign-on (SSO)",
-                "or": "or"
+                "invalid_login": "-These credentials do not match our records."
             },
             "label": {
                 "username_email": "Your username or email address",
@@ -1559,14 +1559,17 @@
                 "email": "Email",
                 "accept_marketing_emails": "Receive marketing emails and promotions",
                 "accept_terms_of_service": "I agree to the <a href=\"/terms\" target=\"_blank\">Terms of Service and Privacy Policy</a>",
-                "accept_terms_of_service_vive_sessions": "I agree to the <a href=\"https://business.viveport.cn/documents/cn_cn_zhcn/terms/terms-of-use\" target=\"_blank\">Terms of Service</a> and <a href=\"https://www.viveport.com/cn-privacy-policy\" target=\"_blank\">Privacy Policy</a>"
+                "accept_terms_of_service_vive_sessions": "I agree to the <a href=\"https://business.viveport.cn/documents/cn_cn_zhcn/terms/terms-of-use\" target=\"_blank\">Terms of Service</a> and <a href=\"https://www.viveport.com/cn-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
+                "sso_login": "Log in with SSO"
             },
             "button": {
                 "sign_in": "Log in",
                 "create_account": "Sign Up",
                 "forgot_password": "Forgot your password?",
+                "click_here": "Click here",
                 "login": "Login",
                 "sso_login": "Log in with SSO",
+                "sso_continue": "Continue",
                 "password_login": "Log in with password"
             }
         }
